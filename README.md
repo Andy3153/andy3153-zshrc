@@ -9,10 +9,11 @@ I made this mostly because I wanted an easy solution to backup my configs, but a
 # Programs/plugins included:
   1. agnoster-zsh-theme (https://github.com/agnoster/agnoster-zsh-theme)
   2. ddate (https://github.com/bo0ts/ddate)
-  3. neofetch (https://github.com/dylanaraps/neofetch)
-  4. thefuck (https://github.com/nvbn/thefuck)
-  5. zsh-autosuggestions (https://github.com/zsh-users/zsh-autosuggestions)
-  6. zsh-syntax-highlighting (https://github.com/zsh-users/zsh-syntax-highlighting)
+  3. lolcat (https://github.com/busyloop/lolcat)
+  4. neofetch (https://github.com/dylanaraps/neofetch)
+  5. thefuck (https://github.com/nvbn/thefuck)
+  6. zsh-autosuggestions (https://github.com/zsh-users/zsh-autosuggestions)
+  7. zsh-syntax-highlighting (https://github.com/zsh-users/zsh-syntax-highlighting)
 
 
 # About the installation scripts:
@@ -27,12 +28,6 @@ Also, all these do a backup of your already-existent configs in a folder named .
 You can just open them up in a text editor and you'll see their story in there ;)
 
 
-
-
 Also, don't get confused if you see this repo get deleted and re-posted, I'm still learning how to use git
-
-
-
-
 
 Feel free to give me advice! :)

@@ -45,24 +45,24 @@
 
  # Startup script
    # brc.sh
-     #$HOME/.zsh/scripts/brc.sh | lolcat
+     #$HOME/.zsh/scripts/brc.sh | $HOME/.zsh/programs/lolcat/bin/lolcat
    
    # Neofetch
      #$HOME/.zsh/programs/neofetch/neofetch
 
    # ddate
      # With lolcat
-       #ddate | lolcat
+       #ddate | $HOME/.zsh/programs/lolcat/bin/lolcat
      # ddate.sh
        $HOME/.zsh/scripts/ddate.sh
      
 
  # Aliases
    # "clear" aliases 
-     #alias clear="clear && $HOME/.zsh/scripts/brc.sh | lolcat"
+     #alias clear="clear && $HOME/.zsh/scripts/brc.sh | $HOME/.zsh/programs/lolcat/bin/lolcat"
      #alias clear="clear && $HOME/.zsh/programs/neofetch/neofetch"
      #alias clear="clear && $HOME/.zsh/scripts/brc.sh"
-     #alias clear="clear && ddate | lolcat && echo"
+     #alias clear="clear && $HOME/.zsh/programs/ddate/ddate | $HOME/.zsh/programs/lolcat/bin/lolcat && echo"
      alias clear="clear && $HOME/.zsh/scripts/ddate.sh"
 
    # Shortcut aliases
@@ -76,7 +76,7 @@
      alias c="clear"
      alias v="vim"
      alias cd..="cd .."
-     alias thispc="echo && neofetch | lolcat -t"
+     alias thispc="echo && $HOME/.zsh/programs/neofetch/neofetch | $HOME/.zsh/programs/lolcat/bin/lolcat -t"
      alias reloadzsh="source $HOME/.zshrc"
 
 
