@@ -51,7 +51,9 @@
      #$HOME/.zsh/programs/neofetch/neofetch
 
    # ddate
-     # ddate | lolcat
+     # With lolcat
+       #ddate | lolcat
+     # ddate.sh
        $HOME/.zsh/scripts/ddate.sh
      
 

@@ -6,7 +6,7 @@
 # So, I decided to make it better!
 
   # Setting a variable so it is all cleaner
-  beginning=$(echo "~*. $($HOME/.zsh/programs/ddate/build/ddate) .*~")
+  beginning=$(echo "~*. $($HOME/.zsh/programs/ddate/ddate) .*~")
 
   # Putting some vertical spaces
   echo
