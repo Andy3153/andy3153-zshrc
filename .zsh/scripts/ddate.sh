@@ -12,7 +12,7 @@
   echo
 
   # Making it centered
-  printf "%*s\n" $(((${#beginning}+$COLUMNS)/2)) "$beginning" | lolcat -t
+  printf "%*s\n" $(((${#beginning}+$COLUMNS)/2)) "$beginning" | $HOME/.zsh/programs/lolcat/bin/lolcat -t
 
   # Another vertical space
     echo
