@@ -27,7 +27,7 @@ About the scripts:
 You can just open them up in a text editor and you'll see their story in there ;)
 
 
-Also, don't get confused if you see this repo get deleted and re-posted, I'm still learning how to use git.
+Also, don't get confused if you see this repo get deleted and re-posted, I'm still learning how to use git
 
 Feel free to give me advice!
 
