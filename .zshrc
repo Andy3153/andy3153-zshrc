@@ -6,7 +6,7 @@
 
 
  # History file
-   HISTFILE=$HOME/.zsh-history
+   HISTFILE=$HOME/.zsh/zsh-history
    HISTSIZE=100000
    SAVEHIST=1000
 
