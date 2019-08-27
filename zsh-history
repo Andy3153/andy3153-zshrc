@@ -1,0 +1,1067 @@
+yay oss
+yay android-studio
+vim .config/compton.conf
+compton
+xwinfo
+xwininfo
+y xwininfo
+xwininfo -stats -wm
+pwd | zenity --text-info
+y compton-conf
+sudo lshw-video
+sudo lshw -video
+y lshw
+sudo EDITOR=vim visudo
+sudo
+sudo 
+sudo sdf
+y graphenex
+grapheneX
+y pyinquirer
+y pip
+date
+p -syu pip
+p -Syu pip
+pip
+mkdir Minecraft_Server
+cd Minecraft_Server
+vim eula.txt
+java -Xms1G -Xmx4G -jar server.jar
+y cron
+p -Syu cron
+wget -q http://git.io/Sxpr9g -O /tmp/msm && bash /tmp/msm
+dmesg | grep oom-killer
+sudo dmesg | grep oom-killer
+sudo swapoff -a
+vim munch.c
+gcc munch.c -o munch
+vim munch
+find . -type f -exec cat {} + > /dev/null
+echo 3 | sudo tee /proc/sys/vm/drop_caches
+sh
+ksh
+tsh
+capsh
+man capsh
+rsh
+slsh
+tclsh
+ls /bin/*sh
+/dev/shm
+lw
+cat cpu
+cd cpu
+cd microcode
+cat microcode
+free -m 
+pamac install virtualbox $(pacman -Qsq "^linux" | grep "^linux[0-9]*[-rt]*$" | awk '{print $1"-virtualbox-host-modules"}' ORS=' ') 
+sudo vboxreload
+pamac build virtualbox-ext-oracle
+sudo gpasswd -a $USER vboxusers
+y cdm
+cdm
+pkill cdm
+pkill virtualbox
+y slurp
+slurp
+y thunar-gtk3
+thunar-gtk3
+y zekton
+gtk3-demo
+y gtk3-demo
+pkill discord
+./Games/Lutris/Minecraft/LaunchMinecraft_Shiginima
+./Games/Lutris/Minecraft/LaunchMinecraft_Shiginima_orig_java
+java -jar ./Games/Lutris/Minecraft/Minecraft_Shiginima.jar
+firefox - P
+firefox -P Youtube
+p -Syu urxvt xdotool cava
+free
+y jdk
+cd Program
+cd Programming
+mkdir java
+cd java
+pico
+pic
+man pic
+htop
+y pacui
+pacui
+ocs-store
+p -Syu nautilus
+xfce4-session --version
+y rofi
+p -Syu rofi
+rofi
+rofi -show window
+rofi -show run
+rofi -show ssh
+rofi -show keys
+rofi -show combi
+y roboto
+y compton
+y materia
+y papirus
+y lxappearance
+y awesome
+p -Syu awesome
+awesome --version
+git clone https://github.com/PapyElGringo/material-awesome.git ~/.config/awesome
+exit
+lxappearance
+p -Syu feh
+feh
+feh -setbg
+clear
+free -m
+htop
+lxsettings
+lxappearance
+nm-applet
+vim .config/awesome/rc.lua
+cd .config/awesome/
+ls
+cd configuration
+ls
+vim apps.lua
+xfce4-settings
+xfce4-settings-manager
+xfce4-settingd
+xfce4-session
+pkill compton
+compton --config .config/awesome/configuration/compton.conf
+pkill compton
+compton &
+exit
+htop
+clear
+y wps-office
+htop
+y xfpanel-switch
+y xfpanel
+y panel
+xfce4-composite-editor
+pkill compton
+xfce4-composite-editor
+y jre
+p -Rns java-8-openjdk
+archlinux-java help
+archlinux-java fix
+sudo archlinux-java fix
+sudo archlinux-java status
+sudo archlinux-java unset
+sudo archlinux-java status
+sudo archlinux-java set java-12-openjdk
+sudo archlinux-java status
+java --version
+whereis java
+java -jar Games/Lutris/Minecraft/Minecraft_TLauncher.jar
+java -jar Downloads/Technic.jar
+htop
+Games/Lutris/Minecraft/jre1.8.0_211/bin/java -jar Downloads/Technic.jar
+./munch
+free -m
+./munch
+free -m
+ping -c 5 8.8.8.8
+pkill java
+sudo su
+neofetch
+p -Syu blender
+p -Syu glfw
+primusrun echo
+kvm-ok
+y cpu-checker
+[200~LC_ALL=C lscpu | grep Virtualization~
+LC_ALL=C lscpu | grep Virtualization
+zgrep CONFIG_KVM /proc/config.gz
+sudo pacman -Syu virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat
+sudo systemctl enable libvirtd.service
+sudo systemctl start libvirtd.service
+y numix | egrep 'pack'
+y numix
+y adapta
+p -Syu xfce4-diskperf-plugin
+p -Syu audacious
+xflock4
+p -Syu xfce4-systemload-plugin
+free -m
+xkill
+p -Syu light-locker
+light-locker
+xflock4
+p -Syu xscreensaver
+xscreensaver
+xjack
+exit
+y fortune
+fortune
+phosfor
+phosphor -root -fg #ff7900
+phosphor-root
+y xscreensaver
+xscreensaver-command -lock
+light-locker-command -l
+light-locker
+xflock4
+xfconf-query -c xfce4-session -p /general/LockCommand -s "light-locker-command --lock" --create -t string
+p -Syu xfce4-screensaver
+y lastpass
+xscreensaver-command -lock
+y gltron
+y -Syu
+y numix-gtk
+y matcha
+clear
+exit
+y numix-icon
+y comic-sans
+y comic
+y ttf-comic
+exit
+p -Rns xmr-stak monero
+p -Rns xmr-stak monerod
+p -Rns xmr-stak
+clear
+neofetch
+thispc
+java -jar Games/Lutris/Minecraft/Minecraft_Shiginima.jar
+clear
+munch
+./munch
+free -m
+clear
+thispc
+celar
+fuck
+clear
+htop
+ping -c 5 8.8.8.8
+clcear
+clear
+pkill compton
+pkill compton && vim && compton &
+exit
+whereis pkill
+whereis compton
+echo sdf`\
+echo ._.\
+EOF\
+\
+\
+exit\
+/EOF\
+\EOF\
+\EOF\
+/EOF
+clear
+y xmms2
+xmms2
+y xmms2
+p -Rns xmms2
+p -Rns lxmusic-gtk3 xmms2
+y xmms
+y qgtkstyle
+y -Syu qt5-styleplugins
+pacgui
+QT_QPA_PLATFORMTHEME=gtk2 clementine
+clementine
+vim .zshrc
+y bmp
+y youki
+y winamp3
+y winamp
+y qmmp
+y qmmp-skins-pack
+y qmmp
+y audacious-plugins
+y qmmp
+y ocs-url
+y qmmp
+y pythonqt
+y youtube-dl
+qjson
+yy qjson
+yay qjson
+git clone https://github.com/rigon/qmmp-plugin-youtube.git
+qmake
+cd qmmp-plugin-youtube
+qmake
+make -j4
+sudo cp -v youtube/libyoutube.so /usr/lib/qmmp/Transports
+ls
+make -j4
+qmake
+make -j4
+cd..
+rm -rf qmmp-plugin-youtube
+y qmmp-plugin-youtube
+youtube-dl
+y minitube
+p -Rns minitube
+y smtube
+smtube
+p -Rns smtube
+youtube-dl https://www.youtube.com/watch\?v\=LDU_Txk06tM
+ls
+y ytd-gtk
+y ytd
+y openssl
+y lib32-openssl
+pkill vlc
+htop
+y ytd
+p -Rns ytd
+y nomnom
+y clipgrab
+y windowck
+y vala
+y panel-switch
+y panelswitch
+y xfpanel-switch
+y panel-profiles
+pkill lutris
+y wine-mono
+ping -c 5 8.8.8.8
+sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings
+sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils 
+p -Rns linux52-nvidia-390xx linux419-nvidia-390xx
+sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils 
+uname -r
+p -S linux53
+sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils 
+sudo pacman -Syu xorg-server-devel lib32-opencl-nvidia
+sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils nvidia-settings
+sudo pacman -S cuda
+p -Syu lib32-mesa
+sudo pacman -S vulkan-icd-loader lib32-vulkan-icd-loader
+sudo pacman -Syu
+p -S bittorrent
+p -S qbittorrent
+htop
+yay -Syu
+sudo pacman-mirrors -f 0
+sudo pacman -Syyu
+y ubuntu emulator
+y ubuntu-emulator
+y -Syyu
+free -m
+vim /home/andy3153/Games/nfsc/AutoRun/autorun.cfg
+htop
+p -Syu filelight
+xscreensaver
+y -Syu
+yay -Syu bleachbit
+yay chkrootkit
+netstat -lt
+y netstat
+netstat -lt
+netstat-nat -lt
+htop
+free -m
+pkill bleachbit
+htop
+poweroff
+neofetch
+tispc
+thispc
+neofetch | lolcat 
+clear
+p -Syu qtcurve
+y qtconfig
+qtconfig
+y qt5-qtconfig
+y qt4-qtconfig
+p -Syu qt5-styleplugins qt5ct
+qt5ct-settings
+qt5ct
+y qtconfiguration
+y qtconfig-qt5
+y qtconfig-qt4
+y firefox
+whereis qtconfig-qt4
+qtconfig-qt4
+qtconfig-qt5
+qtconfig-qt4
+lshw
+export | grep gtk
+export
+echo $SESSION_MANAGER
+y smartctl
+smart
+y smart
+sudo smartctl -i /dev/sda
+sudo smartctl -i /dev/sdb
+nmon
+y nmon
+nmon
+y flameshot
+y flameshot\
+: 1565814250:0;y flameshot
+flameshot
+flameshot gui
+p -Syu shutter
+y shutter
+exit
+qtconfig
+y qt
+y qt | grep config
+y qt config
+qt5ct
+vim .zshrc
+exit
+exit
+vim .zshrc
+qt5ct
+echo $QT_QPA_PLATFORMTHEME
+sudo vim /etc/environment
+qt5ct
+y i8kutils
+p -Syu tk
+y dell-bois-fan-control
+y dell-bios-fan-control
+i8kmon
+sudo vim /etc/i8kutils/i8kmon.conf
+sudo systemctl enable i8kmon 
+sudo systemctl start i8kmon 
+sensors-detect
+sudo sensors-detect
+sensors
+sudo vim /etc/i8kutils/i8kmon.conf
+pkill clementine
+sudo pacman -Syyu
+y -Syyu
+efibootmgr
+efibootmgr --help
+y bsdgames
+p -Syu bsdgames
+y bsdgames
+p -Rns monero-gui-bin
+p -Rns monero
+y monero
+sudo bleachbit
+vifm
+exit
+sudo pamcan -Syyu
+fuck
+sudo pacman -Syyu
+yay -Syyu
+clear
+free -m
+htop
+qbittorrent
+ping -c 5 8.8.8.8
+y furius
+p -Syyu
+sudo chown -R andy3153:andy3153 /home/andy3153
+upower -i /org/freedesktop/UPower/devices/battery_BAT0
+acpi -V
+y batstat
+y bat
+primusrun bzflag
+lsblk
+umount /dev/sdc
+sudo umount /dev/sdc
+lsblk
+clear
+c
+exit
+p -Syyu
+y -Syyu
+graphenex
+clr
+y bd
+y bd | grep 'discord'
+y bd | grep discord
+y bdi
+y better | grep discord
+y betterdiscord
+betterdiscord
+whereis betterdiscord
+apropos fstab
+echo sal\
+echo neata\
+neofetch\
+thispc
+#sudo pacman -Syu
+clear
+pstree -p
+pstree -p | grep discord
+pstree -p | grep firefox
+exit
+xargs
+xargs echo
+xargs echo sdf
+pgrep
+pgrep firefox
+ps aux | grep firefox
+lsof
+w
+uptime
+p -Syu git
+clear
+git config --global user.name "Andy3153"
+git config --global user.email "andy3153@protonmail.com"
+cd ~
+mkdir andy3153-configs
+cd andy3153-configs
+ls
+git init
+ls
+ls -alh
+clear
+echo ssdf\
+echo sdf fa\
+echo neata
+mv ~/.oh-my-zsh .\
+ln -s .oh-my-zsh ~/\
+mv ~/.brc.sh .\
+ln -s .brc.sh ~/\
+mv ~/.ddate.sh .\
+ln -s .ddate.sh ~/\
+mv ~/.zshrc .\
+ln -s .zshrc ~/
+ls
+ls -alh
+ln -s .brc.sh ~/
+ln -s ./.brc.sh ~/
+ln -s andy3153-configs/.brc.sh ~/
+ln -s andy3153-configs/.oh-my-zsh ~/
+ln -s andy3153-configs/.ddate.sh ~/
+ln -s andy3153-configs/.zshrc ~/
+git add .
+git commit -m "initial config commit"
+git remote add origin https://github.com/Andy3153/andy3153-configs.git
+git push -u origin master
+w
+cd
+mkdir
+mkdir sdf
+cd sdf
+ls
+git init
+git status
+touch sdf
+git status
+git add sdf
+git commit -m "first commit"
+git checkout -b newbranch
+git branch
+git checkout -b master
+git checkout  master
+git checkout -b tesssting
+git checkout -r tesssting
+git push origin master
+git push sdf master
+cd ..
+rm -rf sdf
+ls
+mkdir sdf
+cd sdf
+git init 
+git checkout -b testing
+git checkout -b beta
+git checkout -b readme-edits
+ls
+touch README.md
+vim README.md
+git push
+git merge
+git merge readme-edits master
+git merge help
+git merge
+git merge -h
+git merge README.md
+git branch
+cd ..
+cd sdf
+git checkout master
+ls
+ls -alh
+git master
+git merge
+git merge --commit readme-edits
+cd ..
+rm -rf sdf
+yay simplenote
+git add *
+git add 
+git add .
+git commit -m "Added old configs + KDE configs"
+git clone https://github.com/Andy3153/andy3153-configs
+mkdir sdf
+cd sdf
+git clone https://github.com/Andy3153/andy3153-configs
+ls
+cd andy3153-configs/
+ls
+ls -alh
+git remote add origin https://github.com/Andy3153/andy3153-configs
+git push -u origin master
+git push -u origin to-be-added
+git push -u origin additions
+ls
+ls -alh
+vim README.md
+ls -alh
+echo "# andy3153-configs" >> README.md
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Andy3153/andy3153-configs.git
+git push -u origin master
+ls
+ls -alh
+cd ..
+ls
+rm -rf sdf
+ls
+mv andy3153-configs sdf
+git clone https://github.com/Andy3153/andy3153-configs
+ls
+cd andy3153-configs
+ls
+ls -alh
+cd ..
+cd and
+cd andy3153-configs
+ls
+ls -alh
+git commit -m "c o m m i t s" 
+git remote add origin https://github.com/Andy3153/andy3153-configs.git
+git push -u origin master
+git checkout -b tests
+git push -u origin tests
+git commit -m "c o m m i t s" 
+ls -alh
+cp -r .oh-my-zsh .oh-my-zsh2
+ls
+ls -alh
+rm -rf .oh-my-zsh/*
+ls
+ls -alh
+rm -rf .oh-my-zsh
+ls
+ls -alh
+git commit -m "c o m m i t s"
+ls -alh
+mv .oh-my-zsh2/ .oh-my-zsh
+y cjeatengine
+y cheatengine
+y cheat
+y ce
+y pince
+pince
+htop
+pince
+y gameconqueror
+cd
+firefox -P
+firefox -P "Default Profile"
+yay mega
+yay megasync
+xfdesktop
+yay megasync
+vim .xsession-errors
+htop
+rm -rf .xsession-errors
+vim .xerror-deleter.sh
+chmod 755 .xerror-deleter.sh
+./.xerror-deleter.sh
+chmod 755 .xerror-deleter.sh
+./.xerror-deleter.sh
+vim .xerror-deleter.sh
+./.xerror-deleter.sh
+vim .xerror-deleter.sh
+./.xerror-deleter.sh
+vim .xerror-deleter.sh
+./.xerror-deleter.sh
+p -Syu ksh
+./.xerror-deleter.sh
+vim .xerror-deleter.sh
+./.xerror-deleter.sh
+vim .xerror-deleter.sh
+./.xerror-deleter.sh
+vim .xerror-deleter.sh
+./.xerror-deleter.sh
+vim .xerror-deleter.sh
+./.xerror-deleter.sh
+vim .xerror-deleter.sh
+./.xerror-deleter.sh
+ls -alh
+vim .xerror-deleter.sh
+./.xerror-deleter.sh
+vim .xerror-deleter.sh
+./.xerror-deleter.sh
+vim .xerror-deleter.sh
+./.xerror-deleter.sh
+y calligra
+p -Syu pstoedit libgit2 kirigami2
+alias
+uname
+cat /etc/lsb-release
+cat /etc/lsb-release | tail -1
+cat /etc/lsb-release
+cat /etc/lsb-release | tail -1
+bc
+bc -l
+ping -c 100 -s .2
+ping -c 100 -s .2 8.8.8.8
+ping -c 100 -s.2 8.8.8.8
+ping -c 100 8.8.8.8
+sudo pacman -Rns megasync
+y atop
+atop
+y -Syu
+whereis grep
+ls -alh
+./.xerror-deleter.sh
+clear
+y windowck
+xfce4-panel --version
+y nvim
+exit
+echo $ZSH_CUSTOM
+cd..
+cd
+exit
+clear
+exit
+sudo cp /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh /home/andy3153/.zsh/zsh-syntax-highlighting/
+mkdir /home/andy3153/.zsh/zsh-syntax-highlighting/
+sudo cp /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh /home/andy3153/.zsh/zsh-syntax-highlighting/
+sudo chown -R andy3153:andy3153 /home/andy3153
+exit
+sdf
+clear
+sdf
+Games
+cd ..
+ls
+rm -rf sdf
+sdf
+exit
+rails
+rails sdf
+rails
+exir
+exit
+textmate
+textmateexit
+exit
+lighthouse
+exit
+clear
+c
+visualizer
+exit
+visualizer
+exit
+sudo pacman -Syu
+p -Syu
+exit
+y -Syu
+ls -alh
+./.xerror-deleter.sh
+exit
+su - bot
+sudo su
+echo $(build_prompt)
+exit
+p -Syu
+bash
+exit
+unsetopt ALL_EXPORT
+RPS1="$PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR"
+echo sal
+exit
+RPS1="$PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR"
+exit
+RPS1="$PR_LIGHT_YELLOW(%D{%m-%d %H:%M})$PR_NO_COLOR "
+exit
+clear
+exit
+history
+exit
+history
+p -Syu
+history
+echo sal
+echo neata
+history
+exit
+vim .zshrc
+exit
+clear
+exit
+vim .zshrc
+cd andy3153-configs
+exit
+cd andy3153-configs
+exit
+cd /
+cd /home
+cd /home/andy3153
+cd Games
+cd Gamescd ..
+cd ..
+cd andy3153-configs
+exit
+ls andy3153-configs/
+vim andy3153-configs/install.sh
+which cp
+mkdir sdf asdf sdf2
+rm -rf sdf asdf sdf2
+ls
+cd andy3153-configs
+cd ..
+cd andy3153-configs
+exit
+cd andy3153-configs
+ls -alh
+.zsh/scripts/brc.sh
+vim .zshrc
+exit
+sudo su
+exit
+htop
+exit
+echo "\ue0b0 \u00b1 \ue0a0 \u27a6 \u2718 \u26a1 \u2699"
+exit
+printf "%*s\n" $(((${sdf}+$COLUMNS)/2)) "sdf" | lolcat -t
+bash
+exit
+ddate.sh
+.zsh/scripts/ddate.sh
+.zsh/scripts/brc.sh
+andy3153-configs/.zsh/scripts/brc.sh
+exit
+exit
+.zsh/scripts/brc.sh
+.zsh/scripts/ddate.sh
+clear
+clear
+exit
+     $HOME/.zsh/scripts/ddate.sh
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+sdf
+echo sal
+exit
+exit
+source $HOME/.zsh/agnoster-zsh-theme/agnoster.zsh-theme
+exit
+setopt prompt_subst
+cd andy3153-configs
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+exit
+ls
+COMPLETION_WAITING_DOTS="true"
+clear
+exir
+exirt
+exit
+exit
+exit
+ls
+clear
+ls -l /
+ls -l /usr
+exit
+ls -ll /usr | grep 'zsh'
+ls -l /usr | grep 'zsh'
+ls -l /usr | grep zsh
+ls -l
+ls -l /usr
+ls -l /usr/bin | grep 'zsh'
+ls -l /usr/bin | grep --color=auto 'zsh'
+exit
+ls -l /usr/bin | grep --color=auto 'zsh'
+ls -l /usr/bin | grep 'zsh'
+exit
+grep
+ls -l /usr/bin | grep 'zsh'
+echo $OSTYPE
+exit
+reloadzsh
+echo kjsdn fjknssdfnsfnzsh | grep 'zsh'
+celsar
+fuck
+clear
+sudo su
+exit
+exit
+lsexir
+exit
+exit
+mkdir build
+cd build
+cmake ..
+make
+make install
+y ddate
+cp /usr/bin/ddate .
+la
+ls
+./ddate
+cd andy3153-zshrc/.zsh/programs/neofetch/neofetch
+./andy3153-zshrc/.zsh/programs/neofetch/neofetch
+./andy3153-zshrc/.zsh/programs/ddate/build/ddate
+exit
+.zsh/scripts/ddate.sh
+exit
+exit
+ls
+whereis thefuck
+cp /usr/bin/thefuck
+cp /usr/bin/thefuck .
+./thefuck
+./thefuck --enable-experimental-instant-mode
+./thefuck --enable-experimental-instant-mode
+eval $(./thefuck --alias)
+fuck
+exit
+y thefuck
+y thefuck-git
+exit
+./setup.py
+./setup.py --help
+echo ur gay
+echo ur gay
+echo ur gay
+echo ur gay
+echo ur gay
+echo ur gay
+echo ur gay
+echo ur gay
+echo ur gay
+echo ur gay
+cd Programming
+la
+ls
+cd bash,zsh
+ls
+pkill discord
+htop
+htop
+sudo pacman -Syu brave
+htop
+y mcedit
+pactree ddate
+pactree neofetch
+pactree thefuck
+y thefuck
+y -Sw thefuck
+pacman -Fs thefuck
+pacman -Fs fuck
+sudo thunar &
+exit
+make
+./setup.py
+./install.sh
+./thefuck
+sudo chown -R andy3153:andy3153 /home/andy3153
+./thefuck
+chmod 755 thefuck
+./thefuck
+./thefucksdf
+fuck
+git brnch
+fuck
+git branch
+whereis thefuck
+whereis fuck
+/usr/bin/fuck
+cd andy3153-zshrc
+ls
+clear
+git init
+git add .
+git commit -m "First commit"
+git push -u origin master
+git status
+git remote add origin https://github.com/Andy3153/andy3153-zshrc.git
+git push -u origin master
+htop
+pkill compton
+htop
+htop
+htop
+yay -S jre
+whereis archlinux-java
+whereis archlinux
+whereis archlinux*
+whereis archlinux-*
+exit
+./Minecraft_Technic-cracked
+echo $PATH
+java
+clear
+./Minecraft_Technic-cracked
+java -jar /Minecraft_Technic-cracked
+java -jar Minecraft_Technic-cracked
+java -jar Minecraft_Technic-cracked
+./Minecraft_Technic-cracked
+./Minecraft_Technic-cracked
+echo $JAVA
+archlinux-java fix
+archlinux-java
+sudo archlinux-java
+sudo archlinux-java set java-8
+sudo archlinux-java set jre8
+y jre
+y jre
+sudo archlinux-java set jre8
+sudo archlinux-java set
+sudo archlinux-java set jre
+sudo archlinux-java set jre8
+sudo archlinux-java set java-jre8
+sudo archlinux-java set java-8
+whereis java
+whereis jre8
+sudo archlinux-java set java-8
+sudo archlinux-java set java
+p -Rns java-12-openjdk
+sudo archlinux-java
+p -Rns java-12-openjdk
+whereis java
+p -Rns java
+p -Rns java-12-openjdk
+y -Rns java-12-openjdk
+p -Rns jre12-openjdk
+p -Rns jre12
+java
+whereis java
+java --version
+sudo archlinux-java fix
+java --version
+whereis java
+sudo archlinux-java fix
+whereis java
