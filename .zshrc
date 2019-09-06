@@ -6,7 +6,7 @@
 
 
  # History file
-   HISTFILE=$HOME/.zsh/zsh-history
+   HISTFILE=$HOME/.zsh-history
    HISTSIZE=100000
    SAVEHIST=1000
 
@@ -104,6 +104,10 @@
 
    # grep
      alias grep="grep --color=auto"
+
+
+ # Stop dotnet telemetry
+   DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 
  # Add date to the end of the line
