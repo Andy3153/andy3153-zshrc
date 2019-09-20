@@ -9,7 +9,6 @@
 # command-line arguments right now
 #
 #
-
 # Adds the command-line arguments
   while [ $1 ]; do
     case $1 in
@@ -18,7 +17,8 @@
       '--help' | '-h' )
         echo
         echo " installv2.sh by Andy3153"
-        echo " Usage: ./installv2.sh [OPTIONS..]"
+        echo " Usage
+: ./installv2.sh [OPTIONS..]"
         echo
         echo "  Options:"
         echo "   --install               , -i   Installs by backing up the original configs and then copying the new ones"
@@ -37,9 +37,31 @@
       # Making a backup, just for safety
         echo "Making a backup of your current configs... (it will be stored in $HOME/.zsh-backup)."
         mkdir $HOME/.zsh-backup
-        cp -r $HOME/.zsh $HOME/.zsh-backup
-        cp -r $HOME/.zshrc $HOME/.zsh-backup
+
+        if [ -e $HOME/.zsh ]
+           then cp -r $HOME/.zsh $HOME/.zsh-backup/
+        fi
+
+        if [ -e $HOME/.zshrc ]
+           then cp -r $HOME/.zshrc $HOME/.zsh-backup/
+        fi
         sleep 3s
+
+      # Then, copying all of the configs in their place
+        echo "Copying the new configs..."
+        echo
+        yes | cp -rf ./.zsh $HOME/
+        yes | cp -rf ./.zshrc $HOME/
+        sleep 2s
+
+      # A finishing message
+        echo "To apply it, close the terminal and re-open it, or type:"
+        echo
+        echo "   source ~/.zshrc"
+        echo
+        echo "Enjoy your new zshrc! :)"
+        ;;
+
 
 # End of arguments
   esac
