@@ -16,18 +16,27 @@ I made this mostly because I wanted an easy solution to backup my configs, but a
   7. zsh-syntax-highlighting (https://github.com/zsh-users/zsh-syntax-highlighting)
 
 
-# About the installation scripts:
-The names are pretty self-explanatory, but I'll say it anyway
-  1. install.sh copies every config in your home directory
-  2. install_with-symlinks.sh links every config in your home directory
-  3. uninstall.sh removes every config and restores your old ones
-Also, all these do a backup of your already-existent configs in a folder named .zsh-backup
+# How to install:
+  The new install script has options that you can use for installing, installing using symlinks and uninstalling. Here's the output of ./install.sh -h :
+  
+  $ ./install.sh -h
+  
+   install.sh by Andy3153
+   Usage: ./install.sh [OPTIONS..]
 
-
-# About the scripts:
+   Options:
+    --help                  , -h   Shows this help screen.
+    --version               , -v   Shows the version of the installer.
+    --install               , -i   Installs by backing up the original
+                                   configs and then copying the new ones.
+    --install-with-symlinks , -I   Installs by backing up the original
+                                   configs and then linking the new ones.
+                                   You have to keep the folder this is in
+                                   for this method.
+    --uninstall             , -u   Deletes the configs/symlinks, then
+                                   restores your old configs.
+                                   
+# About the other scripts:
 You can just open them up in a text editor and you'll see their story in there ;)
 
-
-Also, don't get confused if you see this repo get deleted and re-posted, I'm still learning how to use git
-
-Feel free to give me advice! :)
+Feel free to give me advice on this! :)
