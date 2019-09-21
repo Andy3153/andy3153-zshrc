@@ -37,6 +37,7 @@ I made this mostly because I wanted an easy solution to backup my configs, but a
                                    restores your old configs.
                                    
 # About the other scripts:
+They are located in .zsh/scripts
 You can just open them up in a text editor and you'll see their story in there ;)
 
 Feel free to give me advice on this! :)
