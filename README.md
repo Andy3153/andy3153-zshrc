@@ -13,7 +13,7 @@ I made.
 
 ## How does it look like?
 
-[![asciicast](https://asciinema.org/a/270231.svg)](https://asciinema.org/a/270231)
+[![asciicast](https://asciinema.org/a/270233.svg)](https://asciinema.org/a/270233)
 
 ## Programs/plugins included:
 
