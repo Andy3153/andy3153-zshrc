@@ -11,6 +11,10 @@ backup my configs, but also because I wanted to play around
 with git and it made me organise my configs and other scripts
 I made.
 
+## How does it look like?
+
+[![asciicast](https://asciinema.org/a/270231.svg)](https://asciinema.org/a/270231)
+
 ## Programs/plugins included:
 
   1. [agnoster-zsh-theme](https://github.com/agnoster/agnoster-zsh-theme)
