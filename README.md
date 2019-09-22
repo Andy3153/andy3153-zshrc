@@ -1,43 +1,56 @@
-# andy3153-zshrc
+# andy3153-zshrc ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Andy3153/andy3153-zshrc)
+This is my .zshrc and all the plugins, programs and little
+scripts that I use with it.
 
-This is my .zshrc and all the plugins, programs and little scripts that I use with it. 
+I saw this idea of posting my shell rc config here on
+[The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
+and thought it might be cool to try.
 
-I saw this idea of posting my shell rc config here on https://github.com/jlevy/the-art-of-command-line and thought it might be cool to try.
+I made this mostly because I wanted an easy solution to
+backup my configs, but also because I wanted to play around
+with git and it made me organise my configs and other scripts
+I made.
 
-I made this mostly because I wanted an easy solution to backup my configs, but also because I wanted to play around with git and it made me organise my configs and other scripts I made.
+## Programs/plugins included:
 
-# Programs/plugins included:
-  1. agnoster-zsh-theme (https://github.com/agnoster/agnoster-zsh-theme)
-  2. ddate (https://github.com/bo0ts/ddate)
-  3. lolcat (https://github.com/busyloop/lolcat)
-  4. neofetch (https://github.com/dylanaraps/neofetch)
-  5. thefuck (https://github.com/nvbn/thefuck)
-  6. zsh-autosuggestions (https://github.com/zsh-users/zsh-autosuggestions)
-  7. zsh-syntax-highlighting (https://github.com/zsh-users/zsh-syntax-highlighting)
+  1. [agnoster-zsh-theme](https://github.com/agnoster/agnoster-zsh-theme)
+  2. [ddate](https://github.com/bo0ts/ddate)
+  3. [lolcat](https://github.com/busyloop/lolcat)
+  4. [neofetch](https://github.com/dylanaraps/neofetch)
+  5. [thefuck](https://github.com/nvbn/thefuck)
+  6. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+  7. [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 
 
-# How to install:
-  The new install script has options that you can use for installing, installing using symlinks and uninstalling. Here's the output of ./install.sh -h :
-  
-  $ ./install.sh -h
-  
-   install.sh by Andy3153
-   Usage: ./install.sh [OPTIONS..]
+## Installation
 
-   Options:
-    --help                  , -h   Shows this help screen.
-    --version               , -v   Shows the version of the installer.
-    --install               , -i   Installs by backing up the original
-                                   configs and then copying the new ones.
-    --install-with-symlinks , -I   Installs by backing up the original
-                                   configs and then linking the new ones.
-                                   You have to keep the folder this is in
-                                   for this method.
-    --uninstall             , -u   Deletes the configs/symlinks, then
-                                   restores your old configs.
-                                   
-# About the other scripts:
-They are located in .zsh/scripts
-You can just open them up in a text editor and you'll see their story in there ;)
+The install script uses command-line arguments to install
+the scripts, install them using symlinks and also to
+uninstall them and revert your original configs. Run the
+install script from the folder it is in
 
-Feel free to give me advice on this! :)
+```bash
+./install.sh -i
+```
+to install it normally, it copies the configs in your home
+folder
+
+```bash
+./install.sh -I
+```
+to install it using symlinks; this can be useful so you can
+update it just by pulling the new configs in. You have to
+keep the folder somewhere though
+
+```bash
+./install.sh -u
+```
+to uninstall everything and put your old configs back in
+
+## About the other scripts
+They are located in .zsh/scripts. You can just open them up
+in a text editor and you'll see their story in there ;)
+
+## Contributing
+Feel free to give me advice on this, or even help me with
+it! :)
