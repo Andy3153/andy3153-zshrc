@@ -1,8 +1,10 @@
-#!/bin/zsh
-
+#
 # .zshrc by Andy3153
+#
 # This is my .zshrc that I use everyday
-# I kept any old modification that I made too, but they are commented away if they don't help with anything
+# I kept any old modification that I made too, but they are
+# commented away if they don't help with anything
+#
 
 
  # History file
@@ -42,28 +44,34 @@
  # Make qt5ct work
    QT_QPA_PLATFORMTHEME=qt5ct
 
+ # Set some variables
+   # For the folders
+     zshrc_programs=$HOME/.zsh/programs/
+     zshrc_plugins=$HOME/.zsh/plugins/
+     zshrc_scripts=$HOME/.zsh/scripts/
+
 
  # Startup script
    # brc.sh
-     #$HOME/.zsh/scripts/brc.sh | $HOME/.zsh/programs/lolcat/bin/lolcat
-   
+     #$zshrc_scripts/brc.sh | $lolcat
+
    # Neofetch
-     #$HOME/.zsh/programs/neofetch/neofetch
+     #$neofetch
 
    # ddate
      # With lolcat
-       #ddate | $HOME/.zsh/programs/lolcat/bin/lolcat
+       #$zshrc_programs/ddate/ddate | $zshrc_programs/lolcat/bin/lolcat
      # ddate.sh
-       $HOME/.zsh/scripts/ddate.sh
-     
+       $zshrc_scripts/ddate.sh
+
 
  # Aliases
-   # "clear" aliases 
-     #alias clear="clear && $HOME/.zsh/scripts/brc.sh | $HOME/.zsh/programs/lolcat/bin/lolcat"
-     #alias clear="clear && $HOME/.zsh/programs/neofetch/neofetch"
-     #alias clear="clear && $HOME/.zsh/scripts/brc.sh"
-     #alias clear="clear && $HOME/.zsh/programs/ddate/ddate | $HOME/.zsh/programs/lolcat/bin/lolcat && echo"
-     alias clear="clear && $HOME/.zsh/scripts/ddate.sh"
+   # "clear" aliases
+     #alias clear="clear && $zshrc_scripts/brc.sh | $zshrc_programs/lolcat/bin/lolcat"
+     #alias clear="clear && $zshrc_programs/neofetch/neofetch"
+     #alias clear="clear && $zshrc_scripts/brc.sh"
+     #alias clear="clear && $zshrc_programs/ddate/ddate | $zshrc_programs/lolcat/bin/lolcat && echo"
+     alias clear="clear && $zshrc_scripts/ddate.sh"
 
    # Shortcut aliases
      alias vi="vim"
@@ -75,13 +83,16 @@
      alias y="yay"
      alias c="clear"
      alias v="vim"
+     alias g="git"
+     alias S="sudo systemctl"
      alias cd..="cd .."
-     alias thispc="echo && $HOME/.zsh/programs/neofetch/neofetch | $HOME/.zsh/programs/lolcat/bin/lolcat -t"
+     alias thispc="echo && $zshrc_programs/neofetch/neofetch | $zshrc_programs/lolcat/bin/lolcat -t"
      alias reloadzsh="source $HOME/.zshrc"
+     alias rldzsh="source $HOME/.zshrc"
 
 
  # For making the 'fuck' command work
-   eval $($HOME/.zsh/programs/thefuck/thefuck-bin --alias)
+   eval $($zshrc_programs/thefuck/thefuck-bin --alias)
      
  
  # Colored terminal programs
@@ -114,15 +125,15 @@
    RPS1="$PR_LIGHT_YELLOW(%D{%d.%m.%y, %H:%M:%S})$PR_NO_COLOR"
 
 
- # Sourcing things
+ # Sourcing plugins
    # Syntax highlighting
-     source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+     source $zshrc_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
    # Autosuggestions
-     source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+     source $zshrc_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
    # Agnoster's theme
-     source $HOME/.zsh/plugins/agnoster-zsh-theme/agnoster.zsh-theme
+     source $zshrc_plugins/agnoster-zsh-theme/agnoster.zsh-theme
      setopt prompt_subst # you also need this to make it work
 
 # #############################
