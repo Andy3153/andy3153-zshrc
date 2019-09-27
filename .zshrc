@@ -136,4 +136,5 @@
      source $zshrc_plugins/agnoster-zsh-theme/agnoster.zsh-theme
      setopt prompt_subst # you also need this to make it work
 
-# #############################
+
+# End of file
