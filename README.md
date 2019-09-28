@@ -15,18 +15,21 @@ I made.
 
 [![asciicast](https://asciinema.org/a/270233.svg)](https://asciinema.org/a/270233)
 
-## Programs/plugins included:
+## Programs included:
+
+  1. [ddate](https://github.com/bo0ts/ddate)
+  2. [lolcat](https://github.com/busyloop/lolcat)
+  3. [neofetch](https://github.com/dylanaraps/neofetch)
+  4. [thefuck](https://github.com/nvbn/thefuck)
+
+## Plugins included:
 
   1. [agnoster-zsh-theme](https://github.com/agnoster/agnoster-zsh-theme)
   2. [calc.plugin.zsh](https://github.com/arzzen/calc.plugin.zsh)
-  3. [ddate](https://github.com/bo0ts/ddate)
-  4. [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)
-  5. [lolcat](https://github.com/busyloop/lolcat)
-  6. [neofetch](https://github.com/dylanaraps/neofetch)
-  7. [thefuck](https://github.com/nvbn/thefuck)
-  8. [zsh-you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use)
-  9. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-
+  3. [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)
+  4. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+  5. [zsh-notify](https://github.com/marzocchi/zsh-notify)
+  6. [zsh-you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use)
 
 ## Installation
 
