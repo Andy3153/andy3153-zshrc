@@ -8,7 +8,7 @@
 
 
  # History file
-   HISTFILE=$HOME/.zsh-history
+   HISTFILE=$HOME/.zsh/zsh-history
    HISTSIZE=100000
    SAVEHIST=1000
 
@@ -90,6 +90,11 @@
      alias reloadzsh="source $HOME/.zshrc"
      alias rldzsh="source $HOME/.zshrc"
 
+     # This one helps when you get a command off of the
+     # internet which starts with a dollar sign. It just
+     # runs it normally.
+       alias \$=''
+
 
  # For making the 'fuck' command work
    eval $($zshrc_programs/thefuck/thefuck-bin --alias)
@@ -126,11 +131,20 @@
 
 
  # Sourcing plugins
-   # Syntax highlighting
-     source $zshrc_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
    # Autosuggestions
      source $zshrc_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+   # Syntax highlighting
+     source $zshrc_plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+   # Simple calculator
+     source $zshrc_plugins/calc.plugin.zsh/calc.plugin.zsh
+
+   # You should use alias ...
+     source $zshrc_plugins/zsh-you-should-use/you-should-use.plugin.zsh
+
+   # Notifications
+     source $zshrc_plugins/zsh-notify/notify.plugin.zsh
 
    # Agnoster's theme
      source $zshrc_plugins/agnoster-zsh-theme/agnoster.zsh-theme

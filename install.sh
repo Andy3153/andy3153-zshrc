@@ -45,7 +45,7 @@
       '--version' | '-v' )
         echo
         echo " install.sh by Andy3153"
-        echo "   version 1.0"
+        echo "   version 1.1"
         echo
         echo " Github repository: https://github.com/Andy3153/andy3153-zshrc"
         echo
@@ -77,8 +77,15 @@
 
       # Then, copying all of the configs in their place
         echo " Copying the new configs..."
-        yes | cp -rf ./.zsh $HOME/
-        yes | cp -rf ./.zshrc $HOME/
+
+        mkdir $HOME/.zsh
+
+        yes | cp -rf ./plugins $HOME/.zsh/
+        yes | cp -rf ./programs $HOME/.zsh/
+        yes | cp -rf ./scripts $HOME/.zsh/
+        yes | cp -rf ./zshrc $HOME/
+        mv $HOME/zshrc $HOME/.zshrc
+
         sleep 2s
 
       # A finishing message
@@ -125,8 +132,15 @@
 
       # Then, linking all of the configs in their place
         echo " Linking the new configs..."
-        ln -s $(pwd)/.zsh $HOME/
-        ln -s $(pwd)/.zshrc $HOME/
+
+        mkdir $HOME/.zsh
+
+        ln -s $(pwd)/plugins/ $HOME/.zsh/
+        ln -s $(pwd)/programs/ $HOME/.zsh/
+        ln -s $(pwd)/scripts/ $HOME/.zsh/
+        ln -s $(pwd)/zshrc $HOME/
+        mv $HOME/zshrc $HOME/.zshrc
+
         sleep 2s
 
       # A finishing message
@@ -186,4 +200,9 @@
   done
 
 # If script is run with no arguments, it says this
-  echo "No option. Use -h or --help to see the options"
+  echo " No option. Use -h or --help to see the options"
+  echo
+  echo " Also, please note it's recommended to run the script from"
+  echo " the folder it is in."
+
+# End of file

@@ -2,9 +2,748 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eec6be1a-19f8-4ec6-91e6-0a9f5755be53" name="Default Changelist" comment="Added new install script">
-      <change beforePath="$PROJECT_DIR$/.zsh/scripts/brc.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.zsh/scripts/brc.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.zsh/scripts/ddate.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.zsh/scripts/ddate.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.zshrc" beforeDir="false" afterPath="$PROJECT_DIR$/.zshrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/agnoster-zsh-theme/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/agnoster-zsh-theme/agnoster.zsh-theme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/agnoster-zsh-theme/agnoster_customization.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/agnoster-zsh-theme/characters.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/agnoster-zsh-theme/screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/.circleci/config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/.github/ISSUE_TEMPLATE/bug-report.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/.github/ISSUE_TEMPLATE/feature_request.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/.rspec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/.rubocop.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/.ruby-version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/DESCRIPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/INSTALL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/URL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/ZSH_VERSIONS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/install_test_zsh.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/async_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/integrations/auto_cd_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/integrations/bracketed_paste_magic_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/integrations/client_zpty_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/integrations/glob_subst_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/integrations/rebound_bracket_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/integrations/vi_mode_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/integrations/wrapped_widget_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/integrations/zle_input_stack_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/kill_ring_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/line_init_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/multi_line_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/options/buffer_max_size_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/options/highlight_style_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/options/original_widget_prefix_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/options/strategy_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/options/use_async_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/options/widget_lists_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/spec_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/strategies/completion_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/strategies/history_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/strategies/match_prev_cmd_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/strategies/special_characters_helper.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/terminal_session.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/widgets/disable_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/widgets/enable_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/widgets/fetch_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/widgets/toggle_spec.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/src/async.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/src/bind.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/src/config.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/src/fetch.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/src/highlight.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/src/start.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/src/strategies/completion.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/src/strategies/history.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/src/strategies/match_prev_cmd.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/src/util.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/src/widgets.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/.revision-hash" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/.version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/COPYING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/HACKING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/INSTALL.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/changelog.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/docs/highlighters.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/docs/highlighters/brackets.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/docs/highlighters/cursor.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/docs/highlighters/line.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/docs/highlighters/main.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/docs/highlighters/pattern.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/docs/highlighters/regexp.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/docs/highlighters/root.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/brackets-highlighter.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/test-data/cursor-matchingbracket-line-finish.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/test-data/cursor-matchingbracket.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/test-data/empty-styles.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/test-data/loop-styles.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/test-data/mismatch-patentheses.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/test-data/near-quotes.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/test-data/nested-parentheses.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/test-data/only-error.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/test-data/quoted-patentheses.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/test-data/simple-parentheses.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/test-data/unclosed-patentheses.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/brackets/test-data/unclosed-patentheses2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/cursor/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/cursor/cursor-highlighter.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/line/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/line/line-highlighter.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/main-highlighter.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-assignment1.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-comment1.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-comment2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-complex.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-empty.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-loop.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-nested-precommand.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-nested.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-precommand-option-argument1.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-precommand-option-argument2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-precommand-option-argument3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-precommand-option-argument4.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-quoted.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-redirect.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-self.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-to-dir.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-unknown-token1.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias-unknown-token2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/alias.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/always1.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/always2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/always3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/anonymous-function.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/arg0-colon.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/arithmetic-evaluation.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/assign-append.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/assign-argv.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/assign-array.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/assign-array2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/assign-array3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/assign-not-array.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/assign-not-array2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/assign-semicolon.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/assign-subshell.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/assign.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/back-quoted-argument.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/back-quoted-open.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/backslash-continuation.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/backslash-space.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/bang-assign-array.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/bang-assign-scalar.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/bang-pipeline.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/braces1.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/braces2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-matching1.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-matching2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch1.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch10-if-negative.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch4.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch5.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch6.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch7.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch8-if-positive.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch8.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch9-if-positive.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-premature-termination.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/command-substitution-adjacent.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/command-substitution-in-assignment.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/command-substitution-unclosed.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/commandseparator.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/comment-followed.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/comment-leading.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/comment-off.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/comments.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/commmand-parameter.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/control-flow.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/control-flow2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/control-flow3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/cthulhu.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/dirs_blacklist.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/dollar-dollar.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/dollar-noise.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/dollar-paren.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/dollar-quoted.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/dollar-quoted2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/dollar-quoted3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/double-hyphen-option.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/double-quoted.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/double-quoted2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/double-quoted3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/double-quoted4.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/empty-command-newline.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/empty-command.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/empty-command2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/empty-line.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/escaped-single-quote.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/exec-redirection1.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/function-altsyntax.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/function-named1.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/function-named2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/function.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/glob.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/globs-with-quoting.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/hashed-command.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/history-double-quoted-escaped.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/history-double-quoted-no.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/history-double-quoted-unescaped.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/history-double-quoted-yes.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/history-expansion.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/history-expansion2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/inheritance.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/jobsubst-isnt-glob.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/jobsubst-isnt-glob2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/loop-newline.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/multiline-array-assignment1.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/multiline-string.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/multiline-string2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/multiple-quotes.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/multiple-redirections.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/noglob-alias.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/noglob-always.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/noglob1.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/noglob2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/noglob3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/noglob4.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/number_range-glob.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/off-by-one.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/option-dollar-quote-isnt-filename.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/option-path_dirs.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/option-with-quotes.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/order-path-after-dollar.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/order-path-before-globbing.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/parameter-star.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path-broken-symlink.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path-dollared-word.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path-dollared-word2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path-dollared-word3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path-dollared-word4.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path-separators.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path-separators2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path-space.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path-tilde-home.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path-tilde-home2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path-tilde-home3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path-tilde-named.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path_prefix.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path_prefix2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/path_prefix3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/precommand-type1.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/precommand-type2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/precommand-type3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/precommand-unknown-option.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/precommand.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/precommand2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/precommand3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/precommand4.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/prefix-redirection.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/process-substitution-redirection-isnt-globbing.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/process-substitution.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/process-substitution2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/quoted-command-substitution-empty.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/rc-quotes.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/redirection-comment.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/redirection-in-cmdsubst.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/redirection.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/redirection2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/redirection3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/reserved-word.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/simple-command.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/simple-redirection.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/subshell.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/sudo-command.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/sudo-comment.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/sudo-redirection.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/sudo-redirection2.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/sudo-redirection3.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/tilde-command-word.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/unbackslash.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/unknown-command.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/vanilla-newline.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/main/test-data/vi-linewise-mode.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/pattern/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/pattern/pattern-highlighter.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/pattern/test-data/rm-rf.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/regexp/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/regexp/regexp-highlighter.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/regexp/test-data/complex.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/regexp/test-data/subexpression.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/regexp/test-data/word-boundary.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/root/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/highlighters/root/root-highlighter.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/after1-smaller.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/after1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/after2-smaller.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/after2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/after3-smaller.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/after3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/before1-smaller.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/before1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/before2-smaller.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/before2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/before3-smaller.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/before3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/preview-smaller.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/images/preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/release.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/tests/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/tests/generate.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/tests/tap-colorizer.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/tests/tap-filter" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/tests/test-highlighting.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/tests/test-perfs.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/ddate/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/ddate/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/ddate/README.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/ddate/ddate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/ddate/ddate.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/ddate/ddate.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/Rakefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/ass/nom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/ass/screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/bin/lolcat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/lib/lolcat.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/lib/lolcat/cat.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/lib/lolcat/lol.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/lib/lolcat/version.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/lolcat.gemspec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/lolcat/man/lolcat.6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/neofetch/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/neofetch/.github/PULL_REQUEST_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/neofetch/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/neofetch/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/neofetch/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/neofetch/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/neofetch/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/neofetch/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/neofetch/neofetch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/neofetch/neofetch.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/CONTRIBUTING.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/MANIFEST.in" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/appveyor.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/example.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/example_instant_mode.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/fastentrypoints.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/install.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/release.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/setup.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/snapcraft.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/conftest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/entrypoints/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/entrypoints/test_alias.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/entrypoints/test_fix_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/entrypoints/test_not_configured.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/functional/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/functional/plots.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/functional/test_bash.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/functional/test_fish.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/functional/test_tcsh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/functional/test_zsh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/output_readers/test_rerun.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_adb_unknown_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_ag_literal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_apt_get.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_apt_get_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_apt_invalid_operation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_apt_list_upgradable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_apt_upgrade.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_aws_cli.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_az_cli.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_brew_cask_dependency.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_brew_install.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_brew_link.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_brew_reinstall.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_brew_uninstall.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_brew_unknown_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_brew_update_formula.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_cargo_no_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_cat_dir.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_cd_correction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_cd_mkdir.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_cd_parent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_chmod_x.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_composer_not_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_cp_omitting_directory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_dirty_untar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_dirty_unzip.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_django_south_ghost.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_django_south_merge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_dnf_no_such_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_docker_image_being_used_by_container.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_docker_login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_docker_not_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_dry.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_fab_command_not_found.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_fix_alt_space.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_fix_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_gem_unknown_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_add.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_add_force.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_bisect_usage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_branch_delete.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_branch_exists.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_branch_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_checkout.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_commit_amend.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_commit_reset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_diff_no_index.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_diff_staged.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_fix_stash.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_flag_after_filename.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_help_aliased.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_merge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_merge_unrelated.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_not_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_pull.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_pull_clone.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_pull_uncommitted_changes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_pull_unstaged_changes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_push.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_push_different_branch_names.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_push_force.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_push_pull.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_push_without_commits.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_rebase_merge_dir.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_rebase_no_changes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_remote_delete.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_remote_seturl_add.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_rm_local_modifications.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_rm_recursive.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_rm_staged.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_stash.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_stash_pop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_tag_force.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_git_two_dashes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_go_run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_go_unknown_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_gradle_not_task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_gradle_wrapper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_grep_arguments_order.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_grep_recursive.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_grunt_task_not_found.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_gulp_not_task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_has_exists_script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_heroku_multiple_apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_heroku_not_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_history.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_hostscli.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_ifconfig_device_not_found.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_java.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_javac.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_lein_not_task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_ln_no_hard_link.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_ln_s_order.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_long_form_help.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_ls_all.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_ls_lah.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_man.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_man_no_space.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_mercurial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_missing_space_before_subcommand.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_mkdir_p.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_mvn_no_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_mvn_unknown_lifecycle_phase.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_nixos_cmd_not_found.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_no_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_no_such_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_npm_missing_script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_npm_run_script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_npm_wrong_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_open.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_pacman.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_pacman_not_found.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_path_from_history.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_php_s.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_pip_install.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_pip_unknown_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_port_already_in_use.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_prove_recursively.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_pyenv_no_such_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_python_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_python_execute.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_quotation_marks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_react_native_command_unrecognized.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_remove_trailing_cedilla.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_rm_dir.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_rm_root.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_scm_correction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_sed_unterminated_s.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_sl_ls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_ssh_known_host.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_sudo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_sudo_command_from_user_path.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_switch_lang.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_systemctl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_terraform_init.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_tmux.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_touch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_tsuru_login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_tsuru_not_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_unknown_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_unsudo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_vagrant_up.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_whois.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_workon_doesnt_exists.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_yarn_alias.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_yarn_command_not_found.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_yarn_command_replaced.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/rules/test_yarn_help.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/shells/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/shells/conftest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/shells/test_bash.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/shells/test_fish.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/shells/test_generic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/shells/test_powershell.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/shells/test_tcsh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/shells/test_zsh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/specific/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/specific/test_git.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/specific/test_npm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/specific/test_sudo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/test_argument_parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/test_conf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/test_corrector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/test_logs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/test_readme.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/test_types.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/test_ui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/test_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tests/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck-bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/argument_parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/conf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/const.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/corrector.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/entrypoints/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/entrypoints/alias.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/entrypoints/fix_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/entrypoints/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/entrypoints/not_configured.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/entrypoints/shell_logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/exceptions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/logs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/output_readers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/output_readers/read_log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/output_readers/rerun.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/output_readers/shell_logger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/adb_unknown_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/ag_literal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/apt_get.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/apt_get_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/apt_invalid_operation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/apt_list_upgradable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/apt_upgrade.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/aws_cli.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/az_cli.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/brew_cask_dependency.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/brew_install.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/brew_link.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/brew_reinstall.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/brew_uninstall.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/brew_unknown_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/brew_update_formula.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/cargo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/cargo_no_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/cat_dir.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/cd_correction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/cd_mkdir.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/cd_parent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/chmod_x.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/composer_not_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/cp_omitting_directory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/cpp11.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/dirty_untar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/dirty_unzip.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/django_south_ghost.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/django_south_merge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/dnf_no_such_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/docker_image_being_used_by_container.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/docker_login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/docker_not_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/dry.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/fab_command_not_found.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/fix_alt_space.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/fix_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/gem_unknown_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_add.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_add_force.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_bisect_usage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_branch_delete.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_branch_exists.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_branch_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_checkout.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_commit_amend.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_commit_reset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_diff_no_index.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_diff_staged.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_fix_stash.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_flag_after_filename.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_help_aliased.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_merge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_merge_unrelated.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_not_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_pull.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_pull_clone.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_pull_uncommitted_changes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_push.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_push_different_branch_names.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_push_force.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_push_pull.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_push_without_commits.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_rebase_merge_dir.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_rebase_no_changes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_remote_delete.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_remote_seturl_add.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_rm_local_modifications.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_rm_recursive.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_rm_staged.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_stash.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_stash_pop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_tag_force.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/git_two_dashes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/go_run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/go_unknown_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/gradle_no_task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/gradle_wrapper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/grep_arguments_order.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/grep_recursive.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/grunt_task_not_found.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/gulp_not_task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/has_exists_script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/heroku_multiple_apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/heroku_not_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/history.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/hostscli.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/ifconfig_device_not_found.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/java.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/javac.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/lein_not_task.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/ln_no_hard_link.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/ln_s_order.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/long_form_help.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/ls_all.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/ls_lah.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/man.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/man_no_space.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/mercurial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/missing_space_before_subcommand.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/mkdir_p.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/mvn_no_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/mvn_unknown_lifecycle_phase.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/nixos_cmd_not_found.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/no_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/no_such_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/npm_missing_script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/npm_run_script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/npm_wrong_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/open.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/pacman.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/pacman_not_found.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/path_from_history.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/php_s.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/pip_install.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/pip_unknown_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/port_already_in_use.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/prove_recursively.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/pyenv_no_such_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/python_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/python_execute.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/quotation_marks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/react_native_command_unrecognized.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/remove_trailing_cedilla.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/rm_dir.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/rm_root.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/scm_correction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/sed_unterminated_s.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/sl_ls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/ssh_known_hosts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/sudo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/sudo_command_from_user_path.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/switch_lang.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/systemctl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/terraform_init.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/test.py.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/tmux.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/touch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/tsuru_login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/tsuru_not_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/unknown_command.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/unsudo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/vagrant_up.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/whois.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/workon_doesnt_exists.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/yarn_alias.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/yarn_command_not_found.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/yarn_command_replaced.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/rules/yarn_help.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/shells/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/shells/bash.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/shells/fish.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/shells/generic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/shells/powershell.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/shells/tcsh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/shells/zsh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/specific/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/specific/apt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/specific/archlinux.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/specific/brew.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/specific/dnf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/specific/git.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/specific/nix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/specific/npm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/specific/sudo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/system/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/system/unix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/system/win32.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/types.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/ui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/thefuck/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/programs/thefuck/tox.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/scripts/brc.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zsh/scripts/ddate.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zshrc" beforeDir="false" afterPath="$PROJECT_DIR$/zshrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,11 +759,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="357">
+              <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -32,35 +771,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/install.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.zshrc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="139" column="13" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
+            <state relative-caret-position="430">
+              <caret line="207" column="13" selection-start-line="207" selection-start-column="13" selection-end-line="207" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.zsh/scripts/brc.sh">
+        <entry file="file://$PROJECT_DIR$/zshrc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.zsh/scripts/ddate.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="-2028">
+              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -87,11 +808,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/installv2.sh" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/install.sh" />
         <option value="$PROJECT_DIR$/.zsh/scripts/ddate.sh" />
         <option value="$PROJECT_DIR$/.zsh/scripts/brc.sh" />
+        <option value="$PROJECT_DIR$/.zprofile" />
         <option value="$PROJECT_DIR$/.zshrc" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/install.sh" />
+        <option value="$PROJECT_DIR$/zshrc" />
       </list>
     </option>
   </component>
@@ -106,7 +829,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -115,21 +837,11 @@
               <item name="andy3153-zshrc" type="b2602c69:ProjectViewProjectNode" />
               <item name="andy3153-zshrc" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="andy3153-zshrc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="andy3153-zshrc" type="462c0819:PsiDirectoryNode" />
-              <item name=".zsh" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="andy3153-zshrc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="andy3153-zshrc" type="462c0819:PsiDirectoryNode" />
-              <item name=".zsh" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -138,7 +850,12 @@
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Bash" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -184,21 +901,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="32" y="55" width="1302" height="680" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49839744" visible="true" weight="0.128426" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49839744" visible="true" weight="0.128426" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
       <window_info id="Resources Explorer" order="5" weight="0.19577134" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Favorites" order="7" sideWeight="0.5016026" side_tool="true" weight="0.16603199" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.19070514" />
-      <window_info anchor="bottom" id="TODO" order="1" weight="0.32852563" />
-      <window_info anchor="bottom" id="Terminal" order="2" weight="0.24839744" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.24775584" />
+      <window_info anchor="bottom" id="Version Control" order="1" weight="0.19070514" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.32852563" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32854578" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -209,50 +925,54 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added new install script" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/integrations/zle_input_stack_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.zsh/plugins/zsh-autosuggestions/spec/integrations/zle_input_stack_spec.rb" />
     <entry file="file://$PROJECT_DIR$/installv2.sh" />
     <entry file="file://$PROJECT_DIR$/andy3153-zshrc.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/sdf.sh" />
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/.zsh/scripts/ddate.sh" />
+    <entry file="file://$PROJECT_DIR$/.zsh/scripts/brc.sh" />
+    <entry file="file://$PROJECT_DIR$/scripts/brc.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ddate.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="-153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.zprofile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/install.sh.bak">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/install.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        <state relative-caret-position="430">
+          <caret line="207" column="13" selection-start-line="207" selection-start-column="13" selection-end-line="207" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.zsh/scripts/ddate.sh">
+    <entry file="file://$PROJECT_DIR$/zshrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="-2028">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.zsh/scripts/brc.sh">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.zshrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="139" column="13" selection-start-line="139" selection-start-column="13" selection-end-line="139" selection-end-column="13" />
+        <state relative-caret-position="357">
+          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
         </state>
       </provider>
     </entry>

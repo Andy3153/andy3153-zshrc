@@ -18,12 +18,14 @@ I made.
 ## Programs/plugins included:
 
   1. [agnoster-zsh-theme](https://github.com/agnoster/agnoster-zsh-theme)
-  2. [ddate](https://github.com/bo0ts/ddate)
-  3. [lolcat](https://github.com/busyloop/lolcat)
-  4. [neofetch](https://github.com/dylanaraps/neofetch)
-  5. [thefuck](https://github.com/nvbn/thefuck)
-  6. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-  7. [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+  2. [calc.plugin.zsh](https://github.com/arzzen/calc.plugin.zsh)
+  3. [ddate](https://github.com/bo0ts/ddate)
+  4. [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)
+  5. [lolcat](https://github.com/busyloop/lolcat)
+  6. [neofetch](https://github.com/dylanaraps/neofetch)
+  7. [thefuck](https://github.com/nvbn/thefuck)
+  8. [zsh-you-should-use](https://github.com/MichaelAquilina/zsh-you-should-use)
+  9. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
 
 ## Installation
