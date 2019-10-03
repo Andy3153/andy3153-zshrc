@@ -1,7 +1,10 @@
 #!/bin/bash
-
-#
-# install.sh by Andy3153
+#  _           _        _ _       _     
+# (_)_ __  ___| |_ __ _| | |  ___| |__  
+# | | '_ \/ __| __/ _` | | | / __| '_ \ 
+# | | | | \__ \ || (_| | | |_\__ \ | | |
+# |_|_| |_|___/\__\__,_|_|_(_)___/_| |_|
+#                            by Andy3153
 #
 # This script installs the configs in two ways, and it can
 # also uninstall everything and restore the old configs.

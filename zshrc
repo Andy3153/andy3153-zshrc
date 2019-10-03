@@ -1,9 +1,14 @@
-#
-# .zshrc by Andy3153
-#
+#          _              
+#  _______| |__  _ __ ___ 
+# |_  / __| '_ \| '__/ __|
+#  / /\__ \ | | | | | (__ 
+# /___|___/_| |_|_|  \___|
+#              by Andy3153
+#                       
 # This is my .zshrc that I use everyday
 # I kept any old modification that I made too, but they are
 # commented away if they don't help with anything
+#
 #
 
 
