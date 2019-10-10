@@ -79,25 +79,35 @@
      alias clear="clear && $zshrc_scripts/ddate.sh"
 
    # Shortcut aliases
-     alias vi="vim"
-     #alias a="sudo apt"
-     alias p="sudo pacman"
-     alias lss="ls -alh"
-     alias s="sudo"
-     alias y="yay"
-     alias c="clear"
-     alias v="vim"
-     alias g="git"
-     alias gs="git status"
-     alias ga="git add"
-     alias gc="git commit"
-     alias gp="git pull"
-     alias gP="git push"
-     alias S="sudo systemctl"
-     alias cd..="cd .."
-     alias thispc="echo && $zshrc_programs/neofetch/neofetch | $zshrc_programs/lolcat/bin/lolcat -t"
-     alias reloadzsh="source $HOME/.zshrc"
-     alias rldzsh="source $HOME/.zshrc"
+     # Package managers
+       #alias a="sudo apt"
+       alias p="sudo pacman"
+       alias y="yay"
+
+     # Common commands
+       alias lss="ls -alh"
+       alias s="sudo"
+       alias c="clear"
+       alias cd..="cd .."
+       alias v="vim"
+       alias vi="vim"
+       alias S="sudo systemctl"
+
+     # Git
+       alias g="git"
+       alias gs="git status"
+       alias gc="git clone"
+       alias gp="git pull"
+       alias gA="git add"
+       alias gC="git commit"
+       alias gP="git push"
+
+     # idk this one is just neat
+       alias thispc="echo && $zshrc_programs/neofetch/neofetch | $zshrc_programs/lolcat/bin/lolcat -t"
+
+     # Reloads zshrc
+       alias reloadzsh="source $HOME/.zshrc"
+       alias rldzsh="source $HOME/.zshrc"
 
      # This one helps when you get a command off of the
      # internet which starts with a dollar sign. It just
