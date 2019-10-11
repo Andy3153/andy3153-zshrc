@@ -89,8 +89,10 @@
        alias s="sudo"
        alias c="clear"
        alias cd..="cd .."
-       alias v="vim"
        alias vi="vim"
+       alias vim="gvim -v"
+       alias v="vim"
+       alias f="fuck"
        alias S="sudo systemctl"
 
      # Git
@@ -102,6 +104,10 @@
        alias gC="git commit"
        alias gP="git push"
 
+     # Editing configs
+       alias cfz="gvim -v $HOME/.zshrc"
+       alias cfv="gvim -v $HOME/.vim/vimrc"
+       
      # idk this one is just neat
        alias thispc="echo && $zshrc_programs/neofetch/neofetch | $zshrc_programs/lolcat/bin/lolcat -t"
 
