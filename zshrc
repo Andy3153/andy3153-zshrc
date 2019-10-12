@@ -44,6 +44,9 @@
 
  # Editor
    export EDITOR=vim
+   export BROWSER=firefox
+   export FILE_MANAGER=nautilus
+   export TERMINAL=xfce4-terminal
 
 
  # Make qt5ct work
@@ -151,8 +154,9 @@
    DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 
- # Add date to the end of the line
-   RPS1="$PR_LIGHT_YELLOW(%D{%d.%m.%y, %H:%M:%S})$PR_NO_COLOR"
+ # Add date to the end of the line (the old way I did it,
+ # without the segment from Agnoster's theme
+   #RPS1="$PR_LIGHT_YELLOW(%D{%d.%m.%y, %H:%M:%S})$PR_NO_COLOR"
 
 
  # Sourcing plugins
@@ -174,6 +178,35 @@
    # Agnoster's theme
      source $zshrc_plugins/agnoster-zsh-theme/agnoster.zsh-theme
      setopt prompt_subst # you also need this to make it work
+     
+     # Addons to it
+      # Date and clock
+       prompt_time() {
+         # Makes it that dark gray, it's not black but whatever
+         echo -n "%{%F{black}%}"
+         # Inserts that character with the arrow
+         echo -n "\ue0b2"
+         # Sets the color for the background of the body of the arrow 
+         echo -n "%{%K{black}%}%{%F{white}%}"
+         # Empty space
+         echo -n " "
+         # Date, formatted as I have it in my panel
+         echo -n "$(date +"%d/%m/%y ~ %H:%M:%S")"
+         # Another emty space
+         echo -n ' '
+      }
+
+        # (I think) adds prompt_time to build_right_prompt,
+        # (again, I think, don't quote me on this) so you
+        # can add more segments to it and then just call
+        # build_right_prompt
+        build_right_prompt() {
+          prompt_time
+        }
+
+        # Activates the right prompt
+        RPROMPT='$(build_right_prompt)'
+
 
 
 # End of file
