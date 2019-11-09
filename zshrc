@@ -9,15 +9,27 @@
 # I kept any old modification that I made too, but they are
 # commented away if they don't help with anything
 #
-#
+
+ # Setopt
+   setopt AUTO_CD
+   setopt APPEND_HISTORY
+   setopt EXTENDED_HISTORY
 
 
  # History file
    HISTFILE=$HOME/.zsh/zsh-history
    HISTSIZE=100000
-   SAVEHIST=1000
+   SAVEHIST=100000
 
 
+ # Exporting things
+   export EDITOR=vim
+   export BROWSER=firefox
+   export FILE_MANAGER=nautilus
+   export TERMINAL=xfce4-terminal
+   export QT_QPA_PLATFORMTHEME=qt5ct
+   
+   
  # Bindkey mode
    # Emacs mode
      bindkey -e
@@ -41,16 +53,6 @@
  # Normal / Insert mode indicator enabler (uncomment this too if using Vi bindkey mode)
    #RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
 
-
- # Editor
-   export EDITOR=vim
-   export BROWSER=firefox
-   export FILE_MANAGER=nautilus
-   export TERMINAL=xfce4-terminal
-
-
- # Make qt5ct work
-   QT_QPA_PLATFORMTHEME=qt5ct
 
  # Set some variables
    # For the folders
@@ -104,12 +106,16 @@
        alias gc="git clone"
        alias gp="git pull"
        alias gA="git add"
+       alias gA.="git add ."
        alias gC="git commit"
        alias gP="git push"
 
      # Editing configs
        alias cfz="gvim -v $HOME/.zshrc"
        alias cfv="gvim -v $HOME/.vim/vimrc"
+  
+     # Scripts
+       alias manpdf="$zshrc_scripts/manpdf.sh"
        
      # idk this one is just neat
        alias thispc="echo && $zshrc_programs/neofetch/neofetch | $zshrc_programs/lolcat/bin/lolcat -t"
@@ -119,9 +125,10 @@
        alias rldzsh="source $HOME/.zshrc"
 
      # This one helps when you get a command off of the
-     # internet which starts with a dollar sign. It just
-     # runs it normally.
+     # internet which starts with the dollar sign or
+     # hashtag. It just runs the command normally
        alias \$=''
+       alias \#=''
 
 
  # For making the 'fuck' command work
@@ -192,6 +199,7 @@
          echo -n " "
          # Date, formatted as I have it in my panel
          echo -n "$(date +"%d/%m/%y ~ %H:%M:%S")"
+         #echo -n "02/06/03 ~ 23:59:59"
          # Another emty space
          echo -n ' '
       }
