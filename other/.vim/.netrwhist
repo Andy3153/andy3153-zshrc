@@ -1,5 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/andy3153/.themes/Sweet-Dark/gnome-shell'
+let g:netrw_dirhist_6='/home/andy3153/.themes/Sweet-Dark'
+let g:netrw_dirhist_5='/home/andy3153/.themes'
+let g:netrw_dirhist_4='/home/andy3153/.local/share/themes'
 let g:netrw_dirhist_3='/home/andy3153/.zsh'
 let g:netrw_dirhist_2='/home/andy3153/andy3153-zshrc/plugins/zsh-notify'
 let g:netrw_dirhist_1='/home/andy3153/sdf'
