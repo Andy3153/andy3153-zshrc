@@ -168,7 +168,11 @@
 
  # Sourcing plugins
    # Autosuggestions
-     source $zshrc_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+     # If we aren't in a tty, it loads it
+     # I made this because it doesn't look good at all in tty's
+       if [ ! $(tty | grep tty) ]
+       then source $zshrc_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+       fi
 
    # Syntax highlighting
      source $zshrc_plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
@@ -182,38 +186,53 @@
    # Notifications
      source $zshrc_plugins/zsh-notify/notify.plugin.zsh
 
-   # Agnoster's theme
-     source $zshrc_plugins/agnoster-zsh-theme/agnoster.zsh-theme
-     setopt prompt_subst # you also need this to make it work
+
+
+ # Setting a theme
+ #
+ # The theme setting goes this way:
+ # 1. If we are logged in as root, then it makes the prompt red.
+ # Else it is blue. 
+ # 2. If we are using a tty, then it uses a text-based theme.
+ # Else it uses Agnoster's theme.
+ # The two conditions can be applied at the same time
+ #
+ # This took 2 hours thx
+ # 
+
+   if [ $UID = 0 ]
+   then
+        if [ $(tty | grep tty) ]
+        then
+             export PS1="%B%F{red}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
+             export RPS1="%B%F{cyan}<%b%f "$(date +"%d/%m/%y ~ %H:%M:%S")""
      
-     # Addons to it
-      # Date and clock
-       prompt_time() {
-         # Makes it that dark gray, it's not black but whatever
-         echo -n "%{%F{black}%}"
-         # Inserts that character with the arrow
-         echo -n "\ue0b2"
-         # Sets the color for the background of the body of the arrow 
-         echo -n "%{%K{black}%}%{%F{white}%}"
-         # Empty space
-         echo -n " "
-         # Date, formatted as I have it in my panel
-         echo -n "$(date +"%d/%m/%y ~ %H:%M:%S")"
-         #echo -n "02/06/03 ~ 23:59:59"
-         # Another emty space
-         echo -n ' '
-      }
+        else
+             source $zshrc_plugins/agnoster-zsh-theme/agnoster-root.zsh-theme
+             setopt prompt_subst
+             prompt_time() {echo "%{%F{black}%}\ue0b2%{%K{black}%}%{%F{white}%} $(date +"%d/%m/%y ~ %H:%M:%S") "}
+             build_right_prompt() {prompt_time}
+             RPROMPT='$(build_right_prompt)' 
+        fi
 
-        # (I think) adds prompt_time to build_right_prompt,
-        # (again, I think, don't quote me on this) so you
-        # can add more segments to it and then just call
-        # build_right_prompt
-        build_right_prompt() {
-          prompt_time
-        }
+   else
+        if [ $(tty | grep tty) ]
+        then
+              export PS1="%B%F{blue}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
+              export RPS1="%B%F{cyan}<%b%f "$(date +"%d/%m/%y ~ %H:%M:%S")""
 
-        # Activates the right prompt
-        RPROMPT='$(build_right_prompt)'
+        else
+             source $zshrc_plugins/agnoster-zsh-theme/agnoster.zsh-theme
+             setopt prompt_subst
+     	     prompt_time() {echo "%{%F{black}%}\ue0b2%{%K{black}%}%{%F{white}%} $(date +"%d/%m/%y ~ %H:%M:%S") "}
+             build_right_prompt() {prompt_time}
+             RPROMPT='$(build_right_prompt)'
+        fi
+   fi
+
+  # Or, if you want a simple, text-only theme, uncomment these
+    #export PS1="%B%F{red}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
+    #export RPS1="%B%F{cyan}<%b%f "$(date +"%d/%m/%y ~ %H:%M:%S")""
 
 
 

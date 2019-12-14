@@ -15,6 +15,11 @@ I made.
 
 [![asciicast](https://asciinema.org/a/273987.svg)](https://asciinema.org/a/270233)
 
+## Themes
+It uses agnoster's theme if it isn't run in a tty, and it uses a theme made by me if it is.
+It also makes the prompt red if it is running as root, and it makes it blue if it is run as any other user.
+
+
 ## Programs included:
 
   1. [ddate](https://github.com/bo0ts/ddate)
