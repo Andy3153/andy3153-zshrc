@@ -233,16 +233,14 @@
 
   # Or, if you want a simple, text-only theme, uncomment these
 
-<<simpleprompt
-    if [ $UID = 0 ]
-    then
-         export PS1="%B%F{red}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
-         export RPS1="%B%F{cyan}<%b%f "$(date +"%d/%m/%y ~ %H:%M:%S")""
-    else 
-         export PS1="%B%F{red}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
-         export RPS1="%B%F{cyan}<%b%f "$(date +"%d/%m/%y ~ %H:%M:%S")""
-    fi
-simpleprompt
+#    if [ $UID = 0 ]
+#    then
+#         export PS1="%B%F{red}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
+#         export RPS1="%B%F{cyan}<%b%f "$(date +"%d/%m/%y ~ %H:%M:%S")""
+#    else 
+#         export PS1="%B%F{red}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
+#         export RPS1="%B%F{cyan}<%b%f "$(date +"%d/%m/%y ~ %H:%M:%S")""
+#    fi
 
 
 
