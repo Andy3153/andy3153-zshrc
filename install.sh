@@ -13,6 +13,49 @@
 # one single script, using command-line arguments
 #
 
+# Make some functions
+  # Make backup folder
+    function mkbackupdir ()
+    {
+      echo " Making a backup of your current configs... (it will be stored in $HOME/.zsh-backup)."
+      mkdir $HOME/.zsh-backup
+      
+      if [ -e $HOME/.zsh ]
+      then cp -r $HOME/.zsh $HOME/.zsh-backup/
+      fi
+
+      if [ -e $HOME/.zshrc ]
+      then cp -r $HOME/.zshrc $HOME/.zsh-backup/
+      fi
+    }
+
+  # Finishing message for install
+    function insendmsg ()
+    {
+      echo
+      echo " Done! Installation completed succesfully."
+      echo " To apply it, close the terminal and re-open it, or type:"
+      echo
+      echo "    source ~/.zshrc"
+      echo
+      echo " Enjoy your new zshrc! :)"
+      echo
+      exit
+    }
+  # Finishing message for uninstall
+    function uninsendmsg ()
+    {
+      echo
+      echo " Done! Uninstallation completed succesfully."
+      echo " To re-apply your old configs, close the terminal and"
+      echo " re-open it, or type:"
+      echo
+      echo "    source ~/.zshrc"
+      echo
+      echo " Goodbye!"
+      exit
+    }
+    
 # Adds the command-line arguments
   while [ $1 ]; do
     case $1 in
@@ -48,7 +91,7 @@
       '--version' | '-v' )
         echo
         echo " install.sh by Andy3153"
-        echo "   version 1.1"
+        echo "   version 2"
         echo
         echo " Github repository: https://github.com/Andy3153/andy3153-zshrc"
         echo
@@ -66,16 +109,7 @@
         sleep 2s
 
       # Making a backup, just for safety
-        echo " Making a backup of your current configs... (it will be stored in $HOME/.zsh-backup)."
-           mkdir $HOME/.zsh-backup
-
-        if [ -e $HOME/.zsh ]
-           then cp -r $HOME/.zsh $HOME/.zsh-backup/
-        fi
-
-        if [ -e $HOME/.zshrc ]
-           then cp -r $HOME/.zshrc $HOME/.zsh-backup/
-        fi
+        mkbackupdir
         sleep 3s
 
       # Then, copying all of the configs in their place
@@ -92,15 +126,7 @@
         sleep 2s
 
       # A finishing message
-        echo
-        echo " Done! Installation completed succesfully."
-        echo " To apply it, close the terminal and re-open it, or type:"
-        echo
-        echo "    source ~/.zshrc"
-        echo
-        echo " Enjoy your new zshrc! :)"
-        echo
-        exit
+        insendmsg
         ;; # End of argument "install"
 
     # ################################################
@@ -114,16 +140,7 @@
         sleep 2s
 
       # Making a backup, just for safety
-        echo " Making a backup of your current configs... (it will be stored in $HOME/.zsh-backup)."
-           mkdir $HOME/.zsh-backup
-
-        if [ -e $HOME/.zsh ]
-           then cp -r $HOME/.zsh $HOME/.zsh-backup/
-        fi
-
-        if [ -e $HOME/.zshrc ]
-           then cp -r $HOME/.zshrc $HOME/.zsh-backup/
-        fi
+        mkbackupdir
         sleep 3s
 
       # Deleting the already-existing configs
@@ -147,17 +164,7 @@
         sleep 2s
 
       # A finishing message
-        echo
-        echo " Done! Installation completed succesfully."
-        echo " To apply it, close the terminal and re-open it, or type:"
-        echo
-        echo "    source ~/.zshrc"
-        echo
-        echo " Please note that you have to keep the andy3153-zshrc"
-        echo " folder, since the current configs just link to those in it"
-        echo " Enjoy your new zshrc! :)"
-        echo
-        exit
+        insendmsg
         ;; # End of argument "install-with-symlinks"
 
     # ################################################
@@ -184,15 +191,7 @@
         sleep 3s
 
       # A finishing message
-        echo
-        echo " Done! Uninstallation completed succesfully."
-        echo " To re-apply your old configs, close the terminal and"
-        echo " re-open it, or type:"
-        echo
-        echo "    source ~/.zshrc"
-        echo
-        echo " Goodbye!"
-        exit
+        uninsendmsg
         ;; # End of argument "uninstall"
 
     # ################################################

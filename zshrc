@@ -14,7 +14,6 @@
    setopt AUTO_CD
    setopt APPEND_HISTORY
    setopt EXTENDED_HISTORY
-   setopt interactivecomments
 
 
  # History file
@@ -39,21 +38,25 @@
      # bindkey -v
 
 
- # Normal / Insert mode indicator (uncomment if using Vi bindkey mode)
-   
-   #function zle-line-init zle-keymap-select {
-       #VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-       #RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
-       #zle reset-prompt
-   #}
-   #zle -N zle-line-init
-   #zle -N zle-keymap-select
-   #export KEYTIMEOUT=1
-   
+ # Functions
+   # Vim indicators
+     function vim_prompt () 
+     {
+      # Normal / Insert mode indicator (uncomment if using Vi bindkey mode)
+        function zle-line-init zle-keymap-select
+        {
+         VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+         RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+         zle reset-prompt
+        }
 
- # Normal / Insert mode indicator enabler (uncomment this too if using Vi bindkey mode)
-   #RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
-
+        zle -N zle-line-init
+        zle -N zle-keymap-select
+        export KEYTIMEOUT=1
+   
+      # Normal / Insert mode indicator enabler
+        RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+     }
 
  # Set some variables
    # For the folders
@@ -77,6 +80,8 @@
 
 
  # Aliases
+function aliases ()
+{
    # "clear" aliases
      #alias clear="clear && $zshrc_scripts/brc.sh | $zshrc_programs/lolcat/bin/lolcat"
      #alias clear="clear && $zshrc_programs/neofetch/neofetch"
@@ -130,12 +135,13 @@
      # hashtag. It just runs the command normally
        alias \$=''
        alias \#=''
-
+}
 
  # For making the 'fuck' command work
    eval $($zshrc_programs/thefuck/thefuck-bin --alias)
      
- 
+function colored_progs ()
+{ 
  # Colored terminal programs
    # man
      man() {
@@ -156,6 +162,7 @@
 
    # grep
      alias grep="grep --color=auto"
+}
 
 
  # Stop dotnet telemetry
@@ -166,7 +173,8 @@
  # without the segment from Agnoster's theme
    #RPS1="$PR_LIGHT_YELLOW(%D{%d.%m.%y, %H:%M:%S})$PR_NO_COLOR"
 
-
+function source_plugins ()
+{
  # Sourcing plugins
    # Autosuggestions
      # If we aren't in a tty, it loads it
@@ -186,9 +194,10 @@
 
    # Notifications
      source $zshrc_plugins/zsh-notify/notify.plugin.zsh
+}
 
-
-
+function set_full_theme () 
+{
  # Setting a theme
  #
  # The theme setting goes this way:
@@ -230,18 +239,23 @@
              RPROMPT='$(build_right_prompt)'
         fi
    fi
-
+}
   # Or, if you want a simple, text-only theme, uncomment these
 
-#    if [ $UID = 0 ]
-#    then
-#         export PS1="%B%F{red}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
-#         export RPS1="%B%F{cyan}<%b%f "$(date +"%d/%m/%y ~ %H:%M:%S")""
-#    else 
-#         export PS1="%B%F{blue}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
-#         export RPS1="%B%F{cyan}<%b%f "$(date +"%d/%m/%y ~ %H:%M:%S")""
-#    fi
 
+function set_light_theme ()
+{
+    if [ $UID = 0 ]
+    then
+         export PS1="%B%F{red}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
+         export RPS1="%B%F{cyan}<%b%f "$(date +"%d/%m/%y ~ %H:%M:%S")""
+    else 
+         export PS1="%B%F{blue}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
+         export RPS1="%B%F{cyan}<%b%f "$(date +"%d/%m/%y ~ %H:%M:%S")""
+    fi
+}
 
 
 # End of file
+
+source funchzsh

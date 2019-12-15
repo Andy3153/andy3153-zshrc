@@ -12,7 +12,7 @@
 # in this repo.
 #
 
-# Defining vaiables
+# Defining variables
   # For the manpage name
     manname="manpage-$1-$(date +"%d.%m.%y~%H:%M:%S").pdf"
 

@@ -39,10 +39,11 @@
     echo
 
 
+#
 # Also note that if there is a celebration it will work
 # only partially, it will center the part where it says
 # "Today is...", but the "Celebrate..." part will show up
-# normally, witout being centered, and it will also take
+# normally, without being centered, and it will also take
 # the small character decoration I put with it
 # I'm a begginer at scripting, I don't know how to center
 # the "Celebrate..." part thing too. ._. I mean, I took the
