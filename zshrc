@@ -255,7 +255,9 @@ function set_light_theme ()
     fi
 }
 
-
+aliases
+colored_progs
+source_plugins
+set_light_theme
 # End of file
 
-source funchzsh

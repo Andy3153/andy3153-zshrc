@@ -31,5 +31,8 @@
 # Reading the manpage with a PDF reader
   evince "$manfolder/$manname" &
 
+# Exit this script
+  exit
+
 
 # End of file
