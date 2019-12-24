@@ -319,8 +319,8 @@
   zshrc_aliases
   zshrc_coloredprogs
   zshrc_sourcing
-  #zshrc_setfulltheme
-  zshrc_setlighttheme
+  zshrc_setfulltheme
+  #zshrc_setlighttheme
 
 
 
