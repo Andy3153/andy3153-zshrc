@@ -1,3 +1,4 @@
+#!/bin/zsh
 #          _              
 #  _______| |__  _ __ ___ 
 # |_  / __| '_ \| '__/ __|
@@ -9,8 +10,8 @@
 # I kept any old modification that I made too, but they are
 # commented away if they don't help with anything
 #
-# I made everything into simple functions that
-# you can enable, switch with others, or disable
+# I made everything into simple functions that you can
+# enable, switch with others, or disable
 #
 
 
@@ -321,6 +322,19 @@
   zshrc_sourcing
   #zshrc_setfulltheme
   zshrc_setlighttheme
+
+
+function gitprompt ()
+{
+if [ -d .git ]
+then
+     if [ $(git status --porcelain --ignore-submodules) ]
+     then echo -e "$color_yellow$(git rev-parse --abbrev-ref HEAD)"
+     else echo -e "$color_green$(git rev-parse --abbrev-ref HEAD)"
+     fi
+fi
+}
+#export PROMPT="git: $(gitprompt) "
 
 
 

@@ -1,3 +1,4 @@
+#!/bin/zsh
 #          _              
 #  _______| |__  _ __ ___ 
 # |_  / __| '_ \| '__/ __|
@@ -9,8 +10,8 @@
 # I kept any old modification that I made too, but they are
 # commented away if they don't help with anything
 #
-# I made everything into simple functions that
-# you can enable, switch with others, or disable
+# I made everything into simple functions that you can
+# enable, switch with others, or disable
 #
 
 
@@ -35,6 +36,9 @@
       zshrc_programs=$HOME/.zsh/programs/
       zshrc_plugins=$HOME/.zsh/plugins/
       zshrc_scripts=$HOME/.zsh/scripts/
+
+    # The prompt color, the value here will act as a fallback
+      zshrc_promptcolor=yellow
 
     # Opts out of dotnet telemetry
       DOTNET_CLI_TELEMETRY_OPTOUT=1
@@ -231,31 +235,17 @@
 #
 
  # Every theme separated into functions
-   # Agnoster's theme, normal user version
-     function zshrc_agnostertheme_user ()
+   # Agnoster's theme
+     function zshrc_agnostertheme ()
      {
-       source $zshrc_plugins/agnoster-zsh-theme/agnoster.zsh-theme
+       source $zshrc_plugins/agnoster-zsh-theme/agnoster-$zshrc_promptcolor.zsh-theme
        RPROMPT='$(echo "%{%F{black}%}\ue0b2%{%K{black}%}%{%F{white}%} %D{%d/%m/%y ~ %T} ")'
      }
-    
-   # Agnoster's theme, root user version
-     function zshrc_agnostertheme_root ()
-     {
-       source $zshrc_plugins/agnoster-zsh-theme/agnoster-root.zsh-theme
-       RPROMPT='$(echo "%{%F{black}%}\ue0b2%{%K{black}%}%{%F{white}%} %D{%d/%m/%y ~ %T}) ")'
-     }
 
-   # Lightweight theme, normal user version
-     function zshrc_lighttheme_user ()
+   # Lightweight theme
+     function zshrc_lighttheme ()
      {
-       export PS1="%B%F{blue}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
-       export RPS1="%B%F{cyan}<%b%f %D{%d/%m/%y ~ %T}"
-     }
-    
-   # Lightweight theme, root user version
-     function zshrc_lighttheme_root ()
-     {
-       export PS1="%B%F{red}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
+       export PS1="%B%F{$zshrc_promptcolor}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
        export RPS1="%B%F{cyan}<%b%f %D{%d/%m/%y ~ %T}"
      }
     
@@ -276,16 +266,13 @@
      function zshrc_setfulltheme () 
      {
        if [ $UID = 0 ]
-       then
-            if [ $(tty | grep tty) ]
-            then zshrc_lighttheme_root
-            else zshrc_agnostertheme_root
-            fi
-       else
-            if [ $(tty | grep tty) ]
-            then zshrc_lighttheme_user
-            else zshrc_agnostertheme_root
-            fi
+       then zshrc_promptcolor=red
+       else zshrc_promptcolor=blue
+       fi
+       
+       if [ $(tty | grep tty) ]
+       then zshrc_lighttheme
+       else zshrc_agnostertheme
        fi
      }
 
@@ -298,7 +285,7 @@
    # up a little
    #
    # The logic on this one is way simpler:
-   # If we are logged in aas root, then it makes the prompt red.
+   # If we are logged in as root, then it makes the prompt red.
    # Else it is blue.
    #
    # I am currently worrking on a git prompt addon for this.
@@ -307,9 +294,11 @@
      function zshrc_setlighttheme ()
      {
        if [ $UID = 0 ]
-       then zshrc_lighttheme_root
-       else zshrc_lighttheme_user
+       then zshrc_promptcolor=red
+       else zshrc_promptcolor=blue
        fi
+       
+       zshrc_lighttheme
      }
 
 
@@ -333,7 +322,6 @@
   zshrc_sourcing
   #zshrc_setfulltheme
   zshrc_setlighttheme
-
 
 
 # End of file
