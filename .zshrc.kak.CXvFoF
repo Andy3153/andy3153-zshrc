@@ -101,6 +101,11 @@
         #$zshrc_programs/ddate/ddate | $zshrc_programs/lolcat/bin/lolcat
       # ddate.sh
         $zshrc_scripts/ddate.sh
+
+    # Change terminal tab name as well
+      echo -ne "\033]30;Welcome back, $USER.\007"
+      sleep 2s
+      echo -ne "\033]30;Welcome back, $USER.\007"
   }
 
 
