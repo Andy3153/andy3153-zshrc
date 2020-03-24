@@ -1,3 +1,4 @@
+#!/bin/zsh
 #          _              
 #  _______| |__  _ __ ___ 
 # |_  / __| '_ \| '__/ __|
@@ -9,8 +10,8 @@
 # I kept any old modification that I made too, but they are
 # commented away if they don't help with anything
 #
-# I made everything into simple functions that
-# you can enable, switch with others, or disable
+# I made everything into simple functions that you can
+# enable, switch with others, or disable
 #
 
 
@@ -47,11 +48,12 @@
 # Exporting things
   function zshrc_exporting ()
   {
-    export EDITOR=vim
-    export BROWSER=firefox
-    export FILE_MANAGER=nautilus
-    export TERMINAL=xfce4-terminal
+    export EDITOR=kak #gvim -v
+    export BROWSER=vivaldi-stable
+    export FILE_MANAGER=dolphin
+    export TERMINAL=konsole
     export QT_QPA_PLATFORMTHEME=qt5ct
+    export SUDO_PROMPT=$'\033[1m\033[0;31m[sudo]\033[0m password for \033[1m%p\033[0m: '
   } 
    
 # Bindkey mode
@@ -99,6 +101,11 @@
         #$zshrc_programs/ddate/ddate | $zshrc_programs/lolcat/bin/lolcat
       # ddate.sh
         $zshrc_scripts/ddate.sh
+
+    # Change terminal tab name as well
+      echo -ne "\033]30;Welcome back, $USER.\007"
+      sleep 2s
+      echo -ne "\033]30;Welcome back, $USER.\007"
   }
 
 
@@ -130,6 +137,7 @@
          alias v="vim"
          alias f="fuck"
          alias S="sudo systemctl"
+         alias r="ranger"
 
        # Git
          alias g="git"
@@ -142,9 +150,9 @@
          alias gP="git push"
 
        # Editing configs
-         #alias cfz="gvim -v $HOME/.zshrc"
-         #alias cfv="gvim -v $HOME/.vim/vimrc"
-         alias cfz="kak $HOME/.zshrc"
+         alias cfz="$EDITOR $HOME/.zshrc"
+         alias cfr="$EDITOR $HOME/.config/ranger/rc.conf"
+         alias cfstab="sudo $EDITOR /etc/fstab"
   
        # Scripts
          alias manpdf="$zshrc_scripts/manpdf.sh"
@@ -162,7 +170,7 @@
        # hashtag. It just runs the command normally
        #
          alias \$=''
-         alias \#=''
+         alias \#='sudo'
 }
 
 # Colored terminal programs
@@ -319,10 +327,22 @@
   zshrc_aliases
   zshrc_coloredprogs
   zshrc_sourcing
-  zshrc_setfulltheme
-  #zshrc_setlighttheme
+  #zshrc_setfulltheme
+  zshrc_setlighttheme
+
+
+function gitprompt ()
+{
+if [ -d .git ]
+then
+     if [ $(git status --porcelain --ignore-submodules) ]
+     then echo -e "$color_yellow$(git rev-parse --abbrev-ref HEAD)"
+     else echo -e "$color_green$(git rev-parse --abbrev-ref HEAD)"
+     fi
+fi
+}
+#export PROMPT="git: $(gitprompt) "
 
 
 
 # End of file
-
