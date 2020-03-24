@@ -111,6 +111,8 @@
         cfstab="sudo $EDITOR /etc/fstab"\
        \
         thispc="echo && $_programs/neofetch/neofetch | $_programs/lolcat/bin/lolcat -t"\
+        parrotgif="curl parrot.live"\
+        weather="curl wttr.in"\
        \
         rldzsh="source $HOME/.zshrc"\
        \
