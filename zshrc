@@ -48,7 +48,7 @@
 # Exporting things
   function zshrc_exporting ()
   {
-    export EDITOR=kak
+    export EDITOR=kak #gvim -v
     export BROWSER=vivaldi-stable
     export FILE_MANAGER=dolphin
     export TERMINAL=konsole
@@ -101,6 +101,11 @@
         #$zshrc_programs/ddate/ddate | $zshrc_programs/lolcat/bin/lolcat
       # ddate.sh
         $zshrc_scripts/ddate.sh
+
+    # Change terminal tab name as well
+      echo -ne "\033]30;Welcome back, $USER.\007"
+      sleep 2s
+      echo -ne "\033]30;Welcome back, $USER.\007"
   }
 
 
@@ -145,10 +150,9 @@
          alias gP="git push"
 
        # Editing configs
-         #alias cfz="gvim -v $HOME/.zshrc"
-         #alias cfv="gvim -v $HOME/.vim/vimrc"
-         alias cfz="kak $HOME/.zshrc"
-         alias cfr="kak $HOME/.config/ranger/rc.conf"
+         alias cfz="$EDITOR $HOME/.zshrc"
+         alias cfr="$EDITOR $HOME/.config/ranger/rc.conf"
+         alias cfstab="sudo $EDITOR /etc/fstab"
   
        # Scripts
          alias manpdf="$zshrc_scripts/manpdf.sh"

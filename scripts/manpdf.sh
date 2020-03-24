@@ -29,7 +29,7 @@
   man -Tpdf $1 > "$manfolder/$manname"
 
 # Reading the manpage with a PDF reader
-  evince "$manfolder/$manname" &
+  xdg-open "$manfolder/$manname" &
 
 # Exit this script
   exit
