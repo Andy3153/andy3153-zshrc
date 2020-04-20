@@ -13,57 +13,11 @@
 # one single script, using command-line arguments
 #
 
-# Make some functions
-  # Make backup folder
-    function mkbackupdir ()
-    {
-      echo " Making a backup of your current configs... (it will be stored in $HOME/.zsh-backup)."
-      mkdir $HOME/.zsh-backup
-      
-      if [ -e $HOME/.zsh ]
-      then cp -r $HOME/.zsh $HOME/.zsh-backup/
-      fi
-
-      if [ -e $HOME/.zshrc ]
-      then cp -r $HOME/.zshrc $HOME/.zsh-backup/
-      fi
-    }
-
-  # Finishing message for install
-    function insendmsg ()
-    {
-      echo
-      echo " Done! Installation completed succesfully."
-      echo " To apply it, close the terminal and re-open it, or type:"
-      echo
-      echo "    source ~/.zshrc"
-      echo
-      echo " Enjoy your new zshrc! :)"
-      echo
-      exit
-    }
-  # Finishing message for uninstall
-    function uninsendmsg ()
-    {
-      echo
-      echo " Done! Uninstallation completed succesfully."
-      echo " To re-apply your old configs, close the terminal and"
-      echo " re-open it, or type:"
-      echo
-      echo "    source ~/.zshrc"
-      echo
-      echo " Goodbye!"
-      exit
-    }
-    
 # Adds the command-line arguments
   while [ $1 ]; do
     case $1 in
 
-    # ################################################
-
-    # Adds the argument "help", which shows info about
-    # the installer.
+    
       '--help' | '-h' )
         echo
         echo " install.sh by Andy3153"
@@ -82,37 +36,34 @@
         echo "                                  restores your old configs."
         echo
         exit
-        ;; # End of argument "help"
+        ;;
 
-    # ################################################
 
-    # Adds the argument "version", which shows the
-    # version of the installer.
       '--version' | '-v' )
         echo
         echo " install.sh by Andy3153"
-        echo "   version 2"
+        echo "   version 1.1"
         echo
         echo " Github repository: https://github.com/Andy3153/andy3153-zshrc"
         echo
         exit
-        ;; # End of argument "version"
+        ;;
 
-    # ################################################
 
-    # Adds the argument "install", which copies the
-    # configs in your home directory.
       '--install' | '-i' )
-
-      # Having messages pop up on the terminal is always neat
         echo " Starting the installation..."
-        sleep 2s
 
-      # Making a backup, just for safety
-        mkbackupdir
-        sleep 3s
+        echo " Making a backup of your current configs... (it will be stored in $HOME/.zsh-backup)."
+        mkdir $HOME/.zsh-backup
 
-      # Then, copying all of the configs in their place
+        if [ -e $HOME/.zsh ]
+        then cp -r $HOME/.zsh $HOME/.zsh-backup/
+        fi
+
+        if [ -e $HOME/.zshrc ]
+        then cp -r $HOME/.zshrc $HOME/.zsh-backup/
+        fi
+
         echo " Copying the new configs..."
 
         mkdir $HOME/.zsh
@@ -123,36 +74,34 @@
         yes | cp -rf ./zshrc $HOME/
         mv $HOME/zshrc $HOME/.zshrc
 
-        sleep 2s
+        echo
+        echo " Done! Installation completed succesfully."
+        echo " To apply it, close the terminal and re-open it, or type:"
+        echo
+        echo "    source ~/.zshrc"
+        echo
+        echo " Enjoy your new zshrc! :)"
+        echo
+        exit
+        ;;
 
-      # A finishing message
-        insendmsg
-        ;; # End of argument "install"
-
-    # ################################################
-
-    # Adds the argument "install-with-symlinks", which
-    # links the configs in your home directory.
       '--install-with-symlinks' | '-I' )
-
-      # Having messages pop up on the terminal is always neat
         echo " Starting the installation..."
-        sleep 2s
 
-      # Making a backup, just for safety
-        mkbackupdir
-        sleep 3s
+        echo " Making a backup of your current configs... (it will be stored in $HOME/.zsh-backup)."
+        mkdir $HOME/.zsh-backup
 
-      # Deleting the already-existing configs
-      #
-      # (I chose copying and then removing instead of
-      # moving because moving might give errors, and you
-      # can lose your files)
+        if [ -e $HOME/.zsh ]
+        then cp -r $HOME/.zsh $HOME/.zsh-backup/
+        fi
+
+        if [ -e $HOME/.zshrc ]
+        then cp -r $HOME/.zshrc $HOME/.zsh-backup/
+        fi
+
         rm -rf $HOME/.zsh $HOME/.zshrc
 
-      # Then, linking all of the configs in their place
         echo " Linking the new configs..."
-
         mkdir $HOME/.zsh
 
         ln -s $(pwd)/plugins/ $HOME/.zsh/
@@ -161,40 +110,39 @@
         ln -s $(pwd)/zshrc $HOME/
         mv $HOME/zshrc $HOME/.zshrc
 
-        sleep 2s
+        echo
+        echo " Done! Installation completed succesfully."
+        echo " To apply it, close the terminal and re-open it, or type:"
+        echo
+        echo "    source ~/.zshrc"
+        echo
+        echo " Please note that you have to keep the andy3153-zshrc"
+        echo " folder, since the current configs just link to those in it"
+        echo " Enjoy your new zshrc! :)"
+        echo
+        exit
+        ;;
 
-      # A finishing message
-        insendmsg
-        ;; # End of argument "install-with-symlinks"
-
-    # ################################################
-
-    # Adds the argument "uninstall", which deletes the
-    # configs/symlinks, then restores the old ones, if any
-    # are present.
       '--uninstall' | '-u' )
-
-
-      # Having messages pop up on the terminal is always neat
         echo " Starting the uninstallation..."
-        sleep 2s
 
-      # Deleting the files
         echo " Deleting the configs..."
         rm -rf $HOME/.zsh $HOME/.zshrc
-        sleep 1s
 
-      # Restoring the old configs from the backup folder
         echo " Restoring your old configs..."
         cp -r $HOME/.zsh-backup/.zsh $HOME/
         cp -r $HOME/.zsh-backup/.zshrc $HOME/
-        sleep 3s
 
-      # A finishing message
-        uninsendmsg
-        ;; # End of argument "uninstall"
-
-    # ################################################
+        echo
+        echo " Done! Uninstallation completed succesfully."
+        echo " To re-apply your old configs, close the terminal and"
+        echo " re-open it, or type:"
+        echo
+        echo "    source ~/.zshrc"
+        echo
+        echo " Goodbye!"
+        exit
+        ;;
 
 # End of all arguments
     esac

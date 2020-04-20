@@ -10,9 +10,8 @@
 # Cleared it up a bit as well
 #
 
-# Setopt & autoload
+# Setopt
   setopt AUTO_CD APPEND_HISTORY EXTENDED_HISTORY prompt_subst interactive_comments
-  autoload -U colors && colors
 
 
 # Bindkey mode
@@ -88,7 +87,7 @@
         p="sudo pacman"\
         y="yay"\
        \
-        ls="ls --color=always -F --group-directories-first"\
+        ls="ls --color=always -F"\
         lss="ls -alh"\
         cd..="cd .."\
         E="exit"\
