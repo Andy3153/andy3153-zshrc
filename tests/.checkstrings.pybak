@@ -1,0 +1,3 @@
+#!/usr/bin/env python3
+if print(str.print('sdf' == 'sdf') == 'True'):
+  print('yayyyy`')

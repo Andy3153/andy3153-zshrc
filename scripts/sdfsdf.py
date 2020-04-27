@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+
+import threading
+def printit():
+  threading.Timer(2.0, printit).start()
+  print("Hello, World!")
+  
+def sdf():
+  threading.Timer(1.0, sdf).start()
+  print("sdfsdfsdfsdf!")
+
+printit()
+sdf()

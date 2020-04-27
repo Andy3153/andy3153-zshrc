@@ -31,29 +31,36 @@ def typestr(string):
 def run():
   typestr('pls beg')
   print("\033[1m[ \033[1;33 grindcoins.py\033[0m ]\033[0m : Begging done.")
-  time.sleep(2)
+  time.sleep(3)
 
   typestr('pls fish')
   print("\033[1m[ \033[1;33 grindcoins.py\033[0m ]\033[0m : Fishing done.")
-  time.sleep(2)
+  time.sleep(3)
 
-  #typestr('pls use candy')
-  #print("\033[1m[ \033[1;33 grindcoins.py\033[0m ]\033[0m : Used a candy.")
-  #time.sleep(2)
+  typestr('pls use candy')
+  print("\033[1m[ \033[1;33 grindcoins.py\033[0m ]\033[0m : Used a candy.")
+  time.sleep(3)
+
+  typestr('pls sell fish 3')
+  print("\033[1m[ \033[1;33 grindcoins.py\033[0m ]\033[0m : Sold a fish.")
+  time.sleep(3)
+
+  typestr('pls sell rarefish')
+  print("\033[1m[ \033[1;33 grindcoins.py\033[0m ]\033[0m : Sold a rare fish.")
+  time.sleep(3)
 
   typestr('pls deposit max')
   print("\033[1m[ \033[1;33 grindcoins.py\033[0m ]\033[0m : Depositing done.")
-  time.sleep(2)
+  time.sleep(3)
 
   #typestr('pls bal')
   #print("\033[1m[ \033[1;33 grindcoins.py\033[0m ]\033[0m : Checking balance...\n")
   #time.sleep(25)
-  time.sleep(29)
+  time.sleep(17)
 
   print("\033[1m[ \033[1;33 grindcoins.py\033[0m ]\033[0m : Begging in 5 seconds...\n")
   time.sleep(5)
 
-  return
 
 # Prints startup message
 print("\033[1m[ \033[1;33 grindcoins.py\033[0m ]\033[0m : Welcome! Make sure you're focusing the Discord window.")
@@ -62,12 +69,15 @@ time.sleep(5)
 
 # Warning for others idk
 typestr('#### Dank Memer Coin Grinder starts ***NOW*** ####')
+time.sleep(2)
 
 # Activates passive mode
 print("\033[1m[ \033[1;33 grindcoins.py\033[0m ]\033[0m : Activating passive mode...")
 typestr('pls settings passive enable')
+time.sleep(3)
 
 # Starts the h e l l.
 print("\033[1m[ \033[1;33 grindcoins.py\033[0m ]\033[0m : START!\n")
+time.sleep(1)
 while True:
   run()

@@ -11,7 +11,7 @@
 
 # Setting variables
   # Variable to the root directory
-    root_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+    root_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/.."
     #root_dir="$(dirname $0)/.."
     #root_dir="$(pwd)/.."
 
