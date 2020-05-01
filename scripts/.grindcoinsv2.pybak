@@ -146,10 +146,10 @@ try:
   sleep(600)
   _600secs()
 
-  sleep(1800)
+  sleep(1200)
   _1800secs()
 
-  sleep(3600)
+  sleep(1800)
   _3600secs()
 
 except (KeyboardInterrupt, SystemExit):

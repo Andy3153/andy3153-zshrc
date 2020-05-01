@@ -10,8 +10,9 @@
 # Cleared it up a bit as well
 #
 
-# Setopt
-  setopt AUTO_CD APPEND_HISTORY EXTENDED_HISTORY prompt_subst interactive_comments
+# Setopt & autoload
+  setopt AUTO_CD APPEND_HISTORY EXTENDED_HISTORY prompt_subst interactive_comments COMPLETE_ALIASES correctall
+  autoload -U compinit colors && colors && compinit
 
 
 # Bindkey mode
@@ -39,7 +40,7 @@
 # Exporting things
   export SUDO_PROMPT=$'\033[1m\033[0;31m[sudo]\033[0m password for \033[1m%p\033[0m: '
   export\
-         EDITOR=kak #gvim -v\
+         EDITOR="gvim -v" #kak\
          BROWSER=vivaldi-stable\
          FILE_MANAGER=dolphin\
          TERMINAL=konsole\
@@ -87,7 +88,7 @@
         p="sudo pacman"\
         y="yay"\
        \
-        ls="ls --color=always -F"\
+        ls="ls --color=always -F --group-directories-first"\
         lss="ls -alh"\
         cd..="cd .."\
         E="exit"\
@@ -99,6 +100,7 @@
         skak="sudo kak"\
         S="sudo systemctl"\
         r="ranger"\
+        catt="less -FX"\
        \
         g="git"\
         gs="git status"\
@@ -168,11 +170,20 @@
        RPROMPT='$(echo "%{%F{black}%}\ue0b2%{%K{black}%}%{%F{white}%} %D{%d/%m/%y ~ %T} ")'
      }
 
-   # Lightweight theme
-     function _lighttheme ()
+   # Colorful theme
+     function _colorfultheme ()
      {
        export PS1="%B%F{$_promptcolor}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
        export RPS1="%B%F{cyan}<%b%f %D{%d/%m/%y ~ %T}"
+     }
+     
+   # Blocks theme
+     function _blockstheme ()
+     {
+       #emojis=('☹' '☺' '☻' '🌜' '🌬' '🐭' '🐮' '🐱' '🐵' '😀' '😁' '😂' '😃' '😄' '😅' '😆' '😇' '😈' '😉' '😊' '😋' '😌' '😍' '😎' '😏' '😐' '😑' '😒' '😓' '😔' '😕' '😖' '😗' '😘' '😙' '😚' '😛' '😜' '😝' '😞' '😟' '😠' '😡' '😢' '😣' '😥' '😦' '😧' '😨' '😩' '😪' '😫' '😭' '😮' '😯' '😰' '😱' '😲' '😳' '😴' '😵' '😶' '😷' '😸' '😹' '😺' '😻' '😼' '😽' '😾' '😿' '🙀' '🙃' '🤖')
+       emojis=('☺' '☻' '🌜' '🐭' '🐮' '🐱' '🐵' '😀' '😁' '😂' '😃' '😄' '😅' '😆' '😇' '😈' '😉' '😊' '😋' '😌' '😍' '😎' '😏' '😗' '😘' '😙' '😚' '😛' '😜' '😝' '😴' '😵' '😶' '😷' '😸' '😹' '😺' '😻' '😼' '😽' '😾' '😿' '🙀' '🙃' '🤖')
+       export PS1="%(?.%K{green}%F{black} √ %f%k.%K{red}%F{black} × %f%k)%K{black} ${emojis[$(($RANDOM%44))]} %n %k%K{$_promptcolor}%F{black} > %f%k "
+       export RPS1="%K{blue}%F{black} 🗁  %(5~|%-2~/…/%2~|%4~) %f%k%K{yellow}%F{black} 🗏 %h %f%k"
      }
     
  
@@ -181,15 +192,8 @@
    #
    # Full theme
    #
-   # It goes this way:
-   # 1. If we are logged in as root, then it makes the prompt red.
-   # Else it is blue. 
-   # 2. If we are using a tty, then it uses the lightweight theme.
-   # Else it uses Agnoster's theme.
-   # The two conditions are applied at the same time
-   #
 
-     function _setfulltheme () 
+     function _setagnostertheme () 
      {
        if [ $UID = 0 ]
        then _promptcolor=red
@@ -197,32 +201,37 @@
        fi
        
        if [ $(tty | grep tty) ]
-       then _lighttheme
+       then _blockstheme
        else _agnostertheme
        fi
      }
 
    #
-   # Lightweight theme
-   #
-   # I made this one by myself. Its main use would be either
-   # to use it in a tty, like in the full theme setting, or
-   # to use it on a slow computer. Or, just to shake things
-   # up a little
-   #
-   # The logic on this one is way simpler:
-   # If we are logged in as root, then it makes the prompt red.
-   # Else it is blue.
+   # Colorful theme
    #
    
-     function _setlighttheme ()
+     function _setcolorfultheme ()
      {
        if [ $UID = 0 ]
        then _promptcolor=red
        else _promptcolor=blue
        fi
        
-       _lighttheme
+       _colorfultheme
+     }
+
+   #
+   # Blocks theme
+   #
+   
+     function _setblockstheme ()
+     {
+       if [ $UID = 0 ]
+       then _promptcolor=red
+       else _promptcolor=blue
+       fi
+       
+       _blockstheme
      }
 
 
@@ -233,8 +242,9 @@
 #
 
   #_vimprompt
-  #_setfulltheme
-  _setlighttheme
+  #_setagnostertheme
+  #_setcolorfultheme
+  _setblockstheme
 
 
 

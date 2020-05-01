@@ -142,7 +142,7 @@ try:
   welcome()
 
   _40secs()
-  
+
   sleep(600)
   _600secs()
 
