@@ -82,6 +82,15 @@ def _40secs():
   print(prompt, "Fished.")
 
 
+# Function that executes every 60 seconds/1 minute (postmeme)
+def _60secs():
+  Timer(60.1, _60secs).start()
+  typestr("pls postmeme")
+  sleep(2)
+  typestr("d")
+  print(prompt, "Posted a meme.")
+
+
 # Function that executes every 600 seconds/10 minutes (deposit,
 # balance, use candy)
 def _600secs():
@@ -99,12 +108,6 @@ def _600secs():
   typestr("pls use candy")
   print(prompt, "Used a candy.")
 
-
-# Function that executes every 1800 seconds/30 minutes (pet pat,
-# pet feed)
-def _1800secs():
-  Timer(1800.0, _1800secs).start()
-
   sleep(2)
   typestr("pls pet pat")
   print(prompt, "Patted the pet.")
@@ -113,6 +116,10 @@ def _1800secs():
   typestr("pls pet feed")
   print(prompt, "Fed the pet.")
 
+  sleep(2)
+  typestr("pls pet wash")
+  print("Washed the pet.")
+
 
 # Function that executes every 3600 secs/1 hr (sell fish,
 # sell rarefish, sell alcohol, use banknote)
@@ -120,16 +127,16 @@ def _3600secs():
   Timer(3600.0, _3600secs).start()
 
   sleep(2)
-  typestr("pls sell fish 15")
+  typestr("pls sell fish 180")
   print(prompt, "Sold 15 fishes.")
 
   sleep(2)
-  typestr("pls sell rarefish")
+  typestr("pls sell rarefish 5")
   print(prompt, "Sold a rare fish.")
 
-  sleep(2)
-  typestr("pls sell alcohol")
-  print(prompt, "Sold an alcohol bottle.")
+  #sleep(2)
+  #typestr("pls sell alcohol")
+  #print(prompt, "Sold an alcohol bottle.")
 
   sleep(2)
   typestr("pls use banknote")
@@ -143,7 +150,10 @@ try:
 
   _40secs()
 
-  sleep(600)
+  sleep(60)
+  _60secs()
+
+  sleep(540)
   _600secs()
 
   sleep(1200)
