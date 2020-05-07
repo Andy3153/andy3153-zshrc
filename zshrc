@@ -40,7 +40,7 @@
 # Exporting things
   export SUDO_PROMPT=$'\033[1m\033[0;31m[sudo]\033[0m password for \033[1m%p\033[0m: '
   export\
-         EDITOR="gvim -v" #kak\
+         EDITOR="vim" #kak\
          BROWSER=vivaldi-stable\
          FILE_MANAGER=dolphin\
          TERMINAL=konsole\
@@ -95,8 +95,8 @@
         :q="exit"\
         755="chmod 755"\
         vi="vim"\
-        vim="gvim -v"\
-        svim="sudo gvim -v"\
+        vim="vim"\
+        svim="sudo vim"\
         skak="sudo kak"\
         S="sudo systemctl"\
         r="ranger"\
@@ -112,6 +112,7 @@
         gP="git push"\
        \
         cfz="$EDITOR $HOME/.zshrc"\
+        cfv="$EDITOR $HOME/.vim/vimrc"\
         cfr="$EDITOR $HOME/.config/ranger/rc.conf"\
         cfstab="sudo $EDITOR /etc/fstab"\
        \
@@ -126,7 +127,7 @@
          
 # Colored terminal programs
   # man
-    function man ()
+    function man()
     {
       LESS_TERMCAP_md=$'\e[01;31m' \
       LESS_TERMCAP_me=$'\e[0m' \
@@ -144,13 +145,14 @@
 
 
 # Sourcing things
+  eval $(dircolors $_plugins/nord_dircolors)
+
   if [ ! $(tty | grep tty) ]
   then source $_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
   fi
 
   source\
          $_plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh\
-         $_plugins/calc.plugin.zsh/calc.plugin.zsh\
          $_plugins/zsh-you-should-use/you-should-use.plugin.zsh\
          $_plugins/zsh-notify/notify.plugin.zsh
 
