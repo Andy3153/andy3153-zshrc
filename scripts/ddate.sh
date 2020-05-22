@@ -11,14 +11,14 @@
 
 # Setting some variables
   # For the folders
-    programs=$HOME/.zsh/programs/
+    _progs=$HOME/.zsh/progs/
 
   # This one actually helps us with something
-    beginning=$(echo "~*. $($programs/ddate/ddate) .*~")
+    _beginning=$(echo "~*. $($_progs/ddate/ddate) .*~")
 
 # Actual centering of output
   echo
-  printf "%*s\n" $(((${#beginning}+$COLUMNS)/2)) "$beginning" | $programs/lolcat/bin/lolcat -t
+  printf "%*s\n" $(((${#_beginning}+$COLUMNS)/2)) "$_beginning" | $_progs/lolcat/bin/lolcat -t
   echo
 
 

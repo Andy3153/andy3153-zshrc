@@ -69,7 +69,7 @@
         mkdir $HOME/.zsh
 
         yes | cp -rf ./plugins $HOME/.zsh/
-        yes | cp -rf ./programs $HOME/.zsh/
+        yes | cp -rf ./progs $HOME/.zsh/
         yes | cp -rf ./scripts $HOME/.zsh/
         yes | cp -rf ./zshrc $HOME/
         mv $HOME/zshrc $HOME/.zshrc
@@ -105,7 +105,7 @@
         mkdir $HOME/.zsh
 
         ln -s $(pwd)/plugins/ $HOME/.zsh/
-        ln -s $(pwd)/programs/ $HOME/.zsh/
+        ln -s $(pwd)/progs/ $HOME/.zsh/
         ln -s $(pwd)/scripts/ $HOME/.zsh/
         ln -s $(pwd)/zshrc $HOME/
         mv $HOME/zshrc $HOME/.zshrc

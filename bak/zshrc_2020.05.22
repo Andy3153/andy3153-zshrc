@@ -26,7 +26,7 @@
     SAVEHIST=100000
 
   # For the folders
-    _progs=$HOME/.zsh/progs/
+    _programs=$HOME/.zsh/programs/
     _plugins=$HOME/.zsh/plugins/
     _scripts=$HOME/.zsh/scripts/
 
@@ -101,7 +101,6 @@
         S="sudo systemctl"\
         r="ranger"\
         catt="less -FX"\
-        ytop="ytop -apsm"\
        \
         g="git"\
         gs="git status"\
@@ -120,9 +119,6 @@
         thispc="echo && $_programs/neofetch/neofetch | $_programs/lolcat/bin/lolcat -t"\
         parrotgif="curl parrot.live"\
         weather="curl wttr.in"\
-       \
-        cmatrix="cmatrix -abC cyan"\
-        tty-clock="tty-clock -sBcC 4"\
        \
         rldzsh="source $HOME/.zshrc"\
        \
@@ -149,7 +145,7 @@
 
 
 # Sourcing things
-  eval $(dircolors $_plugins/nord_dircolors) # Nord colorscheme for ls
+  eval $(dircolors $_plugins/nord_dircolors)
 
   if [ ! $(tty | grep tty) ]
   then source $_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
