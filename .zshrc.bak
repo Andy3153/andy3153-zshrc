@@ -275,16 +275,6 @@
        else _blocksv2
        fi
      }
-     
-     function _setkeepitsimple ()
-     {
-       if [ $UID = 0 ]
-       then _promptcolor=red
-       else _promptcolor=blue
-       fi
-       
-       _keepitsimple
-     }
 
 
 
