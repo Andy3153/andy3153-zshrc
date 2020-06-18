@@ -10,6 +10,9 @@
 " Makes the shell interactive
   :set shellcmdflag=-ic
 
+" Disables native insert status
+  set noshowmode
+
 " Enables syntax highlighting
   :syntax on
 
@@ -36,5 +39,21 @@
   " Editing configs
     :command CFZ :e $HOME/.zshrc
     :command CFV :e $HOME/.vim/vimrc
+
+" Lightline
+  set laststatus=2
+  let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified', 'helloworld' ] ]
+      \ },
+      \ 'component': {
+      \   'helloworld': 'Welcome!'
+      \ },
+      \ }
+
+" Nord 
+  colorscheme nord
 
 " End of file

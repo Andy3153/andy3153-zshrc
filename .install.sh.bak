@@ -133,12 +133,11 @@
         echo " Starting the uninstallation..."
 
         echo " Deleting the configs..."
-        rm -rf $HOME/.zsh $HOME/.zshrc $HOME/.vim
+        rm -rf $HOME/.zsh $HOME/.zshrc
 
         echo " Restoring your old configs..."
         cp -r $HOME/.zsh-backup/.zsh $HOME/
         cp -r $HOME/.zsh-backup/.zshrc $HOME/
-        cp -r $HOME/.zsh-backup/.vim $HOME/
 
         echo
         echo " Done! Uninstallation completed succesfully."

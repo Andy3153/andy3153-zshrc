@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/andy3153/.vim/autoload/airline'
 let g:netrw_dirhist_7='/home/andy3153/.themes/Sweet-Dark/gnome-shell'
 let g:netrw_dirhist_6='/home/andy3153/.themes/Sweet-Dark'
 let g:netrw_dirhist_5='/home/andy3153/.themes'
