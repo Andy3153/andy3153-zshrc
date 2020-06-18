@@ -14,7 +14,7 @@
     _progs=$HOME/.zsh/progs/
 
   # This one actually helps us with something
-    _beginning=$(echo "~*. $($_progs/ddate/ddate) .*~")
+    _beginning=$(echo "~*. $(ddate) .*~")
 
 # Actual centering of output
   echo

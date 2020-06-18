@@ -195,7 +195,7 @@
    # Blocks Dark theme
      function _blocksdarktheme ()
      {
-       export PS1="%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_promptcolor}| %n %k%K{black}| ⯈  %f%k "
+       export PS1="%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_promptcolor}| %n %k%K{black}| > %f%k "
        export RPS1="%K{black}%F{$_promptcolor} 🗁  %(5~|%-2~/…/%2~|%4~) |%f%k%K{black}%F{yellow} 🗏 %h %f%k"
      }
     
