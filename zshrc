@@ -45,7 +45,7 @@
          FILE_MANAGER=dolphin\
          TERMINAL=konsole\
          QT_QPA_PLATFORMTHEME=qt5ct\
-         PATH=$_scripts:$PATH
+         PATH=$HOME/.local/bin:$_scripts:$PATH
 
 
 # Vim indicators (enable if you want it)
@@ -103,6 +103,7 @@
         catt="less -FX"\
         ytop="ytop -apsm"\
         windowpid="xprop _NET_WM_PID"\
+        pc="proxychains"\
        \
         g="git"\
         gs="git status"\
@@ -187,9 +188,10 @@
    # Blocks theme
      function _blockstheme ()
      {
-       emojis=('☺' '☻' '🌜' '🐭' '🐮' '🐱' '🐵' '😀' '😁' '😂' '😃' '😄' '😅' '😆' '😇' '😈' '😉' '😊' '😋' '😌' '😍' '😎' '😏' '😗' '😘' '😙' '😚' '😛' '😜' '😝' '😴' '😵' '😶' '😷' '😸' '😹' '😺' '😻' '😼' '😽' '😾' '😿' '🙀' '🙃' '🤖')
-       export PS1="%(?.%K{green}%F{black} √ %f%k.%K{red}%F{black} × %f%k)%K{black} ${emojis[$(($RANDOM%43))]} %n %k%K{$_promptcolor}%F{black} > %f%k "
-       export RPS1="%K{$_promptcolor}%F{black} 🗁  %(5~|%-2~/…/%2~|%4~) %f%k%K{yellow}%F{black} 🗏 %h %f%k"
+       #emojis=('☺' '☻' '🌜' '🐭' '🐮' '🐱' '🐵' '😀' '😁' '😂' '😃' '😄' '😅' '😆' '😇' '😈' '😉' '😊' '😋' '😌' '😍' '😎' '😏' '😗' '😘' '😙' '😚' '😛' '😜' '😝' '😴' '😵' '😶' '😷' '😸' '😹' '😺' '😻' '😼' '😽' '😾' '😿' '🙀' '🙃' '🤖')
+       # ${emojis[$(($RANDOM%43))]}
+       export PS1="%(?.%K{green}%F{black} √ %f%k.%K{red}%F{black} × %f%k)%K{black} %n %k%K{$_promptcolor}%F{black} > %f%k "
+       export RPS1="%K{$_promptcolor}%F{black} 🗁 %(5~|%-2~/…/%2~|%4~)   %f%k%K{yellow}%F{black} 🗏 %h %f%k"
      }
 
    # Blocks Dark theme
@@ -297,9 +299,10 @@
   #_vimprompt
   #_setagnostertheme
   #_setcolorfultheme
-  #_setblockstheme
+  _setblockstheme
   #_setblocksdarktheme
-  _setblocksv2
+  #_setblocksv2
+  #_setkeepitsimple
 
 
 
