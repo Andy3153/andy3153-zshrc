@@ -11,15 +11,26 @@ Also supports detection of global and git aliases.
 * Usage_
 * Requirements_
 * Installation_
+
+Customization
+
 * `Message Position`_
 * `Displaying Results`_
 * `Customising Messages`_
+
+Advanced Features
+
 * `Hardcore Mode`_
 * `Check your Alias usage`_
 * `Permanently Disabling Aliases`_
 * `Temporarily Disabling Messages`_
+
+Contributing
+
 * Contributing_
 * `Running Tests`_
+
+You can also view the CHANGELOG_ for a history of changes.
 
 Usage
 -----
@@ -237,10 +248,20 @@ You can permanently disable aliases by including them in the ``YSU_IGNORED_ALIAS
 ::
 
   $ ls -l
-  Hint: alias "ll" exists for "ls -l"
+  Found existing alias for "ls -l". You should use: "ll"
 
   $ export YSU_IGNORED_ALIASES=("g" "ll")
   $ ls -l
+
+If you want to ignore global aliases, use the ``YSU_IGNORED_GLOBAL_ALIASES`` environment variable.
+
+::
+
+  $ cd ../..
+  Found existing global alias for "../..". You should use: "..."
+
+  $ export YSU_IGNORED_GLOBAL_ALIASES=("...")
+  $ cd ../..
 
 
 Temporarily Disabling Messages
@@ -301,6 +322,8 @@ all you need to do is run ``mv ~/.gitconfig.bak ~/.gitconfig``
 .. _Arch Linux: https://www.archlinux.org/
 
 .. _AUR: https://aur.archlinux.org/packages/zsh-you-should-use/
+
+.. _CHANGELOG: CHANGELOG.md
 
 .. |GPLv3| image:: https://img.shields.io/badge/License-GPL%20v3-blue.svg
    :target: https://www.gnu.org/licenses/gpl-3.0

@@ -1,0 +1,82 @@
+#!/usr/bin/env zsh
+##
+## themerc by Andy3153
+## created 26/10/20 ~ 15:24:04
+##
+
+# Fallback variables
+  _promptColorUID=yellow
+  _promptColorSSH=gray
+
+# Functions for the theme setting
+  # Check the UID of the currently running user
+    function _themercCheckUID()
+    {
+        if [ $UID = 0 ]
+          then _promptColorUID=yellow
+          else _promptColorUID=blue
+        fi
+    }
+
+  # Check if session is running through SSH
+    function _themercCheckSSH()
+    {
+        if [ -z $SSH_CONNECTION ]
+          then _promptColorSSH=white
+          else _promptColorSSH=yellow
+        fi
+    }
+
+# Functions for the themes
+  # Colorful theme
+    function _setColorful()
+    {
+        _themercCheckUID
+        export PS1="%B%F{$_promptColorUID}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
+        export RPS1="%B%F{cyan}<%b%f %D{%d/%m/%y ~ %T}"
+    }
+
+  # Blocks theme
+    function _setBlocks()
+    {
+        _themercCheckUID
+        emojis=('☺' '☻' '🌜' '🐭' '🐮' '🐱' '🐵' '😀' '😁' '😂' '😃' '😄' '😅' '😆' '😇' '😈' '😉' '😊' '😋' '😌' '😍' '😎' '😏' '😗' '😘' '😙' '😚' '😛' '😜' '😝' '😴' '😵' '😶' '😷' '😸' '😹' '😺' '😻' '😼' '😽' '😾' '😿' '🙀' '🙃' '🤖')
+        export PS1="%(?.%K{green}%F{black} √ %f%k.%K{red}%F{black} × %f%k)%K{black} ${emojis[$(($RANDOM%43))]} %n@%M %k%K{$_promptColorUID}%F{black} > %f%k "
+        export RPS1="%K{$_promptColorUID}%F{black} 🗁 %(5~|%-2~/…/%2~|%4~)   %f%k%K{yellow}%F{black} 🗏 %h %f%k"
+    }
+
+  # Blocks Dark theme
+    function _setBlocksDark()
+    {
+        _themercCheckUID
+        export PS1="%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_promptColorUID}| %n %k%K{black}| > %f%k "
+        export RPS1="%K{black}%F{$_promptColorUID} 🗁  %(5~|%-2~/…/%2~|%4~) |%f%k%K{black}%F{yellow} 🗏 %h %f%k"
+    }
+
+  # Blocks v2 theme
+    function _setBlocksv2()
+    {
+        _themercCheckUID
+        export PS1="%K{black}%F{$_promptColorUID}\%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_promptColorUID}\ %n@%m %k%K{black}\ > \%f%k "
+        export RPS1="%K{black}%F{$_promptColorUID}/ 🗁  %(5~|%-2~/…/%2~|%4~) /%f%k%K{black}%F{yellow} 🗏 %h %F{$_promptColorUID}/"
+    }
+
+  # KeepItSimple
+    function _setKeepItSimple()
+    {
+        _themercCheckUID
+        export PS1="%F{$_promptColorUID}\ %n@%m \ %(?.%F{green}.%F{red})> %f%F{$_promptColorUID}\%f "
+        export RPS1="%F{$_promptColorUID} / %(5~|%-2~/…/%2~|%4~) /%f%F{yellow} %h %F{$_promptColorUID}/"
+    }
+
+  # Arrows theme; 26/10/20 ~ 17:03:28
+    function _setArrows()
+    {
+        _themercCheckUID
+        _themercCheckSSH
+        export PS1="%(?.%K{green}%F{black} √ %F{green}%K{black}$(printf '\ue0b0')%f%k.%K{red}%F{black} × %F{red}%K{black}$(printf '\ue0b0')%f%k)%K{black} %F{$_promptColorSSH}%n@%M %F{black}%K{$_promptColorUID}$(printf '\ue0b0')%k%K{$_promptColorUID}%F{black} > %k%F{$_promptColorUID}$(printf '\ue0b0')%f%k "
+        export RPS1="%F{$_promptColorUID}$(printf '\ue0b2')%K{$_promptColorUID}%F{black} 🗁 %(5~|%-2~/…/%2~|%4~) %F{black}%K{$_promptColorUID} $(printf '\ue0b2') %f%k%K{black}%F{white} 🗏 %h %f%k"
+    }
+
+
+## End of file.

@@ -1,6 +1,42 @@
 Changelog for zsh-you-should-use
 ================================
 
+1.7.3
+-----
+* Fix further issue where local variables would leak into users environment
+
+1.7.2
+-----
+* Fix issue where `key` and `entry` variables would leak into users environment
+
+1.7.1
+-----
+* Fix issue where \ and % would not be escaped correctly in messages (Issue #98)
+
+1.7.0
+-----
+* Add support for ignoring global aliases
+
+1.6.1
+-----
+* Fix detection of substrings with global aliases (#91)
+
+1.6.0
+-----
+* Revert smart alias expansion detection feature from 1.5.0 release as it is causing numerous regressions
+
+1.5.2
+-----
+* Fix bug in 1.5.0 where an alias would be recommended even though it had just been typed by the user
+
+1.5.1
+-----
+* Temporary revert of 1.5.0 which causes a major bug in alias detection (see #84)
+
+1.5.0
+-----
+* Suggest better available aliases if a user uses another alias (issue #79)
+
 1.4.0
 -----
 * Aliases reminders are no longer shown if running commands with sudo

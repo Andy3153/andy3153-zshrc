@@ -1,0 +1,56 @@
+#!/usr/bin/env zsh
+##
+## aliasrc by Andy3153
+## created 26/10/20 ~ 14:42:12
+##
+
+alias\
+      clear="clear && $_scripts/ddate.sh"\
+     \
+      p="sudo pacman"\
+      y="yay"\
+     \
+      ls="ls --color=always -F --group-directories-first"\
+      lss="ls -alh"\
+      cd..="cd .."\
+      E="exit"\
+      :q="exit"\
+      755="chmod 755"\
+      vi="vim"\
+      vim="vim"\
+      svim="sudo vim"\
+      S="sudo systemctl"\
+      r="ranger"\
+      catt="less -FX"\
+      ytop="ytop -apsm"\
+      windowpid="xprop _NET_WM_PID"\
+     \
+      g="git"\
+      gs="git status"\
+      gc="git clone"\
+      gp="git pull"\
+      gA="git add"\
+      gA.="git add ."\
+      gC="git commit"\
+      gP="git push"\
+     \
+      cfz="$EDITOR $ZDOTDIR/zshrc"\
+      cfze="$EDITOR $HOME/.zshenv"\
+      cfza="$EDITOR $ZDOTDIR/aliasrc"\
+      cfzt="$EDITOR $ZDOTDIR/themerc"\
+     \
+      cfv="$EDITOR $HOME/.vim/vimrc"\
+      cfr="$EDITOR $HOME/.config/ranger/rc.conf"\
+      cfstab="sudo $EDITOR /etc/fstab"\
+     \
+      thispc="echo && neofetch | lolcat -t"\
+      parrotgif="curl parrot.live"\
+      weather="curl wttr.in"\
+     \
+      cmatrix="cmatrix -abC cyan"\
+      tty-clock="tty-clock -sBcC 4"\
+     \
+      rldzsh="source $ZDOTDIR/.zshrc"
+
+
+## End of file.

@@ -1,25 +1,16 @@
-#!/bin/zsh
-#      _     _       _             _
-#   __| | __| | __ _| |_ ___   ___| |__
-#  / _` |/ _` |/ _` | __/ _ \ / __| '_ \
-# | (_| | (_| | (_| | ||  __/_\__ \ | | |
-#  \__,_|\__,_|\__,_|\__\___(_)___/_| |_|
-#                             by Andy3153
-#
-# A script that makes ddate look nicer
-#
+#!/usr/bin/env zsh
+##
+## ddate.sh by Andy3153
+## created too_lazy_to_check_might_do_later
+## remade  26/10/20 ~ 23:28:43
+##
 
-# Setting some variables
-  # For the folders
-    _progs=$HOME/.zsh/progs/
+# Variables
+  _ddateshPrintedText=$(printf "~*. $(ddate) .*~")
 
-  # This one actually helps us with something
-    _beginning=$(echo "~*. $(ddate) .*~")
-
-# Actual centering of output
-  echo
-  printf "%*s\n" $(((${#_beginning}+$COLUMNS)/2)) "$_beginning" | $_progs/lolcat/bin/lolcat -t
-  echo
+# Centering the text
+  printf "\n"
+  printf  "%*s\n" $(((${#_ddateshPrintedText}+$COLUMNS)/2)) "$_ddateshPrintedText" \n | lolcat -t
 
 
-# End of file.
+## End of file.
