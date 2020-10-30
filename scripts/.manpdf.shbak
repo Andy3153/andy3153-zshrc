@@ -33,7 +33,7 @@
          xdg-open "$_manpdfshFolder/$_manpdfshFileName" &
 
        # Exits script
-         printf "$_manpdfshPrompt Done! Exit script.\n"
+         printf "$_manpdfshPromptDone! Exit script.\n"
          exit
   else
        # Script errors out

@@ -9,6 +9,15 @@
   setopt AUTO_CD APPEND_HISTORY EXTENDED_HISTORY prompt_subst interactive_comments COMPLETE_ALIASES correctall
   autoload -U compinit colors && colors && compinit
 
+# Variables
+  # For folders
+    _plugins="$ZDOTDIR/plugins/"
+    _scripts="$ZDOTDIR/scripts/"
+  # History file configuration
+    HISTFILE=$ZDOTDIR/zsh-history
+    HISTSIZE=100000
+    SAVEHIST=100000
+
 # Bindkey mode
   bindkey -e #-v #for Vi mode
 
