@@ -4,9 +4,14 @@
 ## created 26/10/20 ~ 15:24:04
 ##
 
-# Fallback variables
-  _promptColorUID=yellow
-  _promptColorSSH=gray
+# Variables
+  # Fallback colors
+    _promptColorUID=yellow
+    _promptColorSSH=gray
+
+  # Special characters
+    _charPowerlineArrowLeft=$'\ue0b2'
+    _charPowerlineArrowRight=$'\ue0b0'
 
 # Functions for the theme setting
   # Check the UID of the currently running user
@@ -74,8 +79,8 @@
     {
         _themercCheckUID
         _themercCheckSSH
-        export PS1="%(?.%K{green}%F{black} √ %F{green}%K{black}$(printf '\ue0b0')%f%k.%K{red}%F{black} × %F{red}%K{black}$(printf '\ue0b0')%f%k)%K{black} %F{$_promptColorSSH}%n@%M %F{black}%K{$_promptColorUID}$(printf '\ue0b0')%k%K{$_promptColorUID}%F{black} > %k%F{$_promptColorUID}$(printf '\ue0b0')%f%k "
-        export RPS1="%F{$_promptColorUID}$(printf '\ue0b2')%K{$_promptColorUID}%F{black} 🗁 %(5~|%-2~/…/%2~|%4~) %F{black}%K{$_promptColorUID} $(printf '\ue0b2') %f%k%K{black}%F{white} 🗏 %h %f%k"
+        export PS1="%(?.%K{green}%F{black} √ %F{green}%K{black}$_charPowerlineArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charPowerlineArrowRight%f%k)%K{black} %F{$_promptColorSSH}%n@%M %F{black}%K{$_promptColorUID}$_charPowerlineArrowRight%k%K{$_promptColorUID}%F{black} > %k%F{$_promptColorUID}$_charPowerlineArrowRight%f%k "
+        export RPS1="%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} 🗁 %(5~|%-2~/…/%2~|%4~) %F{black}%K{$_promptColorUID} $_charPowerlineArrowLeft %f%k%K{black}%F{white} 🗏 %h %f%k"
     }
 
 

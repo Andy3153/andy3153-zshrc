@@ -8,7 +8,7 @@ alias\
       clear="clear && $_scripts/ddate.sh"\
      \
       p="sudo pacman"\
-      y="yay"\
+      y="yay --sudoloop"\
      \
       ls="ls --color=always -F --group-directories-first"\
       lss="ls -alh"\
