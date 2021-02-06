@@ -3,6 +3,7 @@
 ## aliasrc by Andy3153
 ## created 26/10/20 ~ 14:42:12
 ##
+## This is a secondary Zsh configuration file responsible for configuring aliases. 
 
 alias\
       clear="clear && $_scripts/ddate.sh"\
@@ -10,20 +11,19 @@ alias\
       p="sudo pacman"\
       y="yay --sudoloop"\
      \
-      ls="ls --color=always -F --group-directories-first"\
       lss="ls -alh"\
       cd..="cd .."\
-      E="exit"\
       :q="exit"\
       755="chmod 755"\
-      vi="vim"\
-      vim="vim"\
-      svim="sudo vim"\
+      vi="nvim"\
+      vim="nvim"\
+      svim="sudo nvim"\
       S="sudo systemctl"\
-      r="ranger"\
+      r="source ranger"\
       catt="less -FX"\
-      ytop="ytop -apsm"\
       windowpid="xprop _NET_WM_PID"\
+     \
+      YM="youtube-dl -x --audio-format mp3 --prefer-ffmpeg"\
      \
       g="git"\
       gs="git status"\
@@ -46,11 +46,9 @@ alias\
       thispc="echo && neofetch | lolcat -t"\
       parrotgif="curl parrot.live"\
       weather="curl wttr.in"\
+      ipinfo="curl ipinfo.io"\
      \
-      cmatrix="cmatrix -abC cyan"\
-      tty-clock="tty-clock -sBcC 4"\
-     \
-      rldzsh="source $ZDOTDIR/.zshrc"
+      rldzsh="zsh ; exit"
 
 
 ## End of file.

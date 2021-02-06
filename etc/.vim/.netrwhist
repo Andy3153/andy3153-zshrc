@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =0
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/andy3153/.config/fontconfig'
 let g:netrw_dirhist_0='/usr/include'
 let g:netrw_dirhist_9='/etc/ananicy.d/00-default/wine'
 let g:netrw_dirhist_8='/home/andy3153/.vim/autoload/airline'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_5='/home/andy3153/.themes'
 let g:netrw_dirhist_4='/home/andy3153/.local/share/themes'
 let g:netrw_dirhist_3='/home/andy3153/.zsh'
 let g:netrw_dirhist_2='/home/andy3153/andy3153-zshrc/plugins/zsh-notify'
-let g:netrw_dirhist_1='/home/andy3153/sdf'

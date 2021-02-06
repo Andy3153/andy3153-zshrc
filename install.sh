@@ -105,7 +105,8 @@
 
       ln -s $XDG_CONFIG_HOME/zsh/zshrc $XDG_CONFIG_HOME/zsh/.zshrc
 
-      yes | cp -rf ./etc/.vim $HOME/
+      #yes | cp -rf ./etc/.vim $HOME/
+      yes | cp -rf ./etc/nvim $XDG_CONFIG_HOME/
   }
 
   function _installshInstallBySymlink()
@@ -122,7 +123,8 @@
 
       ln -s $XDG_CONFIG_HOME/zsh/zshrc $XDG_CONFIG_HOME/zsh/.zshrc
 
-      ln -s $(pwd)/etc/.vim $HOME/
+      #ln -s $(pwd)/etc/.vim $HOME/
+      ln -s $(pwd)/etc/nvim $XDG_CONFIG_HOME/
   }
 
   function _installshUninstall()

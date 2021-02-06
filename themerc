@@ -3,6 +3,10 @@
 ## themerc by Andy3153
 ## created 26/10/20 ~ 15:24:04
 ##
+## This is a secondary Zsh configuration file responsible for configuring themes.
+##
+## Use 'print -P' to test prompt escapes when making a new theme
+##
 
 # Variables
   # Fallback colors

@@ -1,0 +1,33 @@
+#!/usr/bin/env zsh
+##
+## colorrc by Andy3153
+## created 31/01/21 ~ 13:18:37
+##
+## This is a secondary Zsh configuration file responsible for configuring colors in shell programs.
+##
+
+function man()
+{
+    LESS_TERMCAP_md=$'\e[01;31m'
+    LESS_TERMCAP_me=$'\e[0m'\
+    LESS_TERMCAP_se=$'\e[0m'\
+    LESS_TERMCAP_so=$'\e[01;44;33m'\
+    LESS_TERMCAP_ue=$'\e[0m'\
+    LESS_TERMCAP_us=$'\e[01;32m'\
+   \
+    command man "$@"
+}
+
+eval $(dircolors $_plugins/nord_dircolors) # Nord colorscheme for ls
+
+alias\
+      ls="ls --color=auto --classify --group-directories-first"\
+      diff="colordiff"\
+      grep="grep --color=auto"\
+     \
+      cmatrix="cmatrix -abC cyan"\
+      tty-clock="tty-clock -sBcC 4"\
+      ytop="ytop -apsm"\
+ 
+
+## End of file.

@@ -3,6 +3,7 @@
 ## zshenv by Andy3153
 ## created 26/10/20 ~ 13:03:22
 ##
+## This is a secondary Zsh configuration file responsible for setting custom environment variables.
 
 # Exporting environment variables
   export\
@@ -13,7 +14,8 @@
          XDG_CACHE_HOME="$HOME/.cache"\
         \
         \
-         EDITOR="vim"\
+         EDITOR="nvim"\
+	 VISUAL="nvim"\
          BROWSER="firefox"\
          FILE_MANAGER="dolphin"\
          TERMINAL="konsole"\

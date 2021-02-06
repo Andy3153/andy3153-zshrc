@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+##
+## keysrc by Andy3153
+## created 31/01/21 ~ 14:05:08
+##
+## This is a secondary Zsh configuration file responsible for configuring keybindings.
+##
+
+# Bindkey mode
+  bindkey -e # -v for Vi mode; -e for Emacs mode
+
+##
+## Keyboard shortcuts
+##
+## Use ' ^ ' for Ctrl, ' ^[ ' for Alt 
+##
+
+  bindkey -s '^[c' 'clear\n'         # clear (alt+c)
+  bindkey -s '^[r' 'source ranger\n' # ranger cd (alt+r)
+  #bindkey -s '^[R' 'ranger\n'       # ranger (alt+shift+r)
+  bindkey -s '^[v' '$EDITOR\n'       # default editor/nvim most likely (alt+v)
+  bindkey -s '^[t' 'tree\n'          # show file tree in current directory (alt+t)
