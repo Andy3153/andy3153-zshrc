@@ -28,6 +28,10 @@ alias\
       cmatrix="cmatrix -abC cyan"\
       tty-clock="tty-clock -sBcC 4"\
       ytop="ytop -apsm"\
+
+if [ -e /usr/bin/bat ]
+  then alias cat="bat"
+fi
  
 
 ## End of file.

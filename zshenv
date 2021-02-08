@@ -13,7 +13,6 @@
          XDG_DATA_HOME="$HOME/.local/share"\
          XDG_CACHE_HOME="$HOME/.cache"\
         \
-        \
          EDITOR="nvim"\
 	 VISUAL="nvim"\
          BROWSER="firefox"\

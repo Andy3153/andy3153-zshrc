@@ -20,6 +20,7 @@ alias\
       svim="sudo nvim"\
       S="sudo systemctl"\
       r="source ranger"\
+      R="/usr/bin/ranger"\
       catt="less -FX"\
       windowpid="xprop _NET_WM_PID"\
      \
@@ -37,9 +38,12 @@ alias\
       cfz="$EDITOR $ZDOTDIR/zshrc"\
       cfze="$EDITOR $HOME/.zshenv"\
       cfza="$EDITOR $ZDOTDIR/aliasrc"\
+      cfzc="$EDITOR $ZDOTDIR/colorrc"\
+      cfzk="$EDITOR $ZDOTDIR/keysrc"\
       cfzt="$EDITOR $ZDOTDIR/themerc"\
      \
-      cfv="$EDITOR $HOME/.vim/vimrc"\
+      cfv="$EDITOR $XDG_CONFIG_HOME/nvim/init.vim"\
+      cfvp="$EDITOR $XDG_CONFIG_HOME/nvim/plugins.vim"\
       cfr="$EDITOR $HOME/.config/ranger/rc.conf"\
       cfstab="sudo $EDITOR /etc/fstab"\
      \
