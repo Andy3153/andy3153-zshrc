@@ -19,6 +19,7 @@ alias\
       vim="nvim"\
       svim="sudo nvim"\
       S="sudo systemctl"\
+      d="docker"\
       r="source ranger"\
       R="/usr/bin/ranger"\
       catt="less -FX"\

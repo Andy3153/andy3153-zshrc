@@ -12,6 +12,7 @@
   # Fallback colors
     _promptColorUID=yellow
     _promptColorSSH=gray
+    _promptColorGit=white
 
   # Special characters
     _charPowerlineArrowLeft=$'\ue0b2'
@@ -35,6 +36,16 @@
           else _promptColorSSH=yellow
         fi
     }
+
+  # Git branch
+    function _themercCheckGitUncommitted()
+    {
+	if [ $(git status --porcelain=v1 2>/dev/null | wc -l) == 0 ]
+	  then _promptColorGit=green
+	  else _promptColorGit=yellow
+  	fi
+    }
+
 
 # Functions for the themes
   # Colorful theme
