@@ -20,8 +20,12 @@ function man()
 
 eval $(dircolors $_plugins/nord_dircolors) # Nord colorscheme for ls
 
+if [ $(which lsd) ] 2> /dev/null
+then alias ls="lsd --color=auto --classify --group-dirs=first"
+else alias ls="ls --color=auto --classify --group-directories-first"
+fi
+
 alias\
-      ls="ls --color=auto --classify --group-directories-first"\
       diff="colordiff"\
       grep="grep --color=auto"\
      \

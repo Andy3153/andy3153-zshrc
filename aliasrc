@@ -10,6 +10,7 @@ alias\
      \
       p="sudo pacman"\
       y="yay --sudoloop"\
+      P="paru --sudoloop"\
      \
       lss="ls -alh"\
       cd..="cd .."\
@@ -17,6 +18,7 @@ alias\
       755="chmod 755"\
       vi="nvim"\
       vim="nvim"\
+      s="sudo"\
       svim="sudo nvim"\
       S="sudo systemctl"\
       d="docker"\
