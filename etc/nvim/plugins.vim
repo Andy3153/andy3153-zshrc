@@ -20,8 +20,11 @@
       "Plug 'vim-airline/vim-airline-themes'
 
     " nord-vim (colorscheme)
-      Plug 'arcticicestudio/nord-vim'
-    
+      "Plug 'arcticicestudio/nord-vim'
+      
+    " breezy (colorscheme)
+      Plug 'fneu/breezy'
+
     " deoplete (tab completion)
       Plug 'Shougo/deoplete.nvim'
 

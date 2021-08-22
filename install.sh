@@ -14,6 +14,7 @@
     _installshBackupInput="y"
     _installshInstallInput="4"
     _installshUninstallInput="n"
+    _installshIsOnline="false"
 
   # Environment variables
     XDG_CONFIG_HOME="$HOME/.config"
@@ -57,6 +58,57 @@
       printf "$_installshPrompt Goodbye!\n"
   }
 
+  function _installshCheckOnline()
+  {
+      printf "\n"
+      nc -z 8.8.8.8 53  >/dev/null 2>&1
+      _installshCheckOnline=$?
+      if [ $_installshCheckOnline -eq 0 ]
+        then
+	      _installshIsOnline="true"
+	      printf "$_installshPrompt Connected to internet!\n"
+        else 
+	      _installshIsOnline="false"
+	      printf "$_installshErrPrompt Not connected to internet!\n"
+      fi
+  }
+
+  function _installshDownloadPlugins()
+  {
+      if [ $_installshIsOnline = true ]
+        then
+	      if [ ! -e $XDG_CONFIG_HOME/plugins ]
+	        then mkdir $XDG_CONFIG_HOME/zsh/plugins
+	      fi
+
+	      printf "$_installshPrompt Downloading plugins...\n"
+              git clone https://github.com/zdharma/fast-syntax-highlighting $XDG_CONFIG_HOME/zsh/plugins/fast-syntax-highlighting
+	      git clone https://github.com/zsh-users/zsh-autosuggestions $XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions
+	else 
+	      printf "$_installshErrPrompt Downloadng plugins failed.\n"
+      fi
+
+      printf "\n"
+  }
+
+  function _installshDownloadPrograms()
+  {
+      if [ $_installshIsOnline = true ]
+        then
+	      if [ ! -e $XDG_CONFIG_HOME/progs ]
+	        then mkdir $XDG_CONFIG_HOME/zsh/progs
+	      fi
+
+	      printf "$_installshPrompt Downloading programs...\n"
+              git clone https://github.com/bake/ddate.sh $XDG_CONFIG_HOME/zsh/progs/ddate.sh
+	else 
+	      printf "$_installshErrPrompt Downloading programs failed.\n"
+      fi
+      
+      printf "\n"
+  }
+
+
   function _installshMakeBackup()
   {
       printf "$_installshPrompt Making a backup of your current configs... (will be stored in $HOME/.zshbak)\n"
@@ -97,7 +149,10 @@
         then mkdir -p $XDG_CONFIG_HOME/zsh
       fi
 
-      yes | cp -rf ./plugins $XDG_CONFIG_HOME/zsh/
+      _installshCheckOnline
+      _installshDownloadPlugins
+      _installshDownloadPrograms
+
       yes | cp -rf ./scripts $XDG_CONFIG_HOME/zsh/
 
       yes | cp -rf ./zshenv $HOME/.zshenv
@@ -115,7 +170,11 @@
       if [ ! -e $XDG_CONFIG_HOME/zsh ]
         then mkdir -p $XDG_CONFIG_HOME/zsh
       fi
-      ln -s $(pwd)/plugins/ $XDG_CONFIG_HOME/zsh/
+
+      _installshCheckOnline
+      _installshDownloadPlugins
+      _installshDownloadPrograms
+
       ln -s $(pwd)/scripts/ $XDG_CONFIG_HOME/zsh/
 
       ln -s $(pwd)/zshenv $HOME/.zshenv

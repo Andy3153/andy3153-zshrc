@@ -8,10 +8,10 @@
 
 " Set colorscheme
   " for neovim
-    colorscheme nord
+    colorscheme breezy
   " for lightline (statusbar)
     let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'wombat',
       \ }
 
 " Makes the shell interactive

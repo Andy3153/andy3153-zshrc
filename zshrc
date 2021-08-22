@@ -36,8 +36,6 @@
     fi #source this one only when using a graphical interface, it looks weird in a TTY
 
     source $_plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-    source $_plugins/zsh-you-should-use/you-should-use.plugin.zsh
-    #source $_plugins/zsh-notify/notify.plugin.zsh
 
 ##
 ## Setting a theme
