@@ -11,7 +11,7 @@
 
 # Centering the text
   printf "\n"
-  printf  "%*s\n" $(((${#_ddateshPrintedText}+$COLUMNS)/2)) "$_ddateshPrintedText" \n | lolcat -t
+  printf  "%*s\n" $(((${#_ddateshPrintedText}+$COLUMNS)/2)) "$_ddateshPrintedText" \n | lolcat
 
 
 ## End of file.

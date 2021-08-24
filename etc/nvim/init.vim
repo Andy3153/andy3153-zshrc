@@ -58,8 +58,3 @@
       nnoremap <silent>    <A->> :BufferMoveNext<CR>
     " Close buffer
       nnoremap <silent>    <A-x> :BufferClose<CR>
-
-
-
-
-" barbar colors
