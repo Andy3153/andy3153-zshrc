@@ -22,8 +22,13 @@ I've made many themes whenever I felt like shaking things up a little. You can e
 ## Installation
 To find out more about the install script, run it using the `--help` option. You can also run it with no option.
 
+It is also recommended to have a working internet connection so that the bundled plugins and programs can download.
+
 ## About the other scripts
 They are located in zsh/scripts. I made them because they're useful to me.
+
+## About the etc folder
+I keep in there configs for other shell and terminal-related things. Like the configs for neovim. 
 
 ## Contributing
 Feel free to give me advice on this, or even help me with it!

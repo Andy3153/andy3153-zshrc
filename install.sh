@@ -14,6 +14,7 @@
     _installshBackupInput="y"
     _installshInstallInput="4"
     _installshUninstallInput="n"
+    _installshAskNvimConfigInput="n"
     _installshIsOnline="false"
 
   # Environment variables
@@ -108,6 +109,10 @@
       printf "\n"
   }
 
+  function _installshAskNvimConfig()
+  {
+      printf "$_installshPrompt Would you like to also install the neovim configs? (y/n): " ; read _installshAskNvimConfigInput
+  }
 
   function _installshMakeBackup()
   {
@@ -119,6 +124,10 @@
 
       if [ -e $HOME/.zsh ]
         then cp -r $HOME/.zsh $HOME/.zshbak/
+      fi
+
+      if [ -e $XDG_CONFIG_HOME/zsh ]
+	then cp -r $XDG_CONFIG_HOME/zsh $HOME/.zshbak/
       fi
 
       if [ -e $HOME/.zshrc ]
@@ -160,8 +169,15 @@
 
       ln -s $XDG_CONFIG_HOME/zsh/zshrc $XDG_CONFIG_HOME/zsh/.zshrc
 
-      #yes | cp -rf ./etc/.vim $HOME/
-      yes | cp -rf ./etc/nvim $XDG_CONFIG_HOME/
+      _installshAskNvimConfig()
+      
+      if [ $_installshAskNvimConfigInput = 'y' ]
+        then yes | cp -rf ./etc/nvim $XDG_CONFIG_HOME/
+        else
+             if [$_installshAskNvimConfigInput = 'n']
+		then printf "$_installshPrompt Will not copy neovim configs. Continuing.\n"
+	     fi
+      fi
   }
 
   function _installshInstallBySymlink()
@@ -183,7 +199,16 @@
       ln -s $XDG_CONFIG_HOME/zsh/zshrc $XDG_CONFIG_HOME/zsh/.zshrc
 
       #ln -s $(pwd)/etc/.vim $HOME/
-      ln -s $(pwd)/etc/nvim $XDG_CONFIG_HOME/
+
+      _installshAskNvimConfig()
+      
+      if [ $_installshAskNvimConfigInput = 'y' ]
+	then ln -s $(pwd)/etc/nvim $XDG_CONFIG_HOME/
+        else
+             if [$_installshAskNvimConfigInput = 'n']
+		then printf "$_installshPrompt Will not copy neovim configs. Continuing.\n"
+	     fi
+      fi
   }
 
   function _installshUninstall()
