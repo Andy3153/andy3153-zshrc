@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 ##
 ## install.sh by Andy3153
 ## created 27/08/20 ~ 15:47:22
@@ -6,6 +6,9 @@
 ##
 
 # Variables
+  # Root folder variable
+    _installshRootFolder=$(dirname "$(readlink -f "$0")")
+
   # Prompt variables
     _installshPrompt="\033[1m[ \033[1;33minstall.sh\033[0m ]\033[0m : "
     _installshErrPrompt="\033[1m[ \033[1;33minstall.sh\033[0m ]\033[0m : "
@@ -109,11 +112,6 @@
       printf "\n"
   }
 
-  function _installshAskNvimConfig()
-  {
-      printf "$_installshPrompt Would you like to also install the neovim configs? (y/n): " ; read _installshAskNvimConfigInput
-  }
-
   function _installshMakeBackup()
   {
       printf "$_installshPrompt Making a backup of your current configs... (will be stored in $HOME/.zshbak)\n"
@@ -138,11 +136,13 @@
         then cp -r $HOME/.vim $HOME/.zshbak/
       fi
 
+      if [ -e $XDG_CONFIG_HOME/nvim ]
+        then cp -r $XDG_CONFIG_HOME/nvim $HOME/.zshbak
+      fi
 
       if [ -e $XDG_CONFIG_HOME/zsh ]
         then cp -r $XDG_CONFIG_HOME/zsh $HOME/.zshbak
       fi
-
 
       if [ -e $HOME/.zshenv ]
         then cp -r $HOME/.zshenv $HOME/.zshbak
@@ -162,22 +162,22 @@
       _installshDownloadPlugins
       _installshDownloadPrograms
 
-      yes | cp -rf ./scripts $XDG_CONFIG_HOME/zsh/
+      yes | cp -rf $_installshRootFolder/scripts $XDG_CONFIG_HOME/zsh/
 
-      yes | cp -rf ./zshenv $HOME/.zshenv
-      yes | cp -rf ./*rc $XDG_CONFIG_HOME/zsh/
+      yes | cp -rf $_installshRootFolder/zshenv $HOME/.zshenv
+      yes | cp -rf $_installshRootFolder/*rc $XDG_CONFIG_HOME/zsh/
 
       ln -s $XDG_CONFIG_HOME/zsh/zshrc $XDG_CONFIG_HOME/zsh/.zshrc
 
-      _installshAskNvimConfig()
-      
+      printf "$_installshPrompt Would you like to also install the neovim configs? (y/n): " ; read _installshAskNvimConfigInput
       if [ $_installshAskNvimConfigInput = 'y' ]
-        then yes | cp -rf ./etc/nvim $XDG_CONFIG_HOME/
+        then yes | cp -rf $_installshRootFolder/etc/nvim $XDG_CONFIG_HOME/
         else
              if [$_installshAskNvimConfigInput = 'n']
 		then printf "$_installshPrompt Will not copy neovim configs. Continuing.\n"
 	     fi
       fi
+
   }
 
   function _installshInstallBySymlink()
@@ -191,19 +191,16 @@
       _installshDownloadPlugins
       _installshDownloadPrograms
 
-      ln -s $(pwd)/scripts/ $XDG_CONFIG_HOME/zsh/
+      ln -s $_installshRootFolder/scripts/ $XDG_CONFIG_HOME/zsh/
 
-      ln -s $(pwd)/zshenv $HOME/.zshenv
-      ln -s $(pwd)/*rc $XDG_CONFIG_HOME/zsh/
+      ln -s $_installshRootFolder/zshenv $HOME/.zshenv
+      ln -s $_installshRootFolder/*rc $XDG_CONFIG_HOME/zsh/
 
       ln -s $XDG_CONFIG_HOME/zsh/zshrc $XDG_CONFIG_HOME/zsh/.zshrc
 
-      #ln -s $(pwd)/etc/.vim $HOME/
-
-      _installshAskNvimConfig()
-      
+      printf "$_installshPrompt Would you like to also install the neovim configs? (y/n): " ; read _installshAskNvimConfigInput
       if [ $_installshAskNvimConfigInput = 'y' ]
-	then ln -s $(pwd)/etc/nvim $XDG_CONFIG_HOME/
+	then ln -s $_installshRootFolder/etc/nvim $XDG_CONFIG_HOME/
         else
              if [$_installshAskNvimConfigInput = 'n']
 		then printf "$_installshPrompt Will not copy neovim configs. Continuing.\n"
@@ -251,7 +248,7 @@
 
   }
 
-# Command-line arguments
+# Command-line options
   while [ $1 ]; do
     case $1 in
     '--help' | '-h' )
