@@ -9,7 +9,7 @@
 
 # Zsh configuration
   setopt AUTO_CD APPEND_HISTORY EXTENDED_HISTORY prompt_subst interactive_comments COMPLETE_ALIASES correctall
-  autoload -U compinit colors && colors && compinit
+  autoload -U compinit colors && compinit ; colors 
 
 # Variables
   # For folders
@@ -42,9 +42,10 @@
 ##
 ## To set a theme, you have to type the theme's function name from the themesrc file.
 ## Sorry in advance for the very descriptive names for them. *sarcasm*
-## List of themes: _setColorful, _setBlocks, _setBlocksDark, _setBlocksv2, _setKeepItSimple, _setArrows
+## List of themes: _setColorful, _setBlocks, _setBlocksDark, _setBlocksv2, _setKeepItSimple, _setArrows _setArrows2Line
 ##
   _setArrows
+  #_setArrows2Line
 
 
 ## End of file.

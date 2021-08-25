@@ -96,8 +96,56 @@
         _themercCheckUID
         _themercCheckSSH
         export PS1="%(?.%K{green}%F{black} √ %F{green}%K{black}$_charPowerlineArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charPowerlineArrowRight%f%k)%K{black} %F{$_promptColorSSH}%n@%M %F{black}%K{$_promptColorUID}$_charPowerlineArrowRight%k%K{$_promptColorUID}%F{black} > %k%F{$_promptColorUID}$_charPowerlineArrowRight%f%k "
-        #export RPS1="%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} 🗁 %(5~|%-2~/…/%2~|%4~) %F{black}%K{$_promptColorUID} $_charPowerlineArrowLeft %f%k%K{black}%F{white} 🗏 %h %f%k"
         export RPS1="%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} 🗀 %(5~|%-2~/…/%2~|%4~)%F{black}%K{$_promptColorUID} $_charPowerlineArrowLeft %f%k%K{black}%F{white} 🗏 %h %f%k"
+    }
+
+    function _setArrows2Line()
+    {
+	_themercCheckUID
+	_themercCheckSSH
+
+        function prompt-length() {
+          emulate -L zsh
+          local -i COLUMNS=${2:-COLUMNS}
+          local -i x y=${#1} m
+          if (( y )); then
+            while (( ${${(%):-$1%$y(l.1.0)}[-1]} )); do
+              x=y
+              (( y *= 2 ))
+            done
+            while (( y > x + 1 )); do
+              (( m = x + (y - x) / 2 ))
+              (( ${${(%):-$1%$m(l.x.y)}[-1]} = m ))
+            done
+            fi
+            typeset -g REPLY=$x
+}
+
+	function fill-line() {
+          emulate -L zsh
+          prompt-length $1
+          local -i left_len=REPLY
+          prompt-length $2 9999
+          local -i right_len=REPLY
+          local -i pad_len=$((COLUMNS - left_len - right_len - ${ZLE_RPROMPT_INDENT:-1}))
+          if (( pad_len < 1 )); then
+            # Not enough space for the right part. Drop it.
+            typeset -g REPLY=$1
+          else
+            local pad=${(pl.$pad_len.. .)}  # pad_len spaces
+            typeset -g REPLY=${1}${pad}${2}
+          fi
+}
+
+	_topLeft="%(?.%K{green}%F{black} √ %F{green}%K{black}$_charPowerlineArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charPowerlineArrowRight%f%k)%K{black} %F{$_promptColorSSH}%n@%M %F{black}%K{$_promptColorUID}$_charPowerlineArrowRight%k%K{$_promptColorUID}%F{black} master %k%F{$_promptColorUID}$_charPowerlineArrowRight%f%k"
+	_topright="%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} 🗀 %(5~|%-2~/…/%2~|%4~)%F{black}%K{$_promptColorUID} $_charPowerlineArrowLeft %f%k%K{black}%F{white} 🗏 %h %f%k"
+	_bottomLeft="%k%K{$_promptColorUID}%F{black} > %k%F{$_promptColorUID}$_charPowerlineArrowRight%f%k "
+	_bottomRight="%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} %T%f "
+
+        fill-line "$_topLeft" "$_topRight"
+
+	export PS1=$REPLY$'\n'$_bottomLeft
+	export RPS1=$_bottomRight
     }
 
 
