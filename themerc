@@ -131,7 +131,7 @@
             _themercGitBranch
             _themercGitStatus
 
-            if [ -d .git ]
+	    if git rev-parse --git-dir > /dev/null 2>&1 # [ -d .git ]
               then _promptGit="%K{$_promptColorGit}%F{black}$_charPowerlineArrowRight $_charGitBranch $_promptGitBranch%f %k%F{$_promptColorGit}$_charPowerlineArrowRight%f"
               else _promptGit=''
             fi

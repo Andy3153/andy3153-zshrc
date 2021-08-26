@@ -6,6 +6,8 @@
 ##
 ## This is the main Zsh configuration file.
 ##
+## Note: INSANELY useful for debugging is using the 'zsh -v' option to see in which order are things executed.
+##
 
 # Zsh configuration
   setopt AUTO_CD APPEND_HISTORY EXTENDED_HISTORY prompt_subst interactive_comments COMPLETE_ALIASES correctall
@@ -25,6 +27,7 @@
 
 # Sourcing
   # Integral parts of Zsh
+    source $HOME/.zshenv
     source $ZDOTDIR/aliasrc
     source $ZDOTDIR/keysrc
     source $ZDOTDIR/colorrc

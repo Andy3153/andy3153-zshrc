@@ -15,6 +15,7 @@ alias\
       lss="ls -alh"\
       cd..="cd .."\
       :q="exit"\
+      :Q="exit"\
       755="chmod 755"\
       vi="nvim"\
       vim="nvim"\
@@ -50,11 +51,24 @@ alias\
       cfr="$EDITOR $HOME/.config/ranger/rc.conf"\
       cfstab="sudo $EDITOR /etc/fstab"\
      \
+      cddesk="cd $XDG_DESKTOP_DIR"\
+      cddoc="cd $XDG_DOCUMENTS_DIR"\
+      cddown="cd $XDG_DOWNLOAD_DIR"\
+      cdmusic="cd $XDG_MUSIC_DIR"\
+      cdpic="cd $XDG_PICTURES_DIR"\
+      cdvid="cd $XDG_VIDEOS_DIR"\
+      cdetc="cd $HOME/etc"\
+      cdgame="cd $HOME/games"\
+      cdsrc="cd $HOME/src"\
+      cdtorr="cd $HOME/torrents"\
+      cdvm="cd $HOME/vms"\
+      cdzsh="cd $HOME/src/sh/andy3153-zshrc/"\
+      cdnvim="cd $HOME/src/sh/andy3153-zshrc/etc/nvim"\
+     \
       thispc="echo && neofetch | lolcat -t"\
       parrotgif="curl parrot.live"\
       weather="curl wttr.in"\
-      ipinfo="curl ipinfo.io"\
-     \
+      ipinfo="curl ipinfo.io"\ \
       rldzsh="zsh ; exit"
 
 

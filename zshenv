@@ -25,5 +25,11 @@
   export SUDO_PROMPT=$'\033[1m\033[0;31m[sudo]\033[0m password for \033[1m%p\033[0m: '\
          ZDOTDIR="$XDG_CONFIG_HOME/zsh"\
 
+# Sourcing XDG Dirs
+  if [ -e $XDG_CONFIG_HOME/user-dirs.dirs ]
+    then source $XDG_CONFIG_HOME/user-dirs.dirs
+  fi
+
+
 
 ## End of file.
