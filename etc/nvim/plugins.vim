@@ -36,4 +36,8 @@
 
     " nvim-web-devicons
       Plug 'kyazdani42/nvim-web-devicons'
-  call plug#end()
+
+    " vim-lastplace
+      Plug 'farmergreg/vim-lastplace'
+      
+    call plug#end()

@@ -13,11 +13,12 @@
   # Fallback colors
     _promptColorUID=yellow
     _promptColorSSH=gray
-    _promptColorGit=white
+    #_promptColorGit=white
 
   # Special characters
     _charPowerlineArrowLeft=$'\ue0b2'
     _charPowerlineArrowRight=$'\ue0b0'
+    _charGitBranch=$'\ue725'
 
 # Functions for the theme setting
   # Check the UID of the currently running user
@@ -38,13 +39,19 @@
         fi
     }
 
-  # Git branch
-    function _themercCheckGitUncommitted()
+  # Git branch name
+    function _themercGitBranch()
     {
-	if [ $(git status --porcelain=v1 2>/dev/null | wc -l) == 0 ]
-	  then _promptColorGit=green
-	  else _promptColorGit=yellow
-  	fi
+        _promptGitBranch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+    }
+
+  # Git status
+    function _themercGitStatus()
+    {
+        if [ ! $(git status --porcelain 2> /dev/null | wc -l) -eq 0 ]
+          then _promptColorGit=yellow
+          else _promptColorGit=green
+        fi
     }
 
 
@@ -53,7 +60,9 @@
     function _setColorful()
     {
         _themercCheckUID
+
         export PS1="%B%F{$_promptColorUID}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
+
         export RPS1="%B%F{cyan}<%b%f %D{%d/%m/%y ~ %T}"
     }
 
@@ -61,8 +70,11 @@
     function _setBlocks()
     {
         _themercCheckUID
+
         emojis=('☺' '☻' '🌜' '🐭' '🐮' '🐱' '🐵' '😀' '😁' '😂' '😃' '😄' '😅' '😆' '😇' '😈' '😉' '😊' '😋' '😌' '😍' '😎' '😏' '😗' '😘' '😙' '😚' '😛' '😜' '😝' '😴' '😵' '😶' '😷' '😸' '😹' '😺' '😻' '😼' '😽' '😾' '😿' '🙀' '🙃' '🤖')
+
         export PS1="%(?.%K{green}%F{black} √ %f%k.%K{red}%F{black} × %f%k)%K{black} ${emojis[$(($RANDOM%43))]} %n@%M %k%K{$_promptColorUID}%F{black} > %f%k "
+
         export RPS1="%K{$_promptColorUID}%F{black} 🗁 %(5~|%-2~/…/%2~|%4~)   %f%k%K{yellow}%F{black} 🗏 %h %f%k"
     }
 
@@ -70,7 +82,9 @@
     function _setBlocksDark()
     {
         _themercCheckUID
+
         export PS1="%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_promptColorUID}| %n %k%K{black}| > %f%k "
+
         export RPS1="%K{black}%F{$_promptColorUID} 🗁  %(5~|%-2~/…/%2~|%4~) |%f%k%K{black}%F{yellow} 🗏 %h %f%k"
     }
 
@@ -78,7 +92,9 @@
     function _setBlocksv2()
     {
         _themercCheckUID
+
         export PS1="%K{black}%F{$_promptColorUID}\%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_promptColorUID}\ %n@%m %k%K{black}\ > \%f%k "
+
         export RPS1="%K{black}%F{$_promptColorUID}/ 🗁  %(5~|%-2~/…/%2~|%4~) /%f%k%K{black}%F{yellow} 🗏 %h %F{$_promptColorUID}/"
     }
 
@@ -86,7 +102,9 @@
     function _setKeepItSimple()
     {
         _themercCheckUID
+
         export PS1="%F{$_promptColorUID}\ %n@%m \ %(?.%F{green}.%F{red})> %f%F{$_promptColorUID}\%f "
+
         export RPS1="%F{$_promptColorUID} / %(5~|%-2~/…/%2~|%4~) /%f%F{yellow} %h %F{$_promptColorUID}/"
     }
 
@@ -95,58 +113,36 @@
     {
         _themercCheckUID
         _themercCheckSSH
+
+
         export PS1="%(?.%K{green}%F{black} √ %F{green}%K{black}$_charPowerlineArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charPowerlineArrowRight%f%k)%K{black} %F{$_promptColorSSH}%n@%M %F{black}%K{$_promptColorUID}$_charPowerlineArrowRight%k%K{$_promptColorUID}%F{black} > %k%F{$_promptColorUID}$_charPowerlineArrowRight%f%k "
+
         export RPS1="%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} 🗀 %(5~|%-2~/…/%2~|%4~)%F{black}%K{$_promptColorUID} $_charPowerlineArrowLeft %f%k%K{black}%F{white} 🗏 %h %f%k"
     }
 
-    function _setArrows2Line()
+  # Arrows theme with Git support 26/08/21 ~ 20:28:31
+    function _setArrowsGit()
     {
-	_themercCheckUID
-	_themercCheckSSH
+        _themercCheckUID
+        _themercCheckSSH
 
-        function prompt-length() {
-          emulate -L zsh
-          local -i COLUMNS=${2:-COLUMNS}
-          local -i x y=${#1} m
-          if (( y )); then
-            while (( ${${(%):-$1%$y(l.1.0)}[-1]} )); do
-              x=y
-              (( y *= 2 ))
-            done
-            while (( y > x + 1 )); do
-              (( m = x + (y - x) / 2 ))
-              (( ${${(%):-$1%$m(l.x.y)}[-1]} = m ))
-            done
+	    function precmd()
+       	{
+            _themercGitBranch
+            _themercGitStatus
+
+            if [ -d .git ]
+              then _promptGit="%K{$_promptColorGit}%F{black}$_charPowerlineArrowRight $_charGitBranch $_promptGitBranch%f %k%F{$_promptColorGit}$_charPowerlineArrowRight%f"
+              else _promptGit=''
             fi
-            typeset -g REPLY=$x
-}
+	    }
 
-	function fill-line() {
-          emulate -L zsh
-          prompt-length $1
-          local -i left_len=REPLY
-          prompt-length $2 9999
-          local -i right_len=REPLY
-          local -i pad_len=$((COLUMNS - left_len - right_len - ${ZLE_RPROMPT_INDENT:-1}))
-          if (( pad_len < 1 )); then
-            # Not enough space for the right part. Drop it.
-            typeset -g REPLY=$1
-          else
-            local pad=${(pl.$pad_len.. .)}  # pad_len spaces
-            typeset -g REPLY=${1}${pad}${2}
-          fi
-}
+        export PS1='%(?.%K{green}%F{black} √ %F{green}%K{black}$_charPowerlineArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charPowerlineArrowRight%f%k)%K{black} %F{$_promptColorSSH}%n@%M $_promptGit%F{black}%K{$_promptColorUID}$_charPowerlineArrowRight%k%K{$_promptColorUID}%F{black} > %k%F{$_promptColorUID}$_charPowerlineArrowRight%f%k '
 
-	_topLeft="%(?.%K{green}%F{black} √ %F{green}%K{black}$_charPowerlineArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charPowerlineArrowRight%f%k)%K{black} %F{$_promptColorSSH}%n@%M %F{black}%K{$_promptColorUID}$_charPowerlineArrowRight%k%K{$_promptColorUID}%F{black} master %k%F{$_promptColorUID}$_charPowerlineArrowRight%f%k"
-	_topright="%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} 🗀 %(5~|%-2~/…/%2~|%4~)%F{black}%K{$_promptColorUID} $_charPowerlineArrowLeft %f%k%K{black}%F{white} 🗏 %h %f%k"
-	_bottomLeft="%k%K{$_promptColorUID}%F{black} > %k%F{$_promptColorUID}$_charPowerlineArrowRight%f%k "
-	_bottomRight="%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} %T%f "
-
-        fill-line "$_topLeft" "$_topRight"
-
-	export PS1=$REPLY$'\n'$_bottomLeft
-	export RPS1=$_bottomRight
+        export RPS1='%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} 🗀 %(5~|%-2~/…/%2~|%4~)%F{black}%K{$_promptColorUID} $_charPowerlineArrowLeft %f%k%K{black}%F{white} 🗏 %h %f%k'
     }
+
+
 
 
 ## End of file.
