@@ -9,8 +9,10 @@ alias\
       clear="clear && $_scripts/ddate.sh"\
      \
       p="sudo pacman"\
-      y="yay --sudoloop"\
-      P="paru --sudoloop"\
+      yay="yay --sudoloop"\
+      y="yay"\
+      paru="paru --sudoloop"\
+      P="paru"\
      \
       lss="ls -alh"\
       cd..="cd .."\
