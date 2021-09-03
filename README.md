@@ -18,6 +18,7 @@ I've made many themes whenever I felt like shaking things up a little. You can e
 
 ## Other programs recommended to install are:
   1. Any lolcat implementation you prefer [lolcat](https://github.com/busyloop/lolcat) [jaseg/lolcat](https://github.com/jaseg/lolcat) [tehmaze/lolcat](https://github.com/tehmaze/lolcat)
+  2. [LSD](https://github.com/Peltoche/lsd)
 
 ## Installation
 To find out more about the install script, run it using the `--help` option. You can also run it with no option.
