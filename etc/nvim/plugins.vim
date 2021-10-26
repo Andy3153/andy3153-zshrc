@@ -23,7 +23,10 @@
       "Plug 'arcticicestudio/nord-vim'
       
     " breezy (colorscheme)
-      Plug 'fneu/breezy'
+      "Plug 'fneu/breezy'
+    
+    " dracula (colorscheme)
+      Plug 'dracula/vim', { 'as': 'dracula' }
 
     " deoplete (tab completion)
       Plug 'Shougo/deoplete.nvim'

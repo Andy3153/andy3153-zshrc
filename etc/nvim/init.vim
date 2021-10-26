@@ -8,10 +8,12 @@
 
 " Set colorscheme
   " for neovim
-    colorscheme breezy
+    colorscheme dracula
+    let g:dracula_colorterm = 0 "disable background for Dracula colorscheme
+
   " for lightline (statusbar)
     let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'dracula',
       \ }
 
 " Makes the shell interactive

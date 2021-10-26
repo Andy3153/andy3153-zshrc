@@ -16,5 +16,8 @@
 # KDevelop project files
 **/*.kdev4
 
+# IDEA IDEs
+**/.idea
+
 # nvim plugins
 /etc/nvim/autoload/*
