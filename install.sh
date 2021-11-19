@@ -1,8 +1,9 @@
 #!/bin/sh
 ##
 ## install.sh by Andy3153
-## created 27/08/20 ~ 15:47:22
-## remade  26/10/20 ~ 17:11:27
+## created  27/08/20 ~ 15:47:22
+## remade   26/10/20 ~ 17:11:27
+## modified 19/11/21 ~ 22:09:47
 ##
 
 # Variables
@@ -65,7 +66,7 @@
   function _installshCheckOnline()
   {
       printf "\n"
-      nc -z 8.8.8.8 53  >/dev/null 2>&1
+      ping -q -w1 -c1 8.8.8.8 > /dev/null 2>&1
       _installshCheckOnline=$?
       if [ $_installshCheckOnline -eq 0 ]
         then
@@ -73,7 +74,7 @@
 	      printf "$_installshPrompt Connected to internet!\n"
         else 
 	      _installshIsOnline="false"
-	      printf "$_installshErrPrompt Not connected to internet!\n"
+	      printf "$_installshErrPrompt Not connected to internet! Some things will not work as intended since plugins and programs couldn't get downloaded\n"
       fi
   }
 
