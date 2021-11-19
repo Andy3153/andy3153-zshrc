@@ -87,7 +87,7 @@
 	      fi
 
 	      printf "$_installshPrompt Downloading plugins...\n"
-              git clone https://github.com/zdharma/fast-syntax-highlighting $XDG_CONFIG_HOME/zsh/plugins/fast-syntax-highlighting
+              git clone https://github.com/zdharma-continuum/fast-syntax-highlighting $XDG_CONFIG_HOME/zsh/plugins/fast-syntax-highlighting
 	      git clone https://github.com/zsh-users/zsh-autosuggestions $XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions
 	else 
 	      printf "$_installshErrPrompt Downloadng plugins failed.\n"
