@@ -8,8 +8,8 @@
 
 " Set colorscheme
   " for neovim
-    colorscheme dracula
     let g:dracula_colorterm = 0 "disable background for Dracula colorscheme
+    colorscheme dracula
 
   " for lightline (statusbar)
     let g:lightline = {
