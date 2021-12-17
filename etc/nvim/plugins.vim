@@ -42,5 +42,8 @@
 
     " vim-lastplace
       Plug 'farmergreg/vim-lastplace'
+
+    " coc
+      Plug 'neoclide/coc.nvim', {'branch': 'release'}
       
     call plug#end()
