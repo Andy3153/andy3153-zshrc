@@ -8,12 +8,13 @@
 
 " Set colorscheme
   " for neovim
-    let g:dracula_colorterm = 0 "disable background for Dracula colorscheme
-    colorscheme dracula
+    autocmd VimEnter * hi Normal ctermbg=none "disable background for colorscheme
+    let g:gruvbox_contrast_dark = 'soft'
+    colorscheme gruvbox
 
   " for lightline (statusbar)
     let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'gruvbox',
       \ }
 
 " Makes the shell interactive

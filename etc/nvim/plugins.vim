@@ -26,7 +26,10 @@
       "Plug 'fneu/breezy'
     
     " dracula (colorscheme)
-      Plug 'dracula/vim', { 'as': 'dracula' }
+      "Plug 'dracula/vim', { 'as': 'dracula' }
+      
+    " gruvbox (colorscheme)
+      Plug 'morhetz/gruvbox'
 
     " deoplete (tab completion)
       Plug 'Shougo/deoplete.nvim'
