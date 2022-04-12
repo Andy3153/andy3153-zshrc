@@ -1,6 +1,7 @@
 ""
 "" init.vim by Andy3153
-"" created 30/01/21 ~ 15:12:58
+"" created  30/01/21 ~ 15:12:58
+"" modified 16/02/22 ~ 14:06:58
 ""
 
 " Plugins
@@ -9,13 +10,15 @@
 " Set colorscheme
   " for neovim
     autocmd VimEnter * hi Normal ctermbg=none "disable background for colorscheme
-    let g:gruvbox_contrast_dark = 'soft'
-    colorscheme gruvbox
+    "let g:gruvbox_contrast_dark = 'soft'
+    colorscheme catppuccin
+
+    lua require("colorscheme")
+    
+    "let g:transparent_background = 'true'
 
   " for lightline (statusbar)
-    let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ }
+    let g:lightline = {'colorscheme': 'catppuccin'}
 
 " Makes the shell interactive
   :set shellcmdflag=-ic

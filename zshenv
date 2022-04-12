@@ -22,7 +22,7 @@
          QT_QPA_PLATFORMTHEME="qt5ct"\
          DOTNET_CLI_TELEMETRY_OPTOUT="1"\
         \
-	 GAMEMODERUNEXEC="env __NV_PRIME_RENDER_OFFLOAD=1 env __GLX_VENDOR_LIBRARY_NAME=nvidia env __VK_LAYER_NV_optimus=NVIDIA_only"
+	 GAMEMODERUNEXEC="env __NV_PRIME_RENDER_OFFLOAD=1 env __GLX_VENDOR_LIBRARY_NAME=nvidia env __VK_LAYER_NV_optimus=NVIDIA_only mangohud"
 
   export SUDO_PROMPT=$'\033[1m\033[0;31m[sudo]\033[0m password for \033[1m%p\033[0m: '\
          ZDOTDIR="$XDG_CONFIG_HOME/zsh"\

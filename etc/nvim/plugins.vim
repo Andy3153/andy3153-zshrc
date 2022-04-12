@@ -29,7 +29,10 @@
       "Plug 'dracula/vim', { 'as': 'dracula' }
       
     " gruvbox (colorscheme)
-      Plug 'morhetz/gruvbox'
+      "Plug 'morhetz/gruvbox'
+      
+    " catppuccin (colorscheme)
+      Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
     " deoplete (tab completion)
       Plug 'Shougo/deoplete.nvim'
