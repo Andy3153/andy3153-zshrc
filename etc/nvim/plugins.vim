@@ -51,5 +51,8 @@
 
     " coc
       Plug 'neoclide/coc.nvim', {'branch': 'release'}
-      
+
+    " Arduino
+      "Plug 'stevearc/vim-arduino'
+
     call plug#end()

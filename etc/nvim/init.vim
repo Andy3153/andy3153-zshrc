@@ -13,7 +13,7 @@
     "let g:gruvbox_contrast_dark = 'soft'
     colorscheme catppuccin
 
-    lua require("colorscheme")
+    "lua require("colorscheme")
     
     "let g:transparent_background = 'true'
 
