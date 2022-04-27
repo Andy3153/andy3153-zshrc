@@ -38,6 +38,7 @@
     Plug 'windwp/nvim-autopairs'                         " Bracket matching/pairing
     Plug 'andymass/vim-matchup'                          " Better '%'
     Plug 'tpope/vim-commentary'                          " Commands to comment text
+    Plug 'tpope/vim-fugitive'                            " Commands for Git
     Plug 'lukas-reineke/indent-blankline.nvim'           " Indent lines
     Plug 'norcalli/nvim-colorizer.lua'                   " Render colors present in text
     Plug 'mhinz/vim-startify'                            " Start screen
