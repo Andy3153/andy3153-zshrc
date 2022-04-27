@@ -32,6 +32,24 @@
   set smartindent            " increase the indenting level after ‘{’, decrease it after ‘}’
   filetype plugin indent on  " use language‐specific plugins for indenting
 
+" Buffer types to exclude from various plugins
+let g:buffertypes_to_exclude = [
+      \ 'help',
+      \ 'terminal',
+      \ 'alpha',
+      \ 'packer',
+      \ 'lspinfo',
+      \ 'TelescopePrompt',
+      \ 'TelescopeResults',
+      \ 'nvchad_cheatsheet',
+      \ 'lsp-installer',
+      \ 'startify',
+      \ 'vim-plug',
+      \ 'rnvimr',
+      \ 'prompt',
+      \ 'TelescopePrompt',
+      \]
+
 " Custom tabbing for specific languages
   autocmd FileType html,lua,markdown,nginx,none,python,sh,text,vim,zsh setlocal tabstop=2
   autocmd FileType tex,cdrtoc setlocal tabstop=1
@@ -50,7 +68,12 @@
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/startify.lua
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/colorizer.lua
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/treesitter.lua
-  " luafile $XDG_CONFIG_HOME/nvim/plugin_conf/matchparen.lua
+  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/rnvimr.lua
+  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/scrollbar.lua
+  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/cursorline.lua
+  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/autopairs.lua
+  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/presence.lua
+  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/pretty-fold.lua
 
 " Colorscheme
   colorscheme catppuccin                                       " pick colorscheme
@@ -76,3 +99,5 @@
     nnoremap <silent> <A-L>   :BufferMoveNext<CR>     " move to previous buffer
     nnoremap <silent> <A-H>   :BufferMovePrevious<CR> " move to next buffer
     nnoremap <silent> <A-x>   :BufferClose<CR>        " close current buffer
+
+    nnoremap <silent> <A-r>   :RnvimrToggle<CR>       " open ranger in vim
