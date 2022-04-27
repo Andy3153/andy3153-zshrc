@@ -14,7 +14,7 @@
          XDG_CACHE_HOME="$HOME/.cache"\
         \
          EDITOR="nvim"\
-	 VISUAL="nvim"\
+      	 VISUAL="nvim"\
          BROWSER="firefox"\
          FILE_MANAGER="dolphin"\
          TERMINAL="konsole"\

@@ -47,7 +47,6 @@
 ## Sorry in advance for the very descriptive names for them. *sarcasm*
 ## List of themes: _setColorful, _setBlocks, _setBlocksDark, _setBlocksv2, _setKeepItSimple, _setArrows _setArrowsGit
 ##
-  #_setArrows
   _setArrowsGit
 
 
