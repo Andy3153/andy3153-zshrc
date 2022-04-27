@@ -29,6 +29,7 @@
     Plug 'kyazdani42/nvim-web-devicons'                  " Icons
     Plug 'nvim-lualine/lualine.nvim'                     " Statusline
     Plug 'romgrk/barbar.nvim'                            " Tab bar
+    Plug 'numToStr/FTerm.nvim'                           " Terminal
     Plug 'kevinhwang91/rnvimr'                           " File manager
     Plug 'petertriho/nvim-scrollbar'                     " Scrollbar
     Plug 'anuvyklack/pretty-fold.nvim'                   " Code folding support

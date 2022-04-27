@@ -8,6 +8,7 @@
 " Basic settings
   set number                 " Line numbering
   set relativenumber         " Relative line numbering
+  set nocompatible           " Disable Vi compatibility
   set mouse=a                " Enable mouse support
   set clipboard+=unnamedplus " Use system clipboard (REQUIRES xclip or wl-clipboard)
   set noshowmode             " Disable default mode showing since we use a statusbar
@@ -32,6 +33,10 @@
   set smartindent            " increase the indenting level after ‘{’, decrease it after ‘}’
   filetype plugin indent on  " use language‐specific plugins for indenting
 
+" Custom tabbing for specific languages
+  autocmd FileType html,lua,markdown,nginx,none,python,sh,text,vim,zsh setlocal tabstop=2
+  autocmd FileType tex,cdrtoc setlocal tabstop=1
+
 " Buffer types to exclude from various plugins
 let g:buffertypes_to_exclude = [
       \ 'help',
@@ -48,11 +53,8 @@ let g:buffertypes_to_exclude = [
       \ 'rnvimr',
       \ 'prompt',
       \ 'TelescopePrompt',
+      \ 'FTerm',
       \]
-
-" Custom tabbing for specific languages
-  autocmd FileType html,lua,markdown,nginx,none,python,sh,text,vim,zsh setlocal tabstop=2
-  autocmd FileType tex,cdrtoc setlocal tabstop=1
 
 " Replace stuff like :W to :w
   cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
@@ -68,6 +70,7 @@ let g:buffertypes_to_exclude = [
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/startify.lua
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/colorizer.lua
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/treesitter.lua
+  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/fterm.lua
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/rnvimr.lua
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/scrollbar.lua
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/cursorline.lua
@@ -100,4 +103,8 @@ let g:buffertypes_to_exclude = [
     nnoremap <silent> <A-H>   :BufferMovePrevious<CR> " move to next buffer
     nnoremap <silent> <A-x>   :BufferClose<CR>        " close current buffer
 
-    nnoremap <silent> <A-r>   :RnvimrToggle<CR>       " open ranger in vim
+  " Rnvimr
+    nnoremap <silent> <A-r>   :RnvimrToggle<CR>
+  
+  " FTerm
+    nnoremap <silent> <A-t>   <CMD>lua require("FTerm").toggle()<CR>
