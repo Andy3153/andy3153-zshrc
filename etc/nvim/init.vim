@@ -79,6 +79,7 @@ let g:buffertypes_to_exclude = [
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/pretty-fold.lua
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/comment.lua
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/jaq.lua
+  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/gomove.lua
 
 " Colorscheme
   colorscheme catppuccin                                       " pick colorscheme
@@ -126,3 +127,24 @@ let g:buffertypes_to_exclude = [
   " FTerm  (Alt+T; `T` from "Terminal")
     nnoremap <silent> <A-t>   <CMD>lua require("FTerm").toggle()<CR>
     tnoremap <silent> <A-t>   <C-n><CMD>lua require("FTerm").toggle()<CR>
+
+  " GoMove
+    nnoremap <S-h> <Plug>GoNSMLeft
+    nnoremap <S-j> <Plug>GoNSMDown
+    nnoremap <S-k> <Plug>GoNSMUp
+    nnoremap <S-l> <Plug>GoNSMRight
+    
+    vnoremap <S-h> <Plug>GoVSMLeft
+    vnoremap <S-j> <Plug>GoVSMDown
+    vnoremap <S-k> <Plug>GoVSMUp
+    vnoremap <S-l> <Plug>GoVSMRight
+    
+    nnoremap <C-h> <Plug>GoNSDLeft
+    nnoremap <C-j> <Plug>GoNSDDown
+    nnoremap <C-k> <Plug>GoNSDUp
+    nnoremap <C-l> <Plug>GoNSDRight
+    
+    vnoremap <C-h> <Plug>GoVSDLeft
+    vnoremap <C-j> <Plug>GoVSDDown
+    vnoremap <C-k> <Plug>GoVSDUp
+    vnoremap <C-l> <Plug>GoVSDRight

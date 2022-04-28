@@ -48,6 +48,7 @@
     Plug 'norcalli/nvim-colorizer.lua'                           " Render colors present in text
     Plug 'mhinz/vim-startify'                                    " Start screen
     Plug 'andweeb/presence.nvim'                                 " Discord Rich Presence (yes, really)
+    Plug 'booperlv/nvim-gomove'                                  " Move selection in file
     Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'} " Better syntax highlighting
 
     Plug 'neovim/nvim-lspconfig'                                 " LSP server configuration
