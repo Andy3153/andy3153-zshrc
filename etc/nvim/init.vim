@@ -78,6 +78,7 @@ let g:buffertypes_to_exclude = [
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/presence.lua
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/pretty-fold.lua
   luafile $XDG_CONFIG_HOME/nvim/plugin_conf/comment.lua
+  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/jaq.lua
 
 " Colorscheme
   colorscheme catppuccin                                       " pick colorscheme
@@ -96,7 +97,6 @@ let g:buffertypes_to_exclude = [
     nnoremap <silent> <C-_>   <Plug>(comment_toggle_current_linewise)<CR>
     vnoremap <silent> <C-_>   <Plug>(comment_toggle_blockwise_visual)<CR>
     inoremap <silent> <C-_>   <ESC><Plug>(comment_toggle_current_linewise)<CR>ki
-
 
   " BarBar
     nnoremap <silent> <A-l>   :BufferNext<CR>         " previous buffer
