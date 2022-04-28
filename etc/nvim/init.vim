@@ -110,4 +110,4 @@ let g:buffertypes_to_exclude = [
   
   " FTerm
     nnoremap <silent> <A-t>   <CMD>lua require("FTerm").toggle()<CR>
-    tnoremap <silent> <A-t>   <C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>
+    tnoremap <silent> <A-t>   <C-n><CMD>lua require("FTerm").toggle()<CR>
