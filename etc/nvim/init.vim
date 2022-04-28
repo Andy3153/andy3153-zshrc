@@ -107,6 +107,7 @@ let g:buffertypes_to_exclude = [
 
   " Rnvimr
     nnoremap <silent> <A-r>   :RnvimrToggle<CR>
+    tnoremap <silent> <A-r>   <C-\><C-n>:RnvimrToggle<CR>
   
   " FTerm
     nnoremap <silent> <A-t>   <CMD>lua require("FTerm").toggle()<CR>

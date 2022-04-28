@@ -40,7 +40,7 @@ require('jaq-nvim').setup
       -- Highlight group for floating window/border (see ':h winhl')
       border_hl  = "FloatBorder",
       float_hl   = "Normal",
-      blend      = 0             -- Floating Window Transparency (see ':h winblend')
+      blend      = 10             -- Floating Window Transparency (see ':h winblend')
     },
     terminal =
     {
