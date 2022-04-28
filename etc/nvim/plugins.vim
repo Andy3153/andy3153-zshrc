@@ -18,6 +18,10 @@
     echo "Installing coq_nvim dependencies..."
     autocmd VimEnter * COQdeps
 
+    echo "Installing treesitter dependencies..."
+    autocmd VimEnter * TSUpdate
+    autocmd VimEnter * TSInstall all
+
     echo "Done!"
     echo ""
   endif
@@ -37,13 +41,13 @@
     Plug 'farmergreg/vim-lastplace'                      " Remember last place in file
     Plug 'windwp/nvim-autopairs'                         " Bracket matching/pairing
     Plug 'andymass/vim-matchup'                          " Better '%'
-    Plug 'tpope/vim-commentary'                          " Commands to comment text
+    Plug 'numToStr/Comment.nvim'                         " Commands to comment text
     Plug 'tpope/vim-fugitive'                            " Commands for Git
     Plug 'lukas-reineke/indent-blankline.nvim'           " Indent lines
     Plug 'norcalli/nvim-colorizer.lua'                   " Render colors present in text
     Plug 'mhinz/vim-startify'                            " Start screen
     Plug 'andweeb/presence.nvim'                         " Discord Rich Presence (yes, really)
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'}
 
     Plug 'neovim/nvim-lspconfig'                         " LSP server configuration
     Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}            " Tab completion

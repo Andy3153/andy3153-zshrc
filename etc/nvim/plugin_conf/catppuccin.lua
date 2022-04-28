@@ -66,7 +66,7 @@ catppuccin.setup(
   	neogit = false,
   	vim_sneak = false,
   	fern = false,
-  	barbar = false,
+  	barbar = true,
   	bufferline = true,
   	markdown = true,
   	lightspeed = false,
