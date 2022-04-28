@@ -2,6 +2,9 @@
 -- barbar.nvim configuration
 --
 
+-- BufferNext through netrw
+vim.g.netrw_bufsettings = 'noma nomod nonu nowrap ro buflisted'
+
 -- Set barbar's options
 vim.g.bufferline = {
   animation     = true,         -- animations

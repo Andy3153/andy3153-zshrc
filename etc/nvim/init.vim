@@ -99,16 +99,30 @@ let g:buffertypes_to_exclude = [
     inoremap <silent> <C-_>   <ESC><Plug>(comment_toggle_current_linewise)<CR>ki
 
   " BarBar
-    nnoremap <silent> <A-l>   :BufferNext<CR>         " previous buffer
-    nnoremap <silent> <A-h>   :BufferPrevious<CR>     " next buffer
-    nnoremap <silent> <A-L>   :BufferMoveNext<CR>     " move to previous buffer
-    nnoremap <silent> <A-H>   :BufferMovePrevious<CR> " move to next buffer
-    nnoremap <silent> <A-x>   :BufferClose<CR>        " close current buffer
+    nnoremap <silent> <A-l>   :BufferNext<CR>
+    nnoremap <silent> <A-h>   :BufferPrevious<CR>
+    nnoremap <silent> <A-L>   :BufferMoveNext<CR>
+    nnoremap <silent> <A-H>   :BufferMovePrevious<CR>
+    nnoremap <silent> <A-x>   :BufferClose<CR>
+    nnoremap <silent> <A-q>   :BufferClose<CR>
+    nnoremap <silent> <A-1>   :BufferGoto 1<CR>
+    nnoremap <silent> <A-2>   :BufferGoto 2<CR>
+    nnoremap <silent> <A-3>   :BufferGoto 3<CR>
+    nnoremap <silent> <A-4>   :BufferGoto 4<CR>
+    nnoremap <silent> <A-5>   :BufferGoto 5<CR>
+    nnoremap <silent> <A-6>   :BufferGoto 6<CR>
+    nnoremap <silent> <A-7>   :BufferGoto 7<CR>
+    nnoremap <silent> <A-8>   :BufferGoto 8<CR>
+    nnoremap <silent> <A-9>   :BufferGoto 9<CR>
+    nnoremap <silent> <A-0>   :BufferGoto 10<CR>
 
-  " Rnvimr
+  " Jaq    (Alt+E; `E` from "Execute")
+    nnoremap <silent> <A-e>   :Jaq<CR>
+
+  " Rnvimr (Alt+R; `R` from "Ranger")
     nnoremap <silent> <A-r>   :RnvimrToggle<CR>
     tnoremap <silent> <A-r>   <C-\><C-n>:RnvimrToggle<CR>
   
-  " FTerm
+  " FTerm  (Alt+T; `T` from "Terminal")
     nnoremap <silent> <A-t>   <CMD>lua require("FTerm").toggle()<CR>
     tnoremap <silent> <A-t>   <C-n><CMD>lua require("FTerm").toggle()<CR>
