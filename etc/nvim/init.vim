@@ -129,22 +129,22 @@ let g:buffertypes_to_exclude = [
     tnoremap <silent> <A-t>   <C-n><CMD>lua require("FTerm").toggle()<CR>
 
   " GoMove
-    nnoremap <S-h> <Plug>GoNSMLeft
-    nnoremap <S-j> <Plug>GoNSMDown
-    nnoremap <S-k> <Plug>GoNSMUp
-    nnoremap <S-l> <Plug>GoNSMRight
+    nnoremap <silent> <S-h>   <Plug>GoNSMLeft
+    nnoremap <silent> <S-j>   <Plug>GoNSMDown
+    nnoremap <silent> <S-k>   <Plug>GoNSMUp
+    nnoremap <silent> <S-l>   <Plug>GoNSMRight
     
-    vnoremap <S-h> <Plug>GoVSMLeft
-    vnoremap <S-j> <Plug>GoVSMDown
-    vnoremap <S-k> <Plug>GoVSMUp
-    vnoremap <S-l> <Plug>GoVSMRight
+    vnoremap <silent> <S-h>   <Plug>GoVSMLeft
+    vnoremap <silent> <S-j>   <Plug>GoVSMDown
+    vnoremap <silent> <S-k>   <Plug>GoVSMUp
+    vnoremap <silent> <S-l>   <Plug>GoVSMRight
     
-    nnoremap <C-h> <Plug>GoNSDLeft
-    nnoremap <C-j> <Plug>GoNSDDown
-    nnoremap <C-k> <Plug>GoNSDUp
-    nnoremap <C-l> <Plug>GoNSDRight
+    nnoremap <silent> <C-h>   <Plug>GoNSDLeft
+    nnoremap <silent> <C-j>   <Plug>GoNSDDown
+    nnoremap <silent> <C-k>   <Plug>GoNSDUp
+    nnoremap <silent> <C-l>   <Plug>GoNSDRight
     
-    vnoremap <C-h> <Plug>GoVSDLeft
-    vnoremap <C-j> <Plug>GoVSDDown
-    vnoremap <C-k> <Plug>GoVSDUp
-    vnoremap <C-l> <Plug>GoVSDRight
+    vnoremap <silent> <C-h>   <Plug>GoVSDLeft
+    vnoremap <silent> <C-j>   <Plug>GoVSDDown
+    vnoremap <silent> <C-k>   <Plug>GoVSDUp
+    vnoremap <silent> <C-l>   <Plug>GoVSDRight
