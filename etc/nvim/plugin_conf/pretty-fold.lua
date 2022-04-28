@@ -4,10 +4,8 @@
 
 require('pretty-fold').setup(
 {
-  config =
+  sections =
   {
-   sections =
-   {
     left =
     {
       'content',
@@ -17,40 +15,32 @@ require('pretty-fold').setup(
       ' ', 'number_of_folded_lines', ': ', 'percentage', ' ',
       function(config) return config.fill_char:rep(3) end
     }
-   },
-   fill_char = '•',
+  },
 
-   remove_fold_markers = true,
+  fill_char = '•',
+  remove_fold_markers = true,
+  keep_indentation = true, -- Keep the indentation of the content of the fold string.
 
-   -- Keep the indentation of the content of the fold string.
-   keep_indentation = true,
+  -- Possible values:
+  -- "delete" : Delete all comment signs from the fold string.
+  -- "spaces" : Replace all comment signs with equal number of spaces.
+  -- false    : Do nothing with comment signs.
+  process_comment_signs = 'spaces',
+  comment_signs = {},      -- Comment signs additional to the value of `&commentstring` option.
+  stop_words =             -- List of patterns that will be removed from content foldtext section.
+  {
+    '@brief%s*',           -- (for C++) Remove '@brief' and all spaces after.
+  },
 
-   -- Possible values:
-   -- "delete" : Delete all comment signs from the fold string.
-   -- "spaces" : Replace all comment signs with equal number of spaces.
-   -- false    : Do nothing with comment signs.
-   process_comment_signs = 'spaces',
+  add_close_pattern = true, -- true, 'last_line' or false
+  matchup_patterns =
+  {
+    {  '{', '}' },
+    { '%(', ')' }, -- % to escape lua pattern char
+    { '%[', ']' }, -- % to escape lua pattern char
+  },
 
-   -- Comment signs additional to the value of `&commentstring` option.
-   comment_signs = {},
-
-   -- List of patterns that will be removed from content foldtext section.
-   stop_words =
-   {
-     '@brief%s*', -- (for C++) Remove '@brief' and all spaces after.
-   },
-
-   add_close_pattern = true, -- true, 'last_line' or false
-
-   matchup_patterns =
-   {
-     {  '{', '}' },
-     { '%(', ')' }, -- % to escape lua pattern char
-     { '%[', ']' }, -- % to escape lua pattern char
-   },
-
-   ft_ignore = { 'neorg' },
-  }
+  ft_ignore = { 'neorg' },
 })
 
 require('pretty-fold.preview').setup()
