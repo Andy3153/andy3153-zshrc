@@ -5,10 +5,10 @@
 ""
 
 " Install vim-plug if not installed
-  if empty(glob('$XDG_CONFIG_HOME/nvim/autoload/plug.vim'))
+  if empty(glob('$NVIM_DATA_FOLDER/autoload/plug.vim'))
     " Download vim-plug
     echo "Downloading vim-plug package manager..."
-    silent !curl -fLo $XDG_CONFIG_HOME/nvim/autoload/plug.vim --create-dirs
+    silent !curl -fLo $NVIM_DATA_FOLDER/autoload/plug.vim --create-dirs
       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
     " Install Plug packages
@@ -28,7 +28,7 @@
 
 
 " Plugin list
-  call plug#begin('$XDG_CONFIG_HOME/nvim/autoload/plugged')
+  call plug#begin('$NVIM_DATA_FOLDER/autoload/plugged')
     Plug 'nvim-lua/plenary.nvim'                                 " Extra Lua functions
     Plug 'kyazdani42/nvim-web-devicons'                          " Icons
     Plug 'nvim-lualine/lualine.nvim'                             " Statusline

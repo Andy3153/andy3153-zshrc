@@ -5,6 +5,31 @@
 "" modified2 26/04/22 ~ 14:32:46
 ""
 
+" Variables
+  " Folders
+    let $NVIM_CONFIG_FOLDER = stdpath('config')
+    let $NVIM_DATA_FOLDER = stdpath('data')
+  
+  " Buffer types to exclude from various plugins
+    let g:buffertypes_to_exclude =
+      \[
+      \ 'help',
+      \ 'terminal',
+      \ 'alpha',
+      \ 'packer',
+      \ 'lspinfo',
+      \ 'TelescopePrompt',
+      \ 'TelescopeResults',
+      \ 'nvchad_cheatsheet',
+      \ 'lsp-installer',
+      \ 'startify',
+      \ 'vim-plug',
+      \ 'rnvimr',
+      \ 'prompt',
+      \ 'TelescopePrompt',
+      \ 'FTerm',
+      \]
+
 " Basic settings
   set number                 " Line numbering
   set relativenumber         " Relative line numbering
@@ -37,49 +62,30 @@
   autocmd FileType html,lua,markdown,nginx,none,python,sh,text,vim,zsh setlocal tabstop=2
   autocmd FileType tex,cdrtoc setlocal tabstop=1
 
-" Buffer types to exclude from various plugins
-let g:buffertypes_to_exclude = [
-      \ 'help',
-      \ 'terminal',
-      \ 'alpha',
-      \ 'packer',
-      \ 'lspinfo',
-      \ 'TelescopePrompt',
-      \ 'TelescopeResults',
-      \ 'nvchad_cheatsheet',
-      \ 'lsp-installer',
-      \ 'startify',
-      \ 'vim-plug',
-      \ 'rnvimr',
-      \ 'prompt',
-      \ 'TelescopePrompt',
-      \ 'FTerm',
-      \]
-
 " Replace stuff like :W to :w
   cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
   cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('q'):('W'))
 
 " Plugins
-  source $XDG_CONFIG_HOME/nvim/plugins.vim " load plugins list
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/lualine.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/barbar.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/coq.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/indent_blackline.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/catppuccin.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/startify.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/colorizer.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/treesitter.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/fterm.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/rnvimr.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/scrollbar.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/cursorline.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/autopairs.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/presence.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/pretty-fold.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/comment.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/jaq.lua
-  luafile $XDG_CONFIG_HOME/nvim/plugin_conf/gomove.lua
+  source $NVIM_CONFIG_FOLDER/plugins.vim " load plugins list
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/lualine.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/barbar.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/coq.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/indent_blackline.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/catppuccin.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/startify.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/colorizer.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/treesitter.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/fterm.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/rnvimr.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/scrollbar.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/cursorline.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/autopairs.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/presence.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/pretty-fold.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/comment.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/jaq.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/gomove.lua
 
 " Colorscheme
   colorscheme catppuccin                                       " pick colorscheme
@@ -148,3 +154,15 @@ let g:buffertypes_to_exclude = [
     vnoremap <silent> <C-j>   <Plug>GoVSDDown
     vnoremap <silent> <C-k>   <Plug>GoVSDUp
     vnoremap <silent> <C-l>   <Plug>GoVSDRight
+
+" Highlight yanks
+  lua << EOF
+  local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+  vim.api.nvim_create_autocmd('TextYankPost', {
+    callback = function()
+      vim.highlight.on_yank()
+    end,
+    group = highlight_group,
+    pattern = '*',
+  })
+  EOF
