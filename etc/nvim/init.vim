@@ -156,13 +156,7 @@
     vnoremap <silent> <C-l>   <Plug>GoVSDRight
 
 " Highlight yanks
-  lua << EOF
-  local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-  vim.api.nvim_create_autocmd('TextYankPost', {
-    callback = function()
-      vim.highlight.on_yank()
-    end,
-    group = highlight_group,
-    pattern = '*',
-  })
-  EOF
+  augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=200}
+  augroup END
