@@ -10,7 +10,6 @@
     ' / /|  /  __/ /_/ / |/ / / / / / / /',
     '/_/ |_/\\___/\\____/|___/_/_/ /_/ /_/ '
   }
-      
 
   vim.g.ascii_nvim_3d =
   {
@@ -35,7 +34,7 @@
 
 
 -- Set the custom header
-  vim.g.startify_custom_header = 'startify#center(g:ascii_nvim_3d)'
+  vim.g.startify_custom_header = 'startify#center(g:ascii_nvim_3d_2)'
 
   vim.g.startify_bookmarks =
   {

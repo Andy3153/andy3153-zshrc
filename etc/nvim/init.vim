@@ -1,3 +1,4 @@
+"" vim:fileencoding=utf-8:foldmethod=marker
 ""
 "" init.vim by Andy3153
 "" created   30/01/21 ~ 15:12:58
@@ -5,7 +6,7 @@
 "" modified2 26/04/22 ~ 14:32:46
 ""
 
-" Variables
+" {{{ Variables
   " Folders
     let $NVIM_CONFIG_FOLDER = stdpath('config')
     let $NVIM_DATA_FOLDER = stdpath('data')
@@ -29,8 +30,9 @@
       \ 'TelescopePrompt',
       \ 'FTerm',
       \]
+" }}}
 
-" Basic settings
+" {{{ Basic settings
   set number                 " Line numbering
   set relativenumber         " Relative line numbering
   set nocompatible           " Disable Vi compatibility
@@ -47,8 +49,9 @@
   set ignorecase             " Ignore letter case when searching
   set smartcase              " Case insentive unless capitals used in search
   set termguicolors          " Required by nvim-colorizer
+" }}}
 
-" Tabbing
+" {{{ Tabbing
   set tabstop=4              " length of <TAB>
   set softtabstop=-1         " length when editing text (0 for ‘tabstop’, -1 for ‘shiftwidth’)
   set shiftwidth=0           " length when shifting text (<<, >> and == commands) (0 for ‘tabstop’)
@@ -61,12 +64,9 @@
 " Custom tabbing for specific languages
   autocmd FileType html,lua,markdown,nginx,none,python,sh,text,vim,zsh setlocal tabstop=2
   autocmd FileType tex,cdrtoc setlocal tabstop=1
+" }}}
 
-" Replace stuff like :W to :w
-  cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
-  cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('q'):('W'))
-
-" Plugins
+" {{{ Plugins
   source $NVIM_CONFIG_FOLDER/plugins.vim " load plugins list
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/lualine.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/barbar.lua
@@ -86,13 +86,16 @@
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/comment.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/jaq.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/gomove.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/which-key.lua
+" }}}
 
-" Colorscheme
+" {{{ Colorscheme
   colorscheme catppuccin                                       " pick colorscheme
   autocmd VimEnter * highlight  Normal guibg=NONE ctermbg=NONE " disable backgroud
   autocmd VimEnter * highlight! link CursorColumn CursorLine   " same color for cursor line and cursor column
+" }}}
 
-" Keybinds
+" {{{ Keybinds
   " Undo and redo
     nnoremap          U       <C-r>
     nnoremap          <C-z>   u
@@ -112,6 +115,8 @@
     nnoremap <silent> <A-H>   :BufferMovePrevious<CR>
     nnoremap <silent> <A-x>   :BufferClose<CR>
     nnoremap <silent> <A-q>   :BufferClose<CR>
+    nnoremap <silent> <A-X>   :BufferClose!<CR>
+    nnoremap <silent> <A-Q>   :BufferClose!<CR>
     nnoremap <silent> <A-1>   :BufferGoto 1<CR>
     nnoremap <silent> <A-2>   :BufferGoto 2<CR>
     nnoremap <silent> <A-3>   :BufferGoto 3<CR>
@@ -154,9 +159,16 @@
     vnoremap <silent> <C-j>   <Plug>GoVSDDown
     vnoremap <silent> <C-k>   <Plug>GoVSDUp
     vnoremap <silent> <C-l>   <Plug>GoVSDRight
+" }}}
 
+" {{{ Others
 " Highlight yanks
   augroup highlight_yank
     autocmd!
     au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=200}
   augroup END
+
+" Replace stuff like :W to :w
+  cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+  cnoreabbrev <expr> Q ((getcmdtype() is# ':' && getcmdline() is# 'Q')?('q'):('W'))
+" }}}

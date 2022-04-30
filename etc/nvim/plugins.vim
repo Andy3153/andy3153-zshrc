@@ -1,14 +1,15 @@
+"" vim:fileencoding=utf-8:foldmethod=marker
 ""
 "" plugins.vim by Andy3153
 "" created   30/01/21 ~ 15:15:49
 "" modified  26/04/22 ~ 14:38:02
 ""
 
-" Install vim-plug if not installed
-  if empty(glob('$NVIM_DATA_FOLDER/autoload/plug.vim'))
+" {{{ Install vim-plug if not installed
+  if empty(glob('$NVIM_DATA_FOLDER/site/autoload/plug.vim'))
     " Download vim-plug
     echo "Downloading vim-plug package manager..."
-    silent !curl -fLo $NVIM_DATA_FOLDER/autoload/plug.vim --create-dirs
+    silent !curl -fLo $NVIM_DATA_FOLDER/site/autoload/plug.vim --create-dirs
       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
     " Install Plug packages
@@ -25,10 +26,10 @@
     echo "Done!"
     echo ""
   endif
+" }}}
 
-
-" Plugin list
-  call plug#begin('$NVIM_DATA_FOLDER/autoload/plugged')
+" {{{ Plugin list
+  call plug#begin('$NVIM_DATA_FOLDER/site/autoload/plugged')
     Plug 'nvim-lua/plenary.nvim'                                 " Extra Lua functions
     Plug 'kyazdani42/nvim-web-devicons'                          " Icons
     Plug 'nvim-lualine/lualine.nvim'                             " Statusline
@@ -49,9 +50,12 @@
     Plug 'mhinz/vim-startify'                                    " Start screen
     Plug 'andweeb/presence.nvim'                                 " Discord Rich Presence (yes, really)
     Plug 'booperlv/nvim-gomove'                                  " Move selection in file
-    Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'} " Better syntax highlighting
+    "Plug 'kosayoda/nvim-lightbulb'                               " VSCode lightbulb
+    Plug 'folke/which-key.nvim'                                  " Keybind tooltips
 
+    Plug 'nvim-treesitter/nvim-treesitter' ", {'do': ':TSUpdate'}  Better syntax highlighting
     Plug 'neovim/nvim-lspconfig'                                 " LSP server configuration
+    Plug 'williamboman/nvim-lsp-installer'                       " LSP installer
     Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}                    " Tab completion
     Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}         " 9k+ snippets
     Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}               " third party sources
@@ -62,3 +66,4 @@
     "Plug 'morhetz/gruvbox'                                      " Gruvbox
     Plug 'catppuccin/nvim', {'as': 'catppuccin'}                 " Catppuccin
   call plug#end()
+" }}}
