@@ -4,7 +4,7 @@
 
 require("nvim-lsp-installer").setup(
 {
-  -- ensure_installed = {  }, -- Servers to automatically install Example: {"rust_analyzer", "sumneko_lua"}
+  ensure_installed = vim.g.lspservers_to_install, -- Servers to automatically install Example: {"rust_analyzer", "sumneko_lua"}
   automatic_installation = true, -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
   ui =
   {
@@ -25,8 +25,9 @@ require("nvim-lsp-installer").setup(
       uninstall_server = "X", -- Keymap to uninstall a server
     },
   },
-  install_root_dir = path.concat { vim.fn.stdpath "data", "lsp_servers" } -- The directory in which to install all servers.
-  pip = {
+  install_root_dir = vim.fn.stdpath "data" .. "/lsp_servers",--path.concat { vim.fn.stdpath "data", "lsp_servers" }, -- The directory in which to install all servers.
+  pip =
+  {
     -- These args will be added to `pip install` calls. Note that setting extra args might impact intended behavior
     -- and is not recommended.
     --

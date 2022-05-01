@@ -30,6 +30,24 @@
       \ 'TelescopePrompt',
       \ 'FTerm',
       \]
+
+  " LSP servers to install
+    let g:lspservers_to_install = 
+      \[
+      \ 'arduino_language_server',
+      \ 'arduino_language_server',
+      \ 'bashls',
+      \ 'clangd',
+      \ 'cmake',
+      \ 'dockerls',
+      \ 'html',
+      \ 'jdtls',
+      \ 'pylsp',
+      \ 'sumneko_lua',
+      \ 'texlab',
+      \ 'vimls',
+      \ 'zeta_note',
+      \]
 " }}}
 
 " {{{ Basic settings
@@ -72,6 +90,7 @@
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/barbar.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/coq.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/lspconfig.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/lsp-installer.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/indent_blackline.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/catppuccin.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/startify.lua

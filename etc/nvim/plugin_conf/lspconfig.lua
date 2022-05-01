@@ -2,51 +2,9 @@
 -- nvim-lspconfig configuration
 --
 
-require('lspconfig').arduino_language_server.setup
-{
-
-}
-require('lspconfig').bashls.setup
-{
-
-}
-require('lspconfig').clangd.setup
-{
-
-}
-require('lspconfig').cmake.setup
-{
-
-}
-require('lspconfig').dockerls.setup
-{
-
-}
-require('lspconfig').html.setup
-{
-
-}
-require('lspconfig').jdtls.setup
-{
-
-}
-require('lspconfig').pylsp.setup
-{
-
-}
-require('lspconfig').sumneko_lua.setup
-{
-
-}
-require('lspconfig').texlab.setup
-{
-
-}
-require('lspconfig').vimls.setup
-{
-
-}
-require('lspconfig').zeta_note.setup
-{
-
-}
+-- Configure all LSP servers with coq
+for _, lsp in ipairs(vim.g.lspservers_to_install) do
+  require('lspconfig')[lsp].setup(require('coq').lsp_ensure_capabilities({
+    -- on_attach = my_custom_on_attach,
+  }))
+end

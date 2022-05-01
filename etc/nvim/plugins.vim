@@ -12,16 +12,15 @@
     silent !curl -fLo $NVIM_DATA_FOLDER/site/autoload/plug.vim --create-dirs
       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-    " Install Plug packages
-    echo "Installing packages..."
-    autocmd VimEnter * PlugInstall
+    "echo "Installing packages..."
+    "autocmd VimEnter * PlugInstall
 
-    echo "Installing coq_nvim dependencies..."
-    autocmd VimEnter * COQdeps
+    "echo "Installing coq_nvim dependencies..."
+    "autocmd VimEnter * COQdeps
 
-    echo "Installing treesitter dependencies..."
-    autocmd VimEnter * TSUpdate
-    autocmd VimEnter * TSInstall all
+    "echo "Installing treesitter dependencies..."
+    "autocmd VimEnter * TSUpdate
+    "autocmd VimEnter * TSInstall all
 
     echo "Done!"
     echo ""
