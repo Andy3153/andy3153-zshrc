@@ -4,7 +4,7 @@
 
 require("nvim-lsp-installer").setup(
 {
-  ensure_installed = { "all" }, -- Servers to automatically install Example: { "rust_analyzer", "sumneko_lua" }
+  -- ensure_installed = {  }, -- Servers to automatically install Example: {"rust_analyzer", "sumneko_lua"}
   automatic_installation = true, -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
   ui =
   {

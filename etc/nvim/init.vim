@@ -71,6 +71,7 @@
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/lualine.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/barbar.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/coq.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/lspconfig.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/indent_blackline.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/catppuccin.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/startify.lua
@@ -159,6 +160,10 @@
     vnoremap <silent> <C-j>   <Plug>GoVSDDown
     vnoremap <silent> <C-k>   <Plug>GoVSDUp
     vnoremap <silent> <C-l>   <Plug>GoVSDRight
+
+  " Accelerated-JK
+    nmap j <Plug>(accelerated_jk_gj)
+    nmap k <Plug>(accelerated_jk_gk)
 " }}}
 
 " {{{ Others

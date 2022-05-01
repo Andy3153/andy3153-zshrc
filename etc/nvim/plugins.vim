@@ -39,6 +39,7 @@
     Plug 'is0n/jaq-nvim'                                         " Quick-run code
     Plug 'petertriho/nvim-scrollbar'                             " Scrollbar
     Plug 'anuvyklack/pretty-fold.nvim'                           " Code folding support
+    Plug 'anuvyklack/nvim-keymap-amend'                          " pretty-fold requires it
     Plug 'yamatsum/nvim-cursorline'                              " Highlight similar stuff
     Plug 'farmergreg/vim-lastplace'                              " Remember last place in file
     Plug 'windwp/nvim-autopairs'                                 " Bracket matching/pairing
@@ -52,6 +53,7 @@
     Plug 'booperlv/nvim-gomove'                                  " Move selection in file
     "Plug 'kosayoda/nvim-lightbulb'                               " VSCode lightbulb
     Plug 'folke/which-key.nvim'                                  " Keybind tooltips
+    Plug 'rhysd/accelerated-jk'                                  " Repeat jk movements
 
     Plug 'nvim-treesitter/nvim-treesitter' ", {'do': ':TSUpdate'}  Better syntax highlighting
     Plug 'neovim/nvim-lspconfig'                                 " LSP server configuration
