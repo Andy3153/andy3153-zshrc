@@ -54,6 +54,7 @@
   set number                 " Line numbering
   set relativenumber         " Relative line numbering
   set nocompatible           " Disable Vi compatibility
+  "set numberwidth=6          " Line numbering column width
   set mouse=a                " Enable mouse support
   set clipboard+=unnamedplus " Use system clipboard (REQUIRES xclip or wl-clipboard)
   set noshowmode             " Disable default mode showing since we use a statusbar
@@ -67,6 +68,9 @@
   set ignorecase             " Ignore letter case when searching
   set smartcase              " Case insentive unless capitals used in search
   set termguicolors          " Required by nvim-colorizer
+  "set foldmethod=syntax      " Required by pretty-fold
+  set foldmethod=indent
+  set foldlevel=99           " Nested fold count
 " }}}
 
 " {{{ Tabbing
@@ -89,8 +93,8 @@
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/lualine.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/barbar.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/coq.lua
-  luafile $NVIM_CONFIG_FOLDER/plugin_conf/lspconfig.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/lsp-installer.lua
+  luafile $NVIM_CONFIG_FOLDER/plugin_conf/lspconfig.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/indent_blackline.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/catppuccin.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/startify.lua
@@ -102,7 +106,7 @@
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/cursorline.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/autopairs.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/presence.lua
-  luafile $NVIM_CONFIG_FOLDER/plugin_conf/pretty-fold.lua
+  "luafile $NVIM_CONFIG_FOLDER/plugin_conf/pretty-fold.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/comment.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/jaq.lua
   luafile $NVIM_CONFIG_FOLDER/plugin_conf/gomove.lua
