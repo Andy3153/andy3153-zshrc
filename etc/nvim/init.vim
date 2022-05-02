@@ -67,9 +67,8 @@
   set ignorecase             " Ignore letter case when searching
   set smartcase              " Case insentive unless capitals used in search
   set termguicolors          " Required by nvim-colorizer
-  "set foldmethod=syntax     " Required by pretty-fold
-  set foldmethod=indent
-  set foldlevel=99           " Nested fold count
+  set foldmethod=indent      " Fold code
+  set foldlevel=99           " Max nested fold count
   set signcolumn=yes         " Keep signcolumn always on
 " }}}
 
