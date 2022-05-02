@@ -37,7 +37,7 @@
     Plug 'kevinhwang91/rnvimr'                                   " File manager
     Plug 'is0n/jaq-nvim'                                         " Quick-run code
     Plug 'petertriho/nvim-scrollbar'                             " Scrollbar
-    Plug 'anuvyklack/pretty-fold.nvim'                           " Code folding support
+    "Plug 'anuvyklack/pretty-fold.nvim'                           " Code folding support
     Plug 'anuvyklack/nvim-keymap-amend'                          " pretty-fold requires it
     Plug 'yamatsum/nvim-cursorline'                              " Highlight similar stuff
     Plug 'farmergreg/vim-lastplace'                              " Remember last place in file
