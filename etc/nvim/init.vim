@@ -70,6 +70,8 @@
   set foldmethod=indent      " Fold code
   set foldlevel=99           " Max nested fold count
   set signcolumn=yes         " Keep signcolumn always on
+  set splitbelow             " Open split below
+  set splitright             " Open vsplit on right
 " }}}
 
 " {{{ Tabbing
@@ -126,20 +128,46 @@
     inoremap          <C-z>   <ESC>ui
     inoremap          <C-Z>   <ESC>Ui
 
+  " Splits
+    " Create splits
+    nnoremap          <A-(>   <C-w><C-v>
+    nnoremap          <A-)>   <C-w><C-s>
+    " Move to splits
+    nnoremap          <A-h>   <C-w><C-h>
+    nnoremap          <A-j>   <C-w><C-j>
+    nnoremap          <A-k>   <C-w><C-k>
+    nnoremap          <A-l>   <C-w><C-l>
+    " Move splits
+    nnoremap <silent> <C-A-h> :WinShift left<CR>
+    nnoremap <silent> <C-A-j> :WinShift down<CR>
+    nnoremap <silent> <C-A-k> :WinShift up<CR>
+    nnoremap <silent> <C-A-l> :WinShift right<CR>
+    " Resize splits
+    nnoremap <silent> <A-H>   :lua require('smart-splits').resize_left()<CR>
+    nnoremap <silent> <A-J>   :lua require('smart-splits').resize_down()<CR>
+    nnoremap <silent> <A-K>   :lua require('smart-splits').resize_up()<CR>
+    nnoremap <silent> <A-L>   :lua require('smart-splits').resize_right()<CR>
+    nnoremap          <A-=>   <C-w><C-=>
+    
+
   " Commenting
     nnoremap <silent> <C-_>   <Plug>(comment_toggle_current_linewise)<CR>
     vnoremap <silent> <C-_>   <Plug>(comment_toggle_blockwise_visual)<CR>
     inoremap <silent> <C-_>   <ESC><Plug>(comment_toggle_current_linewise)<CR>ki
 
   " BarBar
-    nnoremap <silent> <A-l>   :BufferNext<CR>
-    nnoremap <silent> <A-h>   :BufferPrevious<CR>
-    nnoremap <silent> <A-L>   :BufferMoveNext<CR>
-    nnoremap <silent> <A-H>   :BufferMovePrevious<CR>
+    " Move to buffers
+    nnoremap <silent> <A-.>   :BufferNext<CR>
+    nnoremap <silent> <A-,>   :BufferPrevious<CR>
+    " Move buffers
+    nnoremap <silent> <A->>   :BufferMoveNext<CR>
+    nnoremap <silent> <A-<>   :BufferMovePrevious<CR>
+    " Close buffers
     nnoremap <silent> <A-x>   :BufferClose<CR>
     nnoremap <silent> <A-q>   :BufferClose<CR>
     nnoremap <silent> <A-X>   :BufferClose!<CR>
     nnoremap <silent> <A-Q>   :BufferClose!<CR>
+    " Go to buffers
     nnoremap <silent> <A-1>   :BufferGoto 1<CR>
     nnoremap <silent> <A-2>   :BufferGoto 2<CR>
     nnoremap <silent> <A-3>   :BufferGoto 3<CR>

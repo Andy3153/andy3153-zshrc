@@ -53,6 +53,8 @@
     "Plug 'kosayoda/nvim-lightbulb'                               " VSCode lightbulb
     Plug 'folke/which-key.nvim'                                  " Keybind tooltips
     Plug 'rhysd/accelerated-jk'                                  " Repeat jk movements
+    Plug 'mrjones2014/smart-splits.nvim'                         " Better split resize
+    Plug 'sindrets/winshift.nvim'                                " Better split move
 
     Plug 'nvim-treesitter/nvim-treesitter' ", {'do': ':TSUpdate'}  Better syntax highlighting
     Plug 'neovim/nvim-lspconfig'                                 " LSP server configuration
