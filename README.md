@@ -9,7 +9,6 @@ I made this mostly because I wanted an easy solution to backup my configs, but a
 I've made many themes whenever I felt like shaking things up a little. You can easily apply them.
 
 ## Plugins included:
-
   1. [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)
   2. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 
@@ -17,7 +16,7 @@ I've made many themes whenever I felt like shaking things up a little. You can e
   1. [ddate.sh](https://github.com/bake/ddate.sh)
 
 ## Other programs recommended to install are:
-  1. Any lolcat implementation you prefer [lolcat](https://github.com/busyloop/lolcat) [jaseg/lolcat](https://github.com/jaseg/lolcat) [tehmaze/lolcat](https://github.com/tehmaze/lolcat)
+  1. Any lolcat implementation you prefer [lolcat](https://github.com/busyloop/lolcat), [jaseg/lolcat](https://github.com/jaseg/lolcat), [tehmaze/lolcat](https://github.com/tehmaze/lolcat)
   2. [LSD](https://github.com/Peltoche/lsd)
 
 ## Installation
@@ -29,7 +28,7 @@ It is also recommended to have a working internet connection so that the bundled
 They are located in zsh/scripts. I made them because they're useful to me.
 
 ## About the etc folder
-I keep in there configs for other shell and terminal-related things. Like the configs for neovim. 
+I keep in there configs for other shell and terminal-related things.
 
 ## Contributing
 Feel free to give me advice on this, or even help me with it!
