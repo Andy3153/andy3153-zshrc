@@ -26,15 +26,18 @@ alias\
       d="docker"\
       r="source ranger"\
       R="/usr/bin/ranger"\
+     \
       catt="less -FX"\
       windowpid="xprop _NET_WM_PID"\
       xorwayland="loginctl show-session $(loginctl | grep $(whoami) | awk '{print $1}') -p Type --value"\
+      rpi_temp="head -n 1 /sys/class/thermal/thermal_zone0/temp | xargs -I{} awk 'BEGIN {printf \"%.2f\n\", {}/1000}'"\
      \
-      YM="youtube-dl -x --audio-format mp3 --prefer-ffmpeg"\
+      YM="yt-dlp -x --audio-format mp3 --prefer-ffmpeg"\
      \
       g="git"\
-      gs="git status"\
       gc="git clone"\
+      gs="git status"\
+      gd="git diff"\
       gp="git pull"\
       gA="git add"\
       gA.="git add ."\
