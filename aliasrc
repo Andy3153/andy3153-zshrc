@@ -23,7 +23,6 @@ alias\
       s="sudo"\
       svim="sudo nvim"\
       S="sudo systemctl"\
-      d="docker"\
       r="source ranger"\
       R="/usr/bin/ranger"\
      \
@@ -43,6 +42,9 @@ alias\
       gA.="git add ."\
       gC="git commit"\
       gP="git push"\
+     \
+      d="docker"\
+      dc="docker-compose"
      \
       cfz="$EDITOR $ZDOTDIR/zshrc"\
       cfze="$EDITOR $HOME/.zshenv"\
