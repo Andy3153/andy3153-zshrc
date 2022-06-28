@@ -7,7 +7,7 @@
 
 # Exporting environment variables
   export\
-         PATH=$HOME/.local/bin:$PATH\
+         PATH=$HOME/.local/bin:$HOME/.local/lib:$PATH\
         \
          XDG_CONFIG_HOME="$HOME/.config"\
          XDG_DATA_HOME="$HOME/.local/share"\

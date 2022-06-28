@@ -3,7 +3,7 @@
 ## aliasrc by Andy3153
 ## created 26/10/20 ~ 14:42:12
 ##
-## This is a secondary Zsh configuration file responsible for configuring aliases. 
+## This is a secondary Zsh configuration file responsible for configuring aliases.
 
 alias\
       clear="clear && $_scripts/ddate.sh"\
@@ -28,6 +28,7 @@ alias\
       R="/usr/bin/ranger"\
       catt="less -FX"\
       windowpid="xprop _NET_WM_PID"\
+      xorwayland="loginctl show-session $(loginctl | grep $(whoami) | awk '{print $1}') -p Type --value"\
      \
       YM="youtube-dl -x --audio-format mp3 --prefer-ffmpeg"\
      \
@@ -64,7 +65,7 @@ alias\
       cdtorr="cd $HOME/torrents"\
       cdvm="cd $HOME/vms"\
       cdzsh="cd $HOME/src/sh/andy3153-zshrc/"\
-      cdnvim="cd $HOME/src/sh/andy3153-zshrc/etc/nvim"\
+      cdnvim="cd $HOME/src/nvim/andy3153-init.lua/"\
      \
       thispc="echo && neofetch | lolcat -t"\
       parrotgif="curl parrot.live"\
