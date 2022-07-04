@@ -14,6 +14,15 @@ alias\
       paru="paru --sudoloop"\
       P="paru"\
      \
+      a="sudo apt"\
+      ai="sudo apt install"\
+      ar="sudo apt remove"\
+      aupg="sudo apt update && sudo apt upgrade"\
+      A="sudo tap"\
+      Ai="sudo tap install"\
+      Ar="sudo tap remove"\
+      Aupg="sudo tap update && sudo tap upgrade"\
+     \
       lss="ls -alh"\
       cd..="cd .."\
       :q="exit"\
@@ -44,7 +53,12 @@ alias\
       gP="git push"\
      \
       d="docker"\
-      dc="docker-compose"
+      db="docker build"\
+      di="docker image"\
+      dv="docker volume"\
+      dn="docker network"\
+      dex="docker exec"\
+      dc="docker-compose"\
      \
       cfz="$EDITOR $ZDOTDIR/zshrc"\
       cfze="$EDITOR $HOME/.zshenv"\
