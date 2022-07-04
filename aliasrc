@@ -18,10 +18,10 @@ alias\
       ai="sudo apt install"\
       ar="sudo apt remove"\
       aupg="sudo apt update && sudo apt upgrade"\
-      A="sudo una"\
-      Ai="sudo una install"\
-      Ar="sudo una remove"\
-      Aupg="sudo una update && sudo una upgrade"\
+      A="una"\
+      Ai="una install"\
+      Ar="una remove"\
+      Aupg="una update && una upgrade"\
      \
       lss="ls -alh"\
       cd..="cd .."\
