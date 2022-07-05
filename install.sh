@@ -18,7 +18,6 @@
     _installshBackupInput="y"
     _installshInstallInput="4"
     _installshUninstallInput="n"
-    _installshAskNvimConfigInput="n"
     _installshIsOnline="false"
 
   # Environment variables
@@ -72,7 +71,7 @@
         then
 	      _installshIsOnline="true"
 	      printf "$_installshPrompt Connected to internet!\n"
-        else 
+        else
 	      _installshIsOnline="false"
 	      printf "$_installshErrPrompt Not connected to internet! Some things will not work as intended since plugins and programs couldn't get downloaded\n"
       fi
@@ -89,7 +88,7 @@
 	      printf "$_installshPrompt Downloading plugins...\n"
               git clone https://github.com/zdharma-continuum/fast-syntax-highlighting $XDG_CONFIG_HOME/zsh/plugins/fast-syntax-highlighting
 	      git clone https://github.com/zsh-users/zsh-autosuggestions $XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions
-	else 
+	else
 	      printf "$_installshErrPrompt Downloadng plugins failed.\n"
       fi
 
@@ -106,10 +105,10 @@
 
 	      printf "$_installshPrompt Downloading programs...\n"
               git clone https://github.com/bake/ddate.sh $XDG_CONFIG_HOME/zsh/progs/ddate.sh
-	else 
+	else
 	      printf "$_installshErrPrompt Downloading programs failed.\n"
       fi
-      
+
       printf "\n"
   }
 
@@ -131,14 +130,6 @@
 
       if [ -e $HOME/.zshrc ]
         then cp -r $HOME/.zshrc $HOME/.zshbak/
-      fi
-
-      if [ -e $HOME/.vim ]
-        then cp -r $HOME/.vim $HOME/.zshbak/
-      fi
-
-      if [ -e $XDG_CONFIG_HOME/nvim ]
-        then cp -r $XDG_CONFIG_HOME/nvim $HOME/.zshbak
       fi
 
       if [ -e $XDG_CONFIG_HOME/zsh ]
@@ -169,16 +160,6 @@
       yes | cp -rf $_installshRootFolder/*rc $XDG_CONFIG_HOME/zsh/
 
       ln -s $XDG_CONFIG_HOME/zsh/zshrc $XDG_CONFIG_HOME/zsh/.zshrc
-
-      printf "$_installshPrompt Would you like to also install the neovim configs? (y/n): " ; read _installshAskNvimConfigInput
-      if [ $_installshAskNvimConfigInput = 'y' ]
-        then yes | cp -rf $_installshRootFolder/etc/nvim $XDG_CONFIG_HOME/
-        else
-             if [$_installshAskNvimConfigInput = 'n']
-		then printf "$_installshPrompt Will not copy neovim configs. Continuing.\n"
-	     fi
-      fi
-
   }
 
   function _installshInstallBySymlink()
@@ -198,21 +179,12 @@
       ln -s $_installshRootFolder/*rc $XDG_CONFIG_HOME/zsh/
 
       ln -s $XDG_CONFIG_HOME/zsh/zshrc $XDG_CONFIG_HOME/zsh/.zshrc
-
-      printf "$_installshPrompt Would you like to also install the neovim configs? (y/n): " ; read _installshAskNvimConfigInput
-      if [ $_installshAskNvimConfigInput = 'y' ]
-	then ln -s $_installshRootFolder/etc/nvim $XDG_CONFIG_HOME/
-        else
-             if [$_installshAskNvimConfigInput = 'n']
-		then printf "$_installshPrompt Will not copy neovim configs. Continuing.\n"
-	     fi
-      fi
   }
 
   function _installshUninstall()
   {
       printf "$_installshPrompt Uninstalling...\n"
-      rm -rf $HOME/.zsh $HOME/.zshrc $HOME/.vim $XDG_CONFIG_HOME/zsh $HOME/.zshenv
+      rm -rf $HOME/.zsh $HOME/.zshrc $XDG_CONFIG_HOME/zsh $HOME/.zshenv
 
       printf "$_installshPrompt Would you like to restore your old configs? (y/n): " ; read _installshUninstallInput
       if [ $_installshUninstallInput = 'y' -o 'Y' ]
@@ -228,15 +200,9 @@
                       then cp -r $HOME/.zshbak/ $HOME/.zshrc
                     fi
 
-                    if [ -e $HOME/.vim ]
-                      then cp -r $HOME/.zshbak/ $HOME/.vim
-                    fi
-
-
                     if [ -e $XDG_CONFIG_HOME/zsh ]
                       then cp -r $HOME/.zshbak $XDG_CONFIG_HOME/zsh
                     fi
-
 
                     if [ -e $HOME/.zshenv ]
                       then cp -r $HOME/.zshbak $HOME/.zshenv
