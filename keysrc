@@ -12,11 +12,18 @@
 ##
 ## Keyboard shortcuts
 ##
-## Use ' ^ ' for Ctrl, ' ^[ ' for Alt 
+## Use ' ^ ' for Ctrl, ' ^[ ' for Alt
 ##
 
-  bindkey -s '^[c' 'clear\n'         # clear (alt+c)
-  bindkey -s '^[r' 'source ranger\n' # ranger cd (alt+r)
-  #bindkey -s '^[R' 'ranger\n'       # ranger (alt+shift+r)
-  bindkey -s '^[v' '$EDITOR\n'       # default editor/nvim most likely (alt+v)
-  bindkey -s '^[t' 'tree\n'          # show file tree in current directory (alt+t)
+# Basic keys
+  bindkey '^[[1;5C' forward-word      # move to next word (ctrl+left_arrow)
+  bindkey '^[[1;5D' backward-word     # move to previous word (ctrl+right_arrow)
+  bindkey '^[[3~'   delete-char       # delete key
+  bindkey '^[[H'    beginning-of-line # home key
+  bindkey '^[[F'    end-of-line       # end key
+
+# Program shortcuts
+  bindkey -s '^[c' 'clear\n'          # clear (alt+c)
+  bindkey -s '^[r' 'source ranger\n'  # ranger cd (alt+r)
+  bindkey -s '^[v' '$EDITOR\n'        # default editor/nvim most likely (alt+v)
+  bindkey -s '^[t' 'tree\n'           # show file tree in current directory (alt+t)
