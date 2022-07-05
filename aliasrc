@@ -46,6 +46,7 @@ alias\
       gc="git clone"\
       gs="git status"\
       gd="git diff"\
+      gdt="git difftool"\
       gp="git pull"\
       gA="git add"\
       gA.="git add ."\
