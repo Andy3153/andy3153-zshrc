@@ -17,11 +17,17 @@ alias\
       a="sudo apt"\
       ai="sudo apt install"\
       ar="sudo apt remove"\
+      aar="sudo apt autoremove"\
+      ac="sudo apt clean"\
+      aac="sudo apt autoclean"\
       aupg="sudo apt update && sudo apt upgrade"\
-      A="una"\
-      Ai="una install"\
-      Ar="una remove"\
-      Aupg="una update && una upgrade"\
+      A="sudo tap"\
+      Ai="sudo tap install"\
+      Ar="sudo tap remove"\
+      Aar="sudo tap autoremove"\
+      Ac="sudo tap clean"\
+      Aac="sudo tap autoclean"\
+      Aupg="sudo tap update && sudo tap upgrade"\
      \
       lss="ls -alh"\
       cd..="cd .."\
