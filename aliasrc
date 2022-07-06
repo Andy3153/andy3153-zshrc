@@ -99,5 +99,10 @@ alias\
       ipinfo="curl ipinfo.io"\ \
       rldzsh="zsh ; exit"
 
+function ssht()
+{
+  /usr/bin/ssh -t "$@" "tmux attach || tmux new"
+}
+
 
 ## End of file.
