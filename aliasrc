@@ -51,6 +51,7 @@ alias\
       g="git"\
       gc="git clone"\
       gs="git status"\
+      gS="git stash"\
       gd="git diff"\
       gdt="git difftool"\
       gp="git pull"\
