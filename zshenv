@@ -41,6 +41,19 @@
          TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"\
          WINEPREFIX="$XDG_DATA_HOME/wine"
 
+# Wayland envvars
+  session=$(loginctl | grep $(whoami) | awk '{print $1}')
+  xorwayland=$(loginctl show-session ${session} -p Type --value)
+
+  if [ ${xorwayland} = "wayland" ] ; then
+    export\
+           MOZ_ENABLE_WAYLAND=1\
+           XDG_SESSION_TYPE=wayland\
+           QT_QPA_PLATFORM=wayland-egl\
+           QT_WAYLAND_DISABLE_WINDOWDECORATION=1\
+           _JAVA_AWT_WM_NONREPARENTING=1
+  fi
+
 # Sourcing XDG Dirs
   if [ -e $XDG_CONFIG_HOME/user-dirs.dirs ]
     then source $XDG_CONFIG_HOME/user-dirs.dirs
