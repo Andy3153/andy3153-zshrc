@@ -12,51 +12,53 @@
 
 # {{{ Variables
 # {{{ Fallback colors
-  _promptColorUID=yellow
-  _promptColorSSH=gray
+  _colorUID=yellow
+  _colorSSH=gray
 # }}}
 
 # {{{ Special characters
-  _charPowerlineArrowLeft=$'\ue0b2'
-  _charPowerlineArrowRight=$'\ue0b0'
-  _charGitBranch=$'\ue725'
+  _charArrowLeft=$'\ue0b2'
+  _charArrowRight=$'\ue0b0'
+  _charGitSym=$'\ue725'
+  _charFolder=$'\ue5ff'
+  _charFile=$'\uf0f6'
 # }}}
 # }}}
 
 # {{{ Functions for element colors
 # {{{ Check the UID of the currently running user
-  function _themercCheckUID()
+  function _checkUID()
   {
     if [ $UID = 0 ]
-      then _promptColorUID=yellow
-      else _promptColorUID=blue
+      then _colorUID=yellow
+      else _colorUID=blue
     fi
   }
 # }}}
 
 # {{{ Check if session is running through SSH
-  function _themercCheckSSH()
+  function _checkSSH()
   {
     if [ -z $SSH_CONNECTION ]
-      then _promptColorSSH=white
-      else _promptColorSSH=yellow
+      then _colorSSH=white
+      else _colorSSH=yellow
     fi
   }
 # }}}
 
 # {{{ Git branch name
-  function _themercGitBranch()
+  function _checkGitBranch()
   {
     _promptGitBranch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
   }
 # }}}
 
 # {{{ Git status
-  function _themercGitStatus()
+  function _checkGitStatus()
   {
     if [ ! $(git status --porcelain 2> /dev/null | wc -l) -eq 0 ]
-      then _promptColorGit=yellow
-      else _promptColorGit=green
+      then _colorGit=yellow
+      else _colorGit=green
     fi
   }
 # }}}
@@ -66,9 +68,9 @@
 # {{{ Colorful theme
   function _setColorful()
   {
-    _themercCheckUID
+    _checkUID
 
-    PS1="%B%F{$_promptColorUID}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
+    PS1="%B%F{$_colorUID}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
 
     RPS1="%B%F{cyan}<%b%f %D{%d/%m/%y ~ %T}"
   }
@@ -77,72 +79,85 @@
 # {{{ Blocks theme
   function _setBlocks()
   {
-    _themercCheckUID
+    _checkUID
 
     emojis=('☺' '☻' '🌜' '🐭' '🐮' '🐱' '🐵' '😀' '😁' '😂' '😃' '😄' '😅' '😆' '😇' '😈' '😉' '😊' '😋' '😌' '😍' '😎' '😏' '😗' '😘' '😙' '😚' '😛' '😜' '😝' '😴' '😵' '😶' '😷' '😸' '😹' '😺' '😻' '😼' '😽' '😾' '😿' '🙀' '🙃' '🤖')
 
-    PS1="%(?.%K{green}%F{black} √ %f%k.%K{red}%F{black} × %f%k)%K{black} ${emojis[$(($RANDOM%43))]} %n@%M %k%K{$_promptColorUID}%F{black} > %f%k "
+    PS1="%(?.%K{green}%F{black} √ %f%k.%K{red}%F{black} × %f%k)%K{black} ${emojis[$(($RANDOM%43))]} %n@%M %k%K{$_colorUID}%F{black} > %f%k "
 
-    RPS1="%K{$_promptColorUID}%F{black} 🗁 %(5~|%-2~/…/%2~|%4~)   %f%k%K{yellow}%F{black} 🗏 %h %f%k"
+    RPS1="%K{$_colorUID}%F{black} 🗁 %(5~|%-2~/…/%2~|%4~)   %f%k%K{yellow}%F{black} 🗏 %h %f%k"
   }
 # }}}
 
 # {{{ Blocks Dark theme
   function _setBlocksDark()
   {
-    _themercCheckUID
+    _checkUID
 
-    PS1="%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_promptColorUID}| %n %k%K{black}| > %f%k "
+    PS1="%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_colorUID}| %n %k%K{black}| > %f%k "
 
-    RPS1="%K{black}%F{$_promptColorUID} 🗁  %(5~|%-2~/…/%2~|%4~) |%f%k%K{black}%F{yellow} 🗏 %h %f%k"
+    RPS1="%K{black}%F{$_colorUID} 🗁  %(5~|%-2~/…/%2~|%4~) |%f%k%K{black}%F{yellow} 🗏 %h %f%k"
   }
 # }}}
 
 # {{{ Blocks v2 theme
   function _setBlocksv2()
   {
-    _themercCheckUID
+    _checkUID
 
-    PS1="%K{black}%F{$_promptColorUID}\%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_promptColorUID}\ %n@%m %k%K{black}\ > \%f%k "
+    PS1="%K{black}%F{$_colorUID}\%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_colorUID}\ %n@%m %k%K{black}\ > \%f%k "
 
-    RPS1="%K{black}%F{$_promptColorUID}/ 🗁  %(5~|%-2~/…/%2~|%4~) /%f%k%K{black}%F{yellow} 🗏 %h %F{$_promptColorUID}/"
+    RPS1="%K{black}%F{$_colorUID}/ 🗁  %(5~|%-2~/…/%2~|%4~) /%f%k%K{black}%F{yellow} 🗏 %h %F{$_colorUID}/"
   }
 # }}}
 
 # {{{ KeepItSimple
   function _setKeepItSimple()
   {
-    _themercCheckUID
+    _checkUID
 
-    PS1="%F{$_promptColorUID}\ %n@%m \ %(?.%F{green}.%F{red})> %f%F{$_promptColorUID}\%f "
+    PS1="%F{$_colorUID}\ %n@%m \ %(?.%F{green}.%F{red})> %f%F{$_colorUID}\%f "
 
-    RPS1="%F{$_promptColorUID} / %(5~|%-2~/…/%2~|%4~) /%f%F{yellow} %h %F{$_promptColorUID}/"
+    RPS1="%F{$_colorUID} / %(5~|%-2~/…/%2~|%4~) /%f%F{yellow} %h %F{$_colorUID}/"
   }
 # }}}
 
 # {{{ Arrows theme
 # First creation      26/10/20 ~ 17:03:28
 # Git support         26/08/21 ~ 20:28:31
+# Restructuring       25/10/22 ~ 13:05:20
 
   function _setArrows()
   {
-    _themercCheckUID
-    _themercCheckSSH
+    # {{{ Get element colors
+    _checkUID
+    _checkSSH
+    # }}}
+
+    # {{{ Prompt elements
+    _promptProgramSignal="%(?.%K{green}%F{black} √ %F{green}%K{black}$_charArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charArrowRight%f%k)"
+    _promptUsername="%K{black} %F{$_colorSSH}%n@%M "
+    _promptArrow="%K{$_colorUID}%F{black} > %k%F{$_colorUID}$_charArrowRight%f%k"
+    _promptFolder="%F{$_colorUID}$_charArrowLeft%K{$_colorUID}%F{black} $_charFolder %(5~|%-2~/…/%2~|%4~)%F{black}%K{$_colorUID} "
+    _promptHistory="$_charArrowLeft%f%k%K{black}%F{white} $_charFile %h %f%k"
+    # }}}
 
     function precmd()
     {
-      _themercGitBranch
-      _themercGitStatus
+      # {{{ Get Git status
+      _checkGitBranch
+      _checkGitStatus
+      # }}}
 
       if git rev-parse --git-dir > /dev/null 2>&1
-        then _promptGit="%K{$_promptColorGit}%F{black}$_charPowerlineArrowRight $_charGitBranch $_promptGitBranch%f %k%F{$_promptColorGit}$_charPowerlineArrowRight%f"
-        else _promptGit=''
+        then _promptGit="%K{$_colorGit}%F{black}$_charArrowRight $_charGitSym $_promptGitBranch%f %k%K{$_colorUID}%F{$_colorGit}$_charArrowRight%f"
+        else _promptGit="%F{black}%K{$_colorUID}$_charArrowRight%k"
       fi
     }
 
-    PS1='%(?.%K{green}%F{black} √ %F{green}%K{black}$_charPowerlineArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charPowerlineArrowRight%f%k)%K{black} %F{$_promptColorSSH}%n@%M $_promptGit%F{black}%K{$_promptColorUID}$_charPowerlineArrowRight%k%K{$_promptColorUID}%F{black} > %k%F{$_promptColorUID}$_charPowerlineArrowRight%f%k '
+    PS1='$_promptProgramSignal$_promptUsername$_promptGit$_promptArrow '
 
-    RPS1='%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} 🗀 %(5~|%-2~/…/%2~|%4~)%F{black}%K{$_promptColorUID} $_charPowerlineArrowLeft %f%k%K{black}%F{white} 🗏 %h %f%k'
+    RPS1='$_promptFolder$_promptHistory'
   }
 # }}}
 # }}}
