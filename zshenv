@@ -7,12 +7,12 @@
 
 # Exporting environment variables
   export\
-         PATH=$HOME/.local/bin:$HOME/.local/lib:$PATH\
+         PATH=${HOME}.local/bin:${HOME}.local/lib:$PATH\
         \
-         XDG_CACHE_HOME="$HOME/.cache"\
-         XDG_CONFIG_HOME="$HOME/.config"\
-         XDG_DATA_HOME="$HOME/.local/share"\
-         XDG_STATE_HOME="$HOME/.local/state"\
+         XDG_CACHE_HOME="${HOME}.cache"\
+         XDG_CONFIG_HOME="${HOME}.config"\
+         XDG_DATA_HOME="${HOME}.local/share"\
+         XDG_STATE_HOME="${HOME}.local/state"\
         \
          EDITOR="nvim"\
          VISUAL="nvim"\
@@ -21,9 +21,10 @@
          TERMINAL="konsole"\
         \
          QT_QPA_PLATFORMTHEME="qt5ct"\
+         GTK_THEME="Catppuccin-Mocha"\
          DOTNET_CLI_TELEMETRY_OPTOUT="1"\
         \
-  GAMEMODERUNEXEC="env __NV_PRIME_RENDER_OFFLOAD=1 env __GLX_VENDOR_LIBRARY_NAME=nvidia env __VK_LAYER_NV_optimus=NVIDIA_only mangohud"
+         GAMEMODERUNEXEC="env __NV_PRIME_RENDER_OFFLOAD=1 env __GLX_VENDOR_LIBRARY_NAME=nvidia env __VK_LAYER_NV_optimus=NVIDIA_only mangohud"
 
   export SUDO_PROMPT=$' \033[0;31m\033[1msudo\033[0m: \033[1m%p\033[0m > '\
          ZDOTDIR="$XDG_CONFIG_HOME/zsh"\
@@ -38,7 +39,10 @@
          KDEHOME="$XDG_CONFIG_HOME/kde"\
          JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"\
          KERAS_HOME="${XDG_STATE_HOME}/keras"\
+         TEXMFHOME="$XDG_DATA_HOME/texmf/"\
          TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"\
+         TEXMFCONFIG="$XDG_CONFIG_HOME/texlive/texmf-config"\
+         VARTEXFONTS="$XDG_CACHE_HOME/texlive/2011/texmf-var/fonts"\
          WINEPREFIX="$XDG_DATA_HOME/wine"
 
 # Wayland envvars
