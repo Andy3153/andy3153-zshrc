@@ -65,15 +65,15 @@
   function _installshCheckOnline()
   {
       printf "\n"
-      ping -q -w1 -c1 8.8.8.8 > /dev/null 2>&1
+      ping -q -w1 -c1 1.1.1.1 > /dev/null 2>&1
       _installshCheckOnline=$?
       if [ $_installshCheckOnline -eq 0 ]
         then
-	      _installshIsOnline="true"
-	      printf "$_installshPrompt Connected to internet!\n"
+          _installshIsOnline="true"
+          printf "$_installshPrompt Connected to internet!\n"
         else
-	      _installshIsOnline="false"
-	      printf "$_installshErrPrompt Not connected to internet! Some things will not work as intended since plugins and programs couldn't get downloaded\n"
+          _installshIsOnline="false"
+          printf "$_installshErrPrompt Not connected to internet! Some things will not work as intended since plugins and programs couldn't get downloaded\n"
       fi
   }
 
@@ -81,15 +81,16 @@
   {
       if [ $_installshIsOnline = true ]
         then
-	      if [ ! -e $XDG_CONFIG_HOME/plugins ]
-	        then mkdir $XDG_CONFIG_HOME/zsh/plugins
-	      fi
+          if [ ! -e $XDG_CONFIG_HOME/plugins ]
+            then mkdir $XDG_CONFIG_HOME/zsh/plugins
+          fi
 
-	      printf "$_installshPrompt Downloading plugins...\n"
-              git clone https://github.com/zdharma-continuum/fast-syntax-highlighting $XDG_CONFIG_HOME/zsh/plugins/fast-syntax-highlighting
-	      git clone https://github.com/zsh-users/zsh-autosuggestions $XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions
-	else
-	      printf "$_installshErrPrompt Downloadng plugins failed.\n"
+          printf "$_installshPrompt Downloading plugins...\n"
+          git clone https://github.com/zdharma-continuum/fast-syntax-highlighting $XDG_CONFIG_HOME/zsh/plugins/fast-syntax-highlighting
+          git clone https://github.com/zsh-users/zsh-autosuggestions $XDG_CONFIG_HOME/zsh/plugins/zsh-autosuggestions
+          git clone https://github.com/jeffreytse/zsh-vi-mode $XDG_CONFIG_HOME/zsh/plugins/zsh-vi-mode
+      else
+          printf "$_installshErrPrompt Downloadng plugins failed.\n"
       fi
 
       printf "\n"
@@ -99,14 +100,14 @@
   {
       if [ $_installshIsOnline = true ]
         then
-	      if [ ! -e $XDG_CONFIG_HOME/progs ]
-	        then mkdir $XDG_CONFIG_HOME/zsh/progs
-	      fi
+          if [ ! -e $XDG_CONFIG_HOME/progs ]
+            then mkdir $XDG_CONFIG_HOME/zsh/progs
+          fi
 
-	      printf "$_installshPrompt Downloading programs...\n"
+          printf "$_installshPrompt Downloading programs...\n"
               git clone https://github.com/bake/ddate.sh $XDG_CONFIG_HOME/zsh/progs/ddate.sh
-	else
-	      printf "$_installshErrPrompt Downloading programs failed.\n"
+    else
+          printf "$_installshErrPrompt Downloading programs failed.\n"
       fi
 
       printf "\n"
@@ -125,7 +126,7 @@
       fi
 
       if [ -e $XDG_CONFIG_HOME/zsh ]
-	then cp -r $XDG_CONFIG_HOME/zsh $HOME/.zshbak/
+    then cp -r $XDG_CONFIG_HOME/zsh $HOME/.zshbak/
       fi
 
       if [ -e $HOME/.zshrc ]
