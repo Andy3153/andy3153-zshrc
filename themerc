@@ -61,9 +61,9 @@
     {
         _themercCheckUID
 
-        export PS1="%B%F{$_promptColorUID}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
+        PS1="%B%F{$_promptColorUID}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
 
-        export RPS1="%B%F{cyan}<%b%f %D{%d/%m/%y ~ %T}"
+        RPS1="%B%F{cyan}<%b%f %D{%d/%m/%y ~ %T}"
     }
 
   # Blocks theme
@@ -73,9 +73,9 @@
 
         emojis=('☺' '☻' '🌜' '🐭' '🐮' '🐱' '🐵' '😀' '😁' '😂' '😃' '😄' '😅' '😆' '😇' '😈' '😉' '😊' '😋' '😌' '😍' '😎' '😏' '😗' '😘' '😙' '😚' '😛' '😜' '😝' '😴' '😵' '😶' '😷' '😸' '😹' '😺' '😻' '😼' '😽' '😾' '😿' '🙀' '🙃' '🤖')
 
-        export PS1="%(?.%K{green}%F{black} √ %f%k.%K{red}%F{black} × %f%k)%K{black} ${emojis[$(($RANDOM%43))]} %n@%M %k%K{$_promptColorUID}%F{black} > %f%k "
+        PS1="%(?.%K{green}%F{black} √ %f%k.%K{red}%F{black} × %f%k)%K{black} ${emojis[$(($RANDOM%43))]} %n@%M %k%K{$_promptColorUID}%F{black} > %f%k "
 
-        export RPS1="%K{$_promptColorUID}%F{black} 🗁 %(5~|%-2~/…/%2~|%4~)   %f%k%K{yellow}%F{black} 🗏 %h %f%k"
+        RPS1="%K{$_promptColorUID}%F{black} 🗁 %(5~|%-2~/…/%2~|%4~)   %f%k%K{yellow}%F{black} 🗏 %h %f%k"
     }
 
   # Blocks Dark theme
@@ -83,9 +83,9 @@
     {
         _themercCheckUID
 
-        export PS1="%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_promptColorUID}| %n %k%K{black}| > %f%k "
+        PS1="%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_promptColorUID}| %n %k%K{black}| > %f%k "
 
-        export RPS1="%K{black}%F{$_promptColorUID} 🗁  %(5~|%-2~/…/%2~|%4~) |%f%k%K{black}%F{yellow} 🗏 %h %f%k"
+        RPS1="%K{black}%F{$_promptColorUID} 🗁  %(5~|%-2~/…/%2~|%4~) |%f%k%K{black}%F{yellow} 🗏 %h %f%k"
     }
 
   # Blocks v2 theme
@@ -93,9 +93,9 @@
     {
         _themercCheckUID
 
-        export PS1="%K{black}%F{$_promptColorUID}\%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_promptColorUID}\ %n@%m %k%K{black}\ > \%f%k "
+        PS1="%K{black}%F{$_promptColorUID}\%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_promptColorUID}\ %n@%m %k%K{black}\ > \%f%k "
 
-        export RPS1="%K{black}%F{$_promptColorUID}/ 🗁  %(5~|%-2~/…/%2~|%4~) /%f%k%K{black}%F{yellow} 🗏 %h %F{$_promptColorUID}/"
+        RPS1="%K{black}%F{$_promptColorUID}/ 🗁  %(5~|%-2~/…/%2~|%4~) /%f%k%K{black}%F{yellow} 🗏 %h %F{$_promptColorUID}/"
     }
 
   # KeepItSimple
@@ -103,9 +103,9 @@
     {
         _themercCheckUID
 
-        export PS1="%F{$_promptColorUID}\ %n@%m \ %(?.%F{green}.%F{red})> %f%F{$_promptColorUID}\%f "
+        PS1="%F{$_promptColorUID}\ %n@%m \ %(?.%F{green}.%F{red})> %f%F{$_promptColorUID}\%f "
 
-        export RPS1="%F{$_promptColorUID} / %(5~|%-2~/…/%2~|%4~) /%f%F{yellow} %h %F{$_promptColorUID}/"
+        RPS1="%F{$_promptColorUID} / %(5~|%-2~/…/%2~|%4~) /%f%F{yellow} %h %F{$_promptColorUID}/"
     }
 
   # Arrows theme; 26/10/20 ~ 17:03:28
@@ -115,9 +115,9 @@
         _themercCheckSSH
 
 
-        export PS1="%(?.%K{green}%F{black} √ %F{green}%K{black}$_charPowerlineArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charPowerlineArrowRight%f%k)%K{black} %F{$_promptColorSSH}%n@%M %F{black}%K{$_promptColorUID}$_charPowerlineArrowRight%k%K{$_promptColorUID}%F{black} > %k%F{$_promptColorUID}$_charPowerlineArrowRight%f%k "
+        PS1="%(?.%K{green}%F{black} √ %F{green}%K{black}$_charPowerlineArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charPowerlineArrowRight%f%k)%K{black} %F{$_promptColorSSH}%n@%M %F{black}%K{$_promptColorUID}$_charPowerlineArrowRight%k%K{$_promptColorUID}%F{black} > %k%F{$_promptColorUID}$_charPowerlineArrowRight%f%k "
 
-        export RPS1="%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} 🗀 %(5~|%-2~/…/%2~|%4~)%F{black}%K{$_promptColorUID} $_charPowerlineArrowLeft %f%k%K{black}%F{white} 🗏 %h %f%k"
+        RPS1="%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} 🗀 %(5~|%-2~/…/%2~|%4~)%F{black}%K{$_promptColorUID} $_charPowerlineArrowLeft %f%k%K{black}%F{white} 🗏 %h %f%k"
     }
 
   # Arrows theme with Git support 26/08/21 ~ 20:28:31
@@ -137,9 +137,9 @@
             fi
 	    }
 
-        export PS1='%(?.%K{green}%F{black} √ %F{green}%K{black}$_charPowerlineArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charPowerlineArrowRight%f%k)%K{black} %F{$_promptColorSSH}%n@%M $_promptGit%F{black}%K{$_promptColorUID}$_charPowerlineArrowRight%k%K{$_promptColorUID}%F{black} > %k%F{$_promptColorUID}$_charPowerlineArrowRight%f%k '
+        PS1='%(?.%K{green}%F{black} √ %F{green}%K{black}$_charPowerlineArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charPowerlineArrowRight%f%k)%K{black} %F{$_promptColorSSH}%n@%M $_promptGit%F{black}%K{$_promptColorUID}$_charPowerlineArrowRight%k%K{$_promptColorUID}%F{black} > %k%F{$_promptColorUID}$_charPowerlineArrowRight%f%k '
 
-        export RPS1='%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} 🗀 %(5~|%-2~/…/%2~|%4~)%F{black}%K{$_promptColorUID} $_charPowerlineArrowLeft %f%k%K{black}%F{white} 🗏 %h %f%k'
+        RPS1='%F{$_promptColorUID}$_charPowerlineArrowLeft%K{$_promptColorUID}%F{black} 🗀 %(5~|%-2~/…/%2~|%4~)%F{black}%K{$_promptColorUID} $_charPowerlineArrowLeft %f%k%K{black}%F{white} 🗏 %h %f%k'
     }
 
 
