@@ -8,9 +8,7 @@
 alias\
       clear="clear && $_scripts/ddate.sh"\
      \
-      p="sudo pacman"\
-      yay="yay --sudoloop"\
-      y="yay"\
+      p="sudo paclabel"\
       paru="paru --sudoloop"\
       P="paru"\
      \
