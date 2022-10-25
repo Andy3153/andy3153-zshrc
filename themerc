@@ -1,4 +1,4 @@
-# vim: set fenc=utf-8 ts=2 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}}:
+# vim: set ft=zsh fenc=utf-8 ts=2 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}}:
 ##
 ## themerc by Andy3153
 ## created   26/10/20 ~ 15:24:04
@@ -149,14 +149,15 @@
       _checkGitStatus
       # }}}
 
+      # {{{ Create the Git prompt
       if git rev-parse --git-dir > /dev/null 2>&1
         then _promptGit="%K{$_colorGit}%F{black}$_charArrowRight $_charGitSym $_promptGitBranch%f %k%K{$_colorUID}%F{$_colorGit}$_charArrowRight%f"
         else _promptGit="%F{black}%K{$_colorUID}$_charArrowRight%k"
       fi
+      # }}}
     }
 
     PS1='$_promptProgramSignal$_promptUsername$_promptGit$_promptArrow '
-
     RPS1='$_promptFolder$_promptHistory'
   }
 # }}}
