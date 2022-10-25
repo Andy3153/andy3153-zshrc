@@ -45,11 +45,9 @@
 ##
 ## Setting a theme
 ##
-## To set a theme, you have to type the theme's function name from the themesrc file.
-## Sorry in advance for the very descriptive names for them. *sarcasm*
-## List of themes: _setColorful, _setBlocks, _setBlocksDark, _setBlocksv2, _setKeepItSimple, _setArrows _setArrowsGit
+## To set a theme, you have to type the theme's function name from the themerc file.
 ##
-  _setArrowsGit
+  _setArrows
 
 
 ## End of file.

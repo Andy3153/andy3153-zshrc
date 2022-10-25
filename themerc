@@ -124,7 +124,7 @@
 # First creation      26/10/20 ~ 17:03:28
 # Git support         26/08/21 ~ 20:28:31
 
-  function _setArrowsGit()
+  function _setArrows()
   {
     _themercCheckUID
     _themercCheckSSH
