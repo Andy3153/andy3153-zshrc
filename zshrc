@@ -11,7 +11,7 @@
 
 # Zsh configuration
   setopt AUTO_CD APPEND_HISTORY EXTENDED_HISTORY prompt_subst interactive_comments COMPLETE_ALIASES correctall
-  autoload -U compinit colors && compinit ; colors 
+  autoload -U compinit colors && compinit ; colors
 
 # Variables
   # For folders
@@ -39,6 +39,8 @@
     fi #source this one only when using a graphical interface, it looks weird in a TTY
 
     source $_plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+    source $_plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 ##
 ## Setting a theme
