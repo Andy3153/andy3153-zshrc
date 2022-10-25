@@ -34,6 +34,7 @@ I've made many themes whenever I felt like shaking things up a little. You can e
 ## Plugins included:
   1. [fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)
   2. [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+  3. [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode)
 
 ## Programs included:
   1. [ddate.sh](https://github.com/bake/ddate.sh)
