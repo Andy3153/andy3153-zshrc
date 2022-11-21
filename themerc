@@ -138,7 +138,7 @@
     _promptProgramSignal="%(?.%K{green}%F{black} √ %F{green}%K{black}$_charArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charArrowRight%f%k)"
     _promptUsername="%K{black} %F{$_colorSSH}%n@%M "
     _promptArrow="%K{$_colorUID}%F{black} > %k%F{$_colorUID}$_charArrowRight%f%k"
-    _promptFolder="%F{$_colorUID}$_charArrowLeft%K{$_colorUID}%F{black} $_charFolder %(5~|%-2~/…/%2~|%4~)%F{black}%K{$_colorUID} "
+    _promptFolder="%F{$_colorUID}$_charArrowLeft%K{$_colorUID}%F{black} $_charFolder %(5~|%-2~/.../%2~|%4~)%F{black}%K{$_colorUID} "
     _promptHistory="$_charArrowLeft%f%k%K{black}%F{white} $_charFile %h %f%k"
     # }}}
 
