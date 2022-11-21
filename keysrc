@@ -7,7 +7,7 @@
 ##
 
 # Bindkey mode
-  bindkey -e # -v for Vi mode; -e for Emacs mode
+  bindkey -v
 
 ##
 ## Keyboard shortcuts
@@ -22,8 +22,11 @@
   bindkey '^[[H'    beginning-of-line # home key
   bindkey '^[[F'    end-of-line       # end key
 
-# Program shortcuts
+# Run command
   bindkey -s '^[c' 'clear\n'          # clear (alt+c)
   bindkey -s '^[r' 'source ranger\n'  # ranger cd (alt+r)
   bindkey -s '^[v' '$EDITOR\n'        # default editor/nvim most likely (alt+v)
   bindkey -s '^[t' 'tree\n'           # show file tree in current directory (alt+t)
+
+# Other
+  bindkey -M vicmd z edit-command-line

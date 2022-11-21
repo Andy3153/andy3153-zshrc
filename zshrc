@@ -11,7 +11,8 @@
 
 # Zsh configuration
   setopt AUTO_CD APPEND_HISTORY EXTENDED_HISTORY prompt_subst interactive_comments COMPLETE_ALIASES correctall
-  autoload -U compinit colors && compinit ; colors
+  autoload -U compinit colors edit-command-line && compinit ; colors
+  zle -N edit-command-line
 
 # Variables
   # For folders
