@@ -34,7 +34,7 @@ alias\
       vi="nvim"\
       vim="nvim"\
       s="sudo"\
-      svim="sudo nvim"\
+      svim="sudoedit"\
       S="sudo systemctl"\
       r="source ranger"\
       R="/usr/bin/ranger"\
