@@ -33,6 +33,7 @@ alias\
       :Q="exit"\
       vi="nvim"\
       vim="nvim"\
+      sudo="sudo "\
       s="sudo"\
       svim="sudoedit"\
       S="sudo systemctl"\
