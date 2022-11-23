@@ -15,7 +15,8 @@
          XDG_STATE_HOME="${HOME}.local/state"\
         \
          EDITOR="nvim"\
-         VISUAL="nvim"\
+         VISUAL=$EDITOR\
+         SUDO_EDITOR=$EDITOR\
          BROWSER="firefox"\
          FILE_MANAGER="dolphin"\
          TERMINAL="konsole"\
