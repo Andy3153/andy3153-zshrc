@@ -29,6 +29,7 @@ fi
 
 alias\
       grep="grep --color=auto"\
+      ip="ip -color"\
      \
       cmatrix="cmatrix -abC cyan"\
       tty-clock="tty-clock -sBcC 4"\
