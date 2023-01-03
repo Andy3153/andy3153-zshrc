@@ -39,6 +39,7 @@ alias\
       S="sudo systemctl"\
       r="source ranger"\
       R="/usr/bin/ranger"\
+      moar="moar -wrap"\
      \
       clipboard="xclip -selection clipboard"\
       catt="less -FX"\
