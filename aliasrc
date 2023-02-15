@@ -5,11 +5,15 @@
 ##
 ## This is a secondary Zsh configuration file responsible for configuring aliases.
 
+# Prefer doas instead of sudo if available
+if [ -x $(which doas) ]
+then alias sudo="doas"
+fi
+
 alias\
       clear="clear && $_scripts/ddate.sh"\
      \
       p="sudo paclabel"\
-      paru="paru --sudoloop"\
       P="paru"\
      \
       a="sudo apt"\
@@ -33,9 +37,9 @@ alias\
       :Q="exit"\
       vi="nvim"\
       vim="nvim"\
-      sudo="sudo "\
-      s="sudo"\
-      svim="sudoedit"\
+      svim="sudo $EDITOR"\
+      dvim="svim"\
+      doas="doas "\
       S="sudo systemctl"\
       r="source ranger"\
       R="/usr/bin/ranger"\
