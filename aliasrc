@@ -6,30 +6,31 @@
 ## This is a secondary Zsh configuration file responsible for configuring aliases.
 
 # Prefer doas instead of sudo if available
-if [ -x $(which doas) ]
-then alias sudo="doas"
+if [ ! -x $(which doas) ]
+then
+  alias doas="sudo"
 fi
 
 alias\
       clear="clear && $_scripts/ddate.sh"\
      \
-      p="sudo paclabel"\
+      p="doas paclabel"\
       P="paru"\
      \
-      a="sudo apt"\
-      ai="sudo apt install"\
-      ar="sudo apt remove"\
-      aar="sudo apt autoremove"\
-      ac="sudo apt clean"\
-      aac="sudo apt autoclean"\
-      aupg="sudo apt update && sudo apt upgrade"\
-      A="sudo tap"\
-      Ai="sudo tap install"\
-      Ar="sudo tap remove"\
-      Aar="sudo tap autoremove"\
-      Ac="sudo tap clean"\
-      Aac="sudo tap autoclean"\
-      Aupg="sudo tap update && sudo tap upgrade"\
+      a="doas apt"\
+      ai="doas apt install"\
+      ar="doas apt remove"\
+      aar="doas apt autoremove"\
+      ac="doas apt clean"\
+      aac="doas apt autoclean"\
+      aupg="doas apt update && doas apt upgrade"\
+      A="doas tap"\
+      Ai="doas tap install"\
+      Ar="doas tap remove"\
+      Aar="doas tap autoremove"\
+      Ac="doas tap clean"\
+      Aac="doas tap autoclean"\
+      Aupg="doas tap update && doas tap upgrade"\
      \
       lss="ls -alh"\
       cd..="cd .."\
@@ -37,10 +38,10 @@ alias\
       :Q="exit"\
       vi="nvim"\
       vim="nvim"\
-      svim="sudo $EDITOR"\
+      svim="doas $EDITOR"\
       dvim="svim"\
       doas="doas "\
-      S="sudo systemctl"\
+      S="doas systemctl"\
       r="source ranger"\
       R="/usr/bin/ranger"\
       moar="moar -wrap"\
@@ -83,7 +84,7 @@ alias\
       cfv="$EDITOR $XDG_CONFIG_HOME/nvim/init.vim"\
       cfvp="$EDITOR $XDG_CONFIG_HOME/nvim/plugins.vim"\
       cfr="$EDITOR $HOME/.config/ranger/rc.conf"\
-      cfstab="sudo $EDITOR /etc/fstab"\
+      cfstab="doas $EDITOR /etc/fstab"\
      \
       cddesk="cd $XDG_DESKTOP_DIR"\
       cddoc="cd $XDG_DOCUMENTS_DIR"\
