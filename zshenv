@@ -17,6 +17,7 @@
          EDITOR="nvim"\
          VISUAL=$EDITOR\
          SUDO_EDITOR=$EDITOR\
+         GIT_EDITOR=$EDITOR\
          PAGER="nvimpager"\
          BROWSER="firefox"\
          FILE_MANAGER="dolphin"\
