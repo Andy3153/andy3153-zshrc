@@ -16,6 +16,8 @@ alias\
      \
       p="doas paclabel"\
       P="paru"\
+      f="doas flatpak"\
+      update="paru -Syu ; doas flatpak update"\
      \
       a="doas apt"\
       ai="doas apt install"\
