@@ -16,7 +16,13 @@ alias\
      \
       p="doas paclabel"\
       P="paru"\
+     \
       f="doas flatpak"\
+      fI="doas flatpak install"\
+      fU="doas flatpak uninstall"\
+      fS="flatpak search"\
+      fL="flatpak list"\
+     \
       update="paru -Syu ; doas flatpak update"\
      \
       a="doas apt"\
@@ -87,6 +93,9 @@ alias\
       cfvp="$EDITOR $XDG_CONFIG_HOME/nvim/plugins.vim"\
       cfr="$EDITOR $HOME/.config/ranger/rc.conf"\
       cfstab="doas $EDITOR /etc/fstab"\
+     \
+      labels="doas $EDITOR /etc/paclabel/labels"\
+      flabels="doas $EDITOR /etc/paclabel/flatpak-labels"\
      \
       cddesk="cd $XDG_DESKTOP_DIR"\
       cddoc="cd $XDG_DOCUMENTS_DIR"\
