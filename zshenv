@@ -25,6 +25,7 @@
         \
          QT_QPA_PLATFORMTHEME="qt5ct"\
          GTK_THEME="Catppuccin-Mocha"\
+         GTK_USE_PORTAL=1\
          DOTNET_CLI_TELEMETRY_OPTOUT="1"\
         \
          GAMEMODERUNEXEC="env __NV_PRIME_RENDER_OFFLOAD=1 env __GLX_VENDOR_LIBRARY_NAME=nvidia env __VK_LAYER_NV_optimus=NVIDIA_only mangohud"
