@@ -49,7 +49,7 @@
          WINEPREFIX="$XDG_DATA_HOME/wine"
 
 # Wayland envvars
-  session=$(loginctl | grep $(whoami) | awk '{print $1}')
+  session=$(loginctl | grep -E '$(whoami)|seat[[:digit:]]+ $' | awk '{print $1}')
   xorwayland=$(loginctl show-session ${session} -p Type --value)
 
   if [ ${xorwayland} = "wayland" ] ; then
