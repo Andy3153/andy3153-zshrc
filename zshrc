@@ -14,6 +14,9 @@
   autoload -U compinit colors edit-command-line && compinit ; colors
   zle -N edit-command-line
 
+# Completion
+  zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+
 # Variables
   # For folders
     _plugins="$ZDOTDIR/plugins/"
