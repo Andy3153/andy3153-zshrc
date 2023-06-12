@@ -19,9 +19,12 @@
          SUDO_EDITOR=$EDITOR\
          GIT_EDITOR=$EDITOR\
          PAGER="nvimpager"\
-         BROWSER="firefox"\
+         BROWSER="librewolf"\
          FILE_MANAGER="dolphin"\
          TERMINAL="konsole"\
+        \
+         MAILCHECK=10\
+         MAILPATH=$MAIL\
         \
          QT_QPA_PLATFORMTHEME="qt5ct"\
          GTK_THEME="Catppuccin-Mocha"\
