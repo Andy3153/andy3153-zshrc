@@ -56,7 +56,7 @@
   session=$(loginctl | grep -E '$(whoami)|seat[[:digit:]]+ $' | awk '{print $1}')
   xorwayland=$(loginctl show-session ${session} -p Type --value)
 
-  if [ ${xorwayland} = "wayland" ] ; then
+  if [ "${xorwayland}" = "wayland" ] ; then
     export\
            MOZ_ENABLE_WAYLAND=1\
            XDG_SESSION_TYPE=wayland\
