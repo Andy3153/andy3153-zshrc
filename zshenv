@@ -26,7 +26,6 @@
          MAILCHECK=10\
          MAILPATH=$MAIL\
         \
-         QT_QPA_PLATFORMTHEME="qt5ct"\
          GTK_THEME="Catppuccin-Mocha"\
          GTK_USE_PORTAL=1\
          DOTNET_CLI_TELEMETRY_OPTOUT="1"\
