@@ -1,4 +1,4 @@
-# andy3153-zshrc ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Andy3153/andy3153-zshrc)
+# andy3153-zshrc
 This is my .zshrc and all the plugins and little scripts that I use with it.
 
 I saw this idea of posting my shell rc config here on [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line) and thought it might be cool to try.
@@ -51,6 +51,7 @@ I keep in there configs for other shell and terminal-related things.
 
 ## Other dotfiles of mine
 - [Neovim config](https://github.com/Andy3153/andy3153-init.lua)
+- [Hyprland rice](https://github.com/Andy3153/hyprland-rice)
 - [Sway rice](https://github.com/Andy3153/sway-rice)
 
 ## Contributing
