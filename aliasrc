@@ -110,6 +110,9 @@ alias\
       cdvm="cd $HOME/vms"\
       cdzsh="cd $HOME/src/sh/andy3153-zshrc/"\
       cdnvim="cd $HOME/src/nvim/andy3153-init.lua/"\
+      cdhypr="cd $HOME/src/hyprland/hyprland-rice/"\
+      cdhyprc="cd $HOME/src/hyprland/hyprland-rice/dotconfig"\
+      cdhyprl="cd $HOME/src/hyprland/hyprland-rice/dotlocal"\
      \
       thispc="echo && neofetch | lolcat -t"\
       parrotgif="curl parrot.live"\
