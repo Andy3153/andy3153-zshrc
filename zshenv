@@ -6,13 +6,17 @@
 ## This is a secondary Zsh configuration file responsible for setting custom environment variables.
 
 # Exporting environment variables
+  if [ $(printf "%s" $HOME | tail -c 1) = "/" ]
+  then HOME=${HOME%?}
+  fi
+
   export\
-         PATH=${HOME}.local/bin:${HOME}.local/lib:$PATH\
+         PATH=${HOME}/.local/bin:${HOME}/.local/lib:$PATH\
         \
-         XDG_CACHE_HOME="${HOME}.cache"\
-         XDG_CONFIG_HOME="${HOME}.config"\
-         XDG_DATA_HOME="${HOME}.local/share"\
-         XDG_STATE_HOME="${HOME}.local/state"\
+         XDG_CACHE_HOME="${HOME}/.cache"\
+         XDG_CONFIG_HOME="${HOME}/.config"\
+         XDG_DATA_HOME="${HOME}/.local/share"\
+         XDG_STATE_HOME="${HOME}/.local/state"\
         \
          EDITOR="nvim"\
          VISUAL=$EDITOR\
