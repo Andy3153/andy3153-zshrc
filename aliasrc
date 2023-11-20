@@ -113,6 +113,9 @@ alias\
       cdhypr="cd $HOME/src/hyprland/hyprland-rice/"\
       cdhyprc="cd $HOME/src/hyprland/hyprland-rice/dotconfig"\
       cdhyprl="cd $HOME/src/hyprland/hyprland-rice/dotlocal"\
+      cdnix="cd $HOME/src/nixos/nixos-rice/"\
+      cdnixc="cd $HOME/src/nixos/nixos-rice/etc/nixos"\
+      cdnixh="cd $HOME/src/nixos/nixos-rice/home/andy3153/.config/home-manager/"\
      \
       thispc="echo && neofetch | lolcat -t"\
       parrotgif="curl parrot.live"\
