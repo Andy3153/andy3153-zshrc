@@ -19,9 +19,9 @@
 # {{{ Special characters
   _charArrowLeft=$'\ue0b2'
   _charArrowRight=$'\ue0b0'
-  _charGitSym=$'\ue725'
-  _charFolder=$'\ue5ff'
-  _charFile=$'\uf0f6'
+  _charGitSym=$'\ue725 '
+  _charFolder=$'\uea83 '
+  _charFile=$'\uf0f6 '
 # }}}
 # }}}
 
