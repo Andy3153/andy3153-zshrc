@@ -6,7 +6,7 @@
 ## This is a secondary Zsh configuration file responsible for configuring aliases.
 
 # Prefer doas instead of sudo if available
-if [ ! -x $(which doas) ]
+if ! command -v doas &> /dev/null
 then
   alias doas="sudo"
 fi
