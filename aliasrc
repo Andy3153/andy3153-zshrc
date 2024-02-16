@@ -128,5 +128,9 @@ function ssht()
   /usr/bin/ssh -t "$@" "tmux attach || tmux new"
 }
 
+function run_game()
+{
+  suspend_compositing.sh suspend & gamemoderun $@ ; suspend_compositing.sh resume
+}
 
 ## End of file.
