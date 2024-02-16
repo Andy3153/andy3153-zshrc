@@ -8,7 +8,10 @@
 # Prefer doas instead of sudo if available
 if ! command -v doas &> /dev/null
 then
-  alias doas="sudo"
+  alias doas="sudo "
+  alias sudo="sudo "
+else
+  alias doas="doas "
 fi
 
 alias\
@@ -48,7 +51,6 @@ alias\
       vim="nvim"\
       svim="doas $EDITOR"\
       dvim="svim"\
-      doas="doas "\
       S="doas systemctl"\
       r="source ranger"\
       R="/usr/bin/ranger"\
