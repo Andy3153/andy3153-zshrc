@@ -25,7 +25,7 @@
          PAGER="nvimpager"\
          BROWSER="librewolf"\
          FILE_MANAGER="dolphin"\
-         TERMINAL="konsole"\
+         TERMINAL="kitty"\
         \
          MAILCHECK=10\
          MAILPATH=$MAIL\
