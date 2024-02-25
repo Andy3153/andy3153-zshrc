@@ -18,6 +18,7 @@ alias\
       clear="clear && $_scripts/ddate.sh"\
      \
       p="doas paclabel"\
+      paru="paru --removemake --pgpfetch --newsonupgrade --bottomup"\
       P="paru"\
      \
       f="doas flatpak"\
@@ -25,8 +26,6 @@ alias\
       fU="doas flatpak uninstall"\
       fS="flatpak search"\
       fL="flatpak list"\
-     \
-      update="paru -Syu ; doas flatpak update"\
      \
       a="doas apt"\
       ai="doas apt install"\
@@ -128,6 +127,11 @@ alias\
 function ssht()
 {
   /usr/bin/ssh -t "$@" "tmux attach || tmux new"
+}
+
+function update()
+{
+  paru -Syu --skipreview "$@"; doas flatpak update
 }
 
 function run_game()
