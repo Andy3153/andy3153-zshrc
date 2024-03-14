@@ -1,32 +1,57 @@
-#!/usr/bin/env zsh
+## vim: set fenc=utf-8 ts=2 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}} ft=zsh:
 ##
 ## keysrc by Andy3153
 ## created 31/01/21 ~ 14:05:08
-##
-## This is a secondary Zsh configuration file responsible for configuring keybindings.
-##
-
-# Bindkey mode
-  bindkey -v
-
-##
-## Keyboard shortcuts
-##
-## Use ' ^ ' for Ctrl, ' ^[ ' for Alt
+## remade  11/03/24 ~ 10:52:28
 ##
 
-# Basic keys
-  bindkey '^[[1;5C' forward-word      # move to next word (ctrl+left_arrow)
-  bindkey '^[[1;5D' backward-word     # move to previous word (ctrl+right_arrow)
-  bindkey '^[[3~'   delete-char       # delete key
-  bindkey '^[[H'    beginning-of-line # home key
-  bindkey '^[[F'    end-of-line       # end key
+# {{{ Bindkey mode
+bindkey -v # use Vi keybindings
+# }}}
 
-# Run command
-  bindkey -s '^[c' 'clear\n'          # clear (alt+c)
-  bindkey -s '^[r' 'source ranger\n'  # ranger cd (alt+r)
-  bindkey -s '^[v' '$EDITOR\n'        # default editor/nvim most likely (alt+v)
-  bindkey -s '^[t' 'tree\n'           # show file tree in current directory (alt+t)
+# {{{ Keybinds
+# {{{ Cursor movement
+bindkey               "^[[1;5C" forward-word            # move to next word (ctrl+left_arrow)
+bindkey               "^[[1;5D" backward-word           # move to previous word (ctrl+right_arrow)
+bindkey               "^[[H"    beginning-of-line       # home key
+bindkey               "^[[F"    end-of-line             # end key
+# }}}
 
-# Other
-  bindkey -M vicmd z edit-command-line
+# {{{ Completion movement
+#bindkey -M menuselect "left"    vi-backward-char
+#bindkey -M menuselect "down"    vi-down-line-or-history
+#bindkey -M menuselect "up"      vi-up-line-or-history
+#bindkey -M menuselect "right"   vi-forward-char
+#
+#bindkey -M menuselect "^[[Z"    vi-up-line-or-history   # previous match (shift-tab)
+# }}}
+
+# {{{ Delete keys
+bindkey               "^[[3~"   delete-char             # delete key
+bindkey               "^H"      backward-delete-word    # delete previous word (ctrl+bksp)
+bindkey               "^[[3;5~" delete-word             # delete next word (ctrl+del)
+# }}}
+
+# {{{ Vi keybinds
+bindkey -M vicmd      "z"       edit-command-line       # edit line in $EDITOR
+
+# {{{ Change/delete inside ...
+for m in visual viopp
+do for c in {a,i}{\',\",\`}
+  do bindkey -M "${m}" "${c}" select-quoted
+  done
+done
+
+for m in visual viopp
+do for c in {a,i}${(s..)^:-'()[]{}<>bB'}
+  do bindkey -M "${m}" "${c}" select-bracketed
+  done
+done
+# }}}
+# }}}
+
+# {{{ Run commands
+bindkey -s            "^[c"     "clear"             # clear (alt+c)
+bindkey -s            "^[r"     "source ranger"     # ranger cd (alt+r)
+# }}}
+# }}}

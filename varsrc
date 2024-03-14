@@ -1,0 +1,88 @@
+## vim: set fenc=utf-8 ts=2 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}} ft=zsh:
+##
+## varsrc by Andy3153
+## created 13/03/24 ~ 16:22:45
+##
+
+# {{{ Theming
+# {{{ Fallback values
+declare -A syms=(
+  root        ""
+  ssh         ""
+)
+
+declare -A col=(
+  gitStatus   ""
+)
+
+declare -A git=(
+  branch      ""
+)
+
+declare -A cmdTime=(
+  format      ""
+  preExecTime ""
+)
+
+declare -A PE
+# }}}
+
+# {{{ Colors
+declare -A F=(
+ blk  "%F{0}"
+ red  "%F{1}"
+ grn  "%F{2}"
+ ylw  "%F{3}"
+ blu  "%F{4}"
+ mgt  "%F{5}"
+ cyn  "%F{6}"
+ wht  "%F{7}"
+
+ bblk "%F{8}"
+ bred "%F{9}"
+ bgrn "%F{10}"
+ bylw "%F{11}"
+ bblu "%F{12}"
+ bmgt "%F{13}"
+ bcyn "%F{14}"
+ bwht "%F{15}"
+)
+
+declare -A K=(
+ blk  "%K{0}"
+ red  "%K{1}"
+ grn  "%K{2}"
+ ylw  "%K{3}"
+ blu  "%K{4}"
+ mgt  "%K{5}"
+ cyn  "%K{6}"
+ wht  "%K{7}"
+
+ bblk "%K{8}"
+ bred "%K{9}"
+ bgrn "%K{10}"
+ bylw "%K{11}"
+ bblu "%K{12}"
+ bmgt "%K{13}"
+ bcyn "%K{14}"
+ bwht "%K{15}"
+)
+# }}}
+
+# {{{ Special characters
+declare -A char=(
+  arrowL      ""
+  arrowR      ""
+  circleL     ""
+  circleR     ""
+  git         ""
+  folder      " "
+  dots        "…"
+  file        " "
+  root        "󰓠 "
+  ssh         " "
+  error       " "
+  time        " "
+)
+# }}}
+# }}}

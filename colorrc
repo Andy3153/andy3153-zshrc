@@ -1,14 +1,14 @@
-#!/usr/bin/env zsh
+## vim: set fenc=utf-8 ts=2 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}} ft=zsh:
 ##
 ## colorrc by Andy3153
 ## created 31/01/21 ~ 13:18:37
-##
-## This is a secondary Zsh configuration file responsible for configuring colors in shell programs.
+## remade  11/03/24 ~ 11:30:54
 ##
 
+# {{{ Man colors
 function man()
 {
-    LESS_TERMCAP_md=$'\e[01;31m'
+    LESS_TERMCAP_md=$'\e[01;31m'\
     LESS_TERMCAP_me=$'\e[0m'\
     LESS_TERMCAP_se=$'\e[0m'\
     LESS_TERMCAP_so=$'\e[01;44;33m'\
@@ -17,23 +17,29 @@ function man()
    \
     command man "$@"
 }
+# }}}
 
-if [ $(which lsd) ] 2> /dev/null
+# {{{ Use lsd if available
+if command -v lsd &> /dev/null
 then alias ls="lsd --color=auto --classify --group-dirs=first"
-else alias ls="ls --color=auto --classify --group-directories-first"
+else
+  alias ls="ls --color=auto --classify --group-directories-first"
+  echo "recommend: install lsd"
 fi
+# }}}
 
-if [ $(which colordiff) ] 2> /dev/null
+# {{{ Use colordiff if available
+if command -v colordiff &> /dev/null
 then alias diff="colordiff"
+else echo "recommend: install colordiff"
 fi
+# }}}
 
-alias\
-      grep="grep --color=auto"\
-      ip="ip -color"\
-     \
-      cmatrix="cmatrix -abC cyan"\
-      tty-clock="tty-clock -sBcC 4"\
-      ytop="ytop -apsm"\
+# {{{ Enable color in basic programs
+alias grep="grep --color=auto"
+alias ip="ip -color"
 
-
-## End of file.
+alias cmatrix="cmatrix -abC cyan"
+alias tty-clock="tty-clock -sBcC 4"
+alias ytop="ytop -apsm"
+# }}}

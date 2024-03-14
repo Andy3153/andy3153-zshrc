@@ -1,0 +1,116 @@
+## vim: set fenc=utf-8 ts=2 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}} ft=zsh:
+##
+## pluginrc by Andy3153
+## created 14/03/24 ~ 00:40:54
+##
+
+# {{{ zsh_unplugged
+##
+## https://github.com/TomfromBerlin/zsh_unplugged
+##
+
+# {{{ Clone a plugin
+##
+## https://github.com/mattmc3/zsh_unplugged/tree/main?tab=readme-ov-file#question-what-if-i-need-to-customize-how-a-plugin-is-loaded
+##
+
+function plugin-clone {
+  local repo plugdir initfile initfiles=()
+  ZPLUGINDIR=${ZPLUGINDIR:-${ZDOTDIR:-$HOME/.config/zsh}/plugins}
+  for repo in $@; do
+    plugdir=$ZPLUGINDIR/${repo:t}
+    initfile=$plugdir/${repo:t}.plugin.zsh
+    if [[ ! -d $plugdir ]]; then
+      echo "Cloning $repo..."
+      git clone -q --depth 1 --recursive --shallow-submodules \
+        https://github.com/$repo $plugdir
+    fi
+    if [[ ! -e $initfile ]]; then
+      initfiles=($plugdir/*.{plugin.zsh,zsh-theme,zsh,sh}(N))
+      (( $#initfiles )) && ln -sf $initfiles[1] $initfile
+    fi
+  done
+}
+# }}}
+
+# {{{ Source plugins
+##
+## https://github.com/mattmc3/zsh_unplugged/tree/main?tab=readme-ov-file#question-what-if-i-need-to-customize-how-a-plugin-is-loaded
+##
+
+function plugin-source {
+  local plugdir
+  ZPLUGINDIR=${ZPLUGINDIR:-${ZDOTDIR:-$HOME/.config/zsh}/plugins}
+  for plugdir in $@; do
+    [[ $plugdir = /* ]] || plugdir=$ZPLUGINDIR/$plugdir
+    fpath+=$plugdir
+    local initfile=$plugdir/${plugdir:t}.plugin.zsh
+    (( $+functions[zsh-defer] )) && zsh-defer . $initfile || . $initfile
+  done
+}
+# }}}
+
+# {{{ Update plugins
+##
+## https://github.com/mattmc3/zsh_unplugged/tree/main?tab=readme-ov-file#question-how-do-i-update-my-plugins
+##
+
+function plugin-update {
+  ZPLUGINDIR=${ZPLUGINDIR:-$HOME/.config/zsh/plugins}
+  for d in $ZPLUGINDIR/*/.git(/); do
+    echo "Updating ${d:h:t}..."
+    command git -C "${d:h}" pull --ff --recurse-submodules --depth 1 --rebase --autostash
+  done
+}
+# }}}
+
+# {{{ List plugins
+##
+## https://github.com/mattmc3/zsh_unplugged/tree/main?tab=readme-ov-file#question-how-do-i-list-my-plugins
+##
+
+function plugin-list {
+  ls $ZPLUGINDIR
+}
+# }}}
+# }}}
+
+# {{{ Plugins to load
+plugin_repos=(
+  romkatv/zsh-defer
+
+  zsh-users/zsh-autosuggestions
+  zsh-users/zsh-history-substring-search
+  zsh-users/zsh-completions
+
+  zdharma-continuum/fast-syntax-highlighting
+  jeffreytse/zsh-vi-mode
+
+  ohmyzsh/ohmyzsh
+)
+
+plugins=(
+  zsh-defer                          # Deffered execution (make everything faster)
+
+  zsh-autosuggestions                # Autosuggestions from history
+  zsh-history-substring-search       # Cycle through history matches after typing a command
+  zsh-completions                    # More completions
+
+  fast-syntax-highlighting           # Syntax highlighting
+  zsh-vi-mode                        # Better Vi mode
+
+  ohmyzsh/plugins/command-not-found  # Show what package to install when a command is not found
+  ohmyzsh/lib/clipboard.zsh          # Cross-platform clipboard
+  ohmyzsh/plugins/extract            # Extract any archive
+)
+
+plugin-clone $plugin_repos
+plugin-source $plugins
+# }}}
+
+# {{{ Programs to download
+programs=(
+  bake/ddate.sh                              # DDate
+)
+ZPLUGINDIR="${ZPROGDIR}" plugin-clone $programs
+# }}}

@@ -1,0 +1,118 @@
+## vim: set fenc=utf-8 ts=2 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}} ft=zsh:
+##
+## funcrc by Andy3153
+## created 13/03/24 ~ 16:22:45
+##
+
+# {{{ Start message
+startMessage()
+{
+  text=$(ddate.sh "~*. Today is %A, the %d. day of %B in the YOLD %Y .*~")
+  printf "\n%*s\n\n" $(( ($#text+$COLUMNS) / 2)) "${text}" | lolcat
+}
+# }}}
+
+# {{{ Theming
+# {{{ Check if running as root
+isRoot()
+{
+  if [ "${UID}" -eq 0 ]
+  then return 0
+  else return 1
+  fi
+}
+# }}}
+
+# {{{ Check if inside SSH
+isSSH()
+{
+  if [ -z "${SSH_CONNECTION}" ]
+  then return 1
+  else return 0
+  fi
+}
+# }}}
+
+# {{{ Git
+# {{{ Check if pwd is a Git tree
+isGit()
+{
+  if git rev-parse --git-dir > /dev/null 2>&1
+  then return 0
+  else return 1
+  fi
+}
+# }}}
+
+# {{{ Check if Git tree is clean
+isGitTreeClean()
+{
+  if [ "$(git status --porcelain 2> /dev/null | wc -l)" -eq 0 ]
+  then return 0
+  else return 1
+  fi
+}
+# }}}
+
+# {{{ Get Git branch name
+getGitBranch()
+{
+  git[branch]="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+}
+# }}}
+# }}}
+
+# {{{ Command execution time
+##
+## Heavily inspired from https://github.com/tom-auger/cmdtime
+##
+
+# {{{ Format time
+timeDurationFormat() # __cmdtime_format_duration
+{
+  local hours=$(printf '%u' $(($1 / 3600)))
+  local mins=$(printf '%u' $((($1 - hours * 3600) / 60)))
+  local secs=$(printf "%.3f" $(($1 - 60 * mins - 3600 * hours)))
+
+  if [[ ! "${mins}" == "0" ]] || [[ ! "${hours}" == "0" ]]
+  then secs=${secs%\.*}
+  elif [[ "${secs}" =~ "^0\..*" ]]
+  then secs="${${${secs#0.}#0}#0}m"
+  else secs=${secs%?}
+  fi
+
+  local duration="${hours}h:${mins}m:${secs}s"
+  local format="${TIMER_FORMAT:-%d}"
+
+  #cmdTime[format]="${format//\%d/${${duration#0h:}#0m:}}"
+  echo "${format//\%d/${${duration#0h:}#0m:}}"
+}
+# }}}
+
+# {{{ Save pre-execution time
+timePreExecTime()    # __cmdtime_save_time_preexec
+{
+  cmdTime[preExecTime]=$EPOCHREALTIME
+}
+# }}}
+
+# {{{ Time to be displayed
+timeDisplayTime()
+{
+  if [ -n "${cmdTime[preExecTime]}" ]
+  then
+    local cmdEndTime="${EPOCHREALTIME}"
+    local timeDifference="$((cmdEndTime - cmdTime[preExecTime]))"
+
+    cmdTime[time]=""
+
+    [[ -z elapsedTimeThreshold ]] || elapsedTimeThreshold=5
+
+    if [[ -z "${elapsedTimeThreshold}" || "${timeDifference}" -ge "${elapsedTimeThreshold}" ]]
+    then cmdTime[time]="$(timeDurationFormat ${timeDifference})"
+    fi
+  fi
+}
+# }}}
+# }}}
+# }}}

@@ -1,57 +1,22 @@
-#!/usr/bin/env zsh
+## vim: set fenc=utf-8 ts=2 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}} ft=zsh:
 ##
 ## zshrc by Andy3153
 ## created 30/07/19 ~ 10:45:48
-## remade  26/10/20 ~ 12:53:21
+## remade1 26/10/20 ~ 12:53:21
+## remade2 13/03/24 ~ 15:34:59
 ##
-## This is the main Zsh configuration file.
-##
-## Note: INSANELY useful for debugging is using the 'zsh -v' option to see in which order are things executed.
+## `gf` on any file in the list to open it in Nvim
 ##
 
-# Zsh configuration
-  setopt AUTO_CD APPEND_HISTORY EXTENDED_HISTORY prompt_subst interactive_comments COMPLETE_ALIASES correctall
-  autoload -U compinit colors edit-command-line && compinit ; colors
-  zle -N edit-command-line
+#source "${ZDOTDIR}/zshenv"
+source "${ZDOTDIR}/varsrc"
+source "${ZDOTDIR}/optsrc"
+source "${ZDOTDIR}/funcrc"
+source "${ZDOTDIR}/keysrc"
+source "${ZDOTDIR}/aliasrc"
+source "${ZDOTDIR}/colorrc"
+source "${ZDOTDIR}/themerc"
+source "${ZDOTDIR}/pluginrc"
 
-# Completion
-  zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
-
-# Variables
-  # For folders
-    _plugins="$ZDOTDIR/plugins/"
-    _scripts="$ZDOTDIR/scripts/"
-  # History file configuration
-    HISTFILE=$ZDOTDIR/zsh-history
-    HISTSIZE=100000
-    SAVEHIST=100000
-
-# Startup script
-  $_scripts/ddate.sh
-
-# Sourcing
-  # Integral parts of Zsh
-    source $HOME/.zshenv
-    source $ZDOTDIR/aliasrc
-    source $ZDOTDIR/keysrc
-    source $ZDOTDIR/colorrc
-    source $ZDOTDIR/themerc
-
-  # Plugins
-    if [ ! $(tty | grep tty) ]
-    then source $_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-    fi #source this one only when using a graphical interface, it looks weird in a TTY
-
-    source $_plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-
-    source $_plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
-##
-## Setting a theme
-##
-## To set a theme, you have to type the theme's function name from the themerc file.
-##
-  _setArrows
-
-
-## End of file.
+startMessage # Startup message
+themeArrows  # Set theme

@@ -1,21 +1,17 @@
-## vim: set fenc=utf-8 ts=4 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}}:
-##
-## .gitignore by Andy3153
-## created  30/10/20 ~ 16:49:38
-## modified 24/08/21 ~ 15:08:52
-##
-
-# backups/backups KDevelop creates automatically
-**/*bak
-
-# the files KDE's Dolphin file manager creates
-**.directory
-
-# Kate's swap temporary files
+**/*.bak
+**/*.old
+**/.directory
 **/*.kate-swp
-
-# KDevelop project files
 **/*.kdev4
-
-# IDEA IDEs
 **/.idea
+**/*.aux
+**/*.log
+**/*.out
+**/*.synctex.gz
+**/*.toc
+**/*.pyg
+**/*.latexrun.db
+**/*.latexrun.db.lock
+**/*.fdb_latexmk
+**/*.fls
+**/*.xdv

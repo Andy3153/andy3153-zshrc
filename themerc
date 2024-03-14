@@ -1,164 +1,86 @@
-# vim: set ft=zsh fenc=utf-8 ts=2 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}}:
+## vim: set fenc=utf-8 ts=2 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}} ft=zsh:
 ##
 ## themerc by Andy3153
 ## created   26/10/20 ~ 15:24:04
-## created   23/08/21 ~ 00:13:35
-## modified  25/10/22 ~ 12:40:25
+## remade1   23/08/21 ~ 00:13:35
+## modified1 25/10/22 ~ 12:40:25
+## remade2   11/03/24 ~ 11:38:39
 ##
-## This is a secondary Zsh configuration file responsible for configuring themes.
-##
-## Use 'print -P' to test prompt escapes when making a new theme
-##
-
-# {{{ Variables
-# {{{ Fallback colors
-  _colorUID=yellow
-  _colorSSH=gray
-# }}}
-
-# {{{ Special characters
-  _charArrowLeft=$'\ue0b2'
-  _charArrowRight=$'\ue0b0'
-  _charGitSym=$'\ue725 '
-  _charFolder=$'\uea83 '
-  _charFile=$'\uf0f6 '
-# }}}
-# }}}
-
-# {{{ Functions for element colors
-# {{{ Check the UID of the currently running user
-  function _checkUID()
-  {
-    if [ $UID = 0 ]
-      then _colorUID=yellow
-      else _colorUID=blue
-    fi
-  }
-# }}}
-
-# {{{ Check if session is running through SSH
-  function _checkSSH()
-  {
-    if [ -z $SSH_CONNECTION ]
-      then _colorSSH=white
-      else _colorSSH=yellow
-    fi
-  }
-# }}}
-
-# {{{ Git branch name
-  function _checkGitBranch()
-  {
-    _promptGitBranch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-  }
-# }}}
-
-# {{{ Git status
-  function _checkGitStatus()
-  {
-    if [ ! $(git status --porcelain 2> /dev/null | wc -l) -eq 0 ]
-      then _colorGit=yellow
-      else _colorGit=green
-    fi
-  }
-# }}}
-# }}}
-
-# {{{ Themes
-# {{{ Colorful theme
-  function _setColorful()
-  {
-    _checkUID
-
-    PS1="%B%F{$_colorUID}[ %n@%m ]%f%b %F{white}:%f %F{yellow}%~%f %B%F{cyan}>%b%f "
-
-    RPS1="%B%F{cyan}<%b%f %D{%d/%m/%y ~ %T}"
-  }
-# }}}
-
-# {{{ Blocks theme
-  function _setBlocks()
-  {
-    _checkUID
-
-    emojis=('☺' '☻' '🌜' '🐭' '🐮' '🐱' '🐵' '😀' '😁' '😂' '😃' '😄' '😅' '😆' '😇' '😈' '😉' '😊' '😋' '😌' '😍' '😎' '😏' '😗' '😘' '😙' '😚' '😛' '😜' '😝' '😴' '😵' '😶' '😷' '😸' '😹' '😺' '😻' '😼' '😽' '😾' '😿' '🙀' '🙃' '🤖')
-
-    PS1="%(?.%K{green}%F{black} √ %f%k.%K{red}%F{black} × %f%k)%K{black} ${emojis[$(($RANDOM%43))]} %n@%M %k%K{$_colorUID}%F{black} > %f%k "
-
-    RPS1="%K{$_colorUID}%F{black} 🗁 %(5~|%-2~/…/%2~|%4~)   %f%k%K{yellow}%F{black} 🗏 %h %f%k"
-  }
-# }}}
-
-# {{{ Blocks Dark theme
-  function _setBlocksDark()
-  {
-    _checkUID
-
-    PS1="%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_colorUID}| %n %k%K{black}| > %f%k "
-
-    RPS1="%K{black}%F{$_colorUID} 🗁  %(5~|%-2~/…/%2~|%4~) |%f%k%K{black}%F{yellow} 🗏 %h %f%k"
-  }
-# }}}
-
-# {{{ Blocks v2 theme
-  function _setBlocksv2()
-  {
-    _checkUID
-
-    PS1="%K{black}%F{$_colorUID}\%(?.%K{black}%F{green} √ %f%k.%K{black}%F{red} × %f%k)%K{black}%F{$_colorUID}\ %n@%m %k%K{black}\ > \%f%k "
-
-    RPS1="%K{black}%F{$_colorUID}/ 🗁  %(5~|%-2~/…/%2~|%4~) /%f%k%K{black}%F{yellow} 🗏 %h %F{$_colorUID}/"
-  }
-# }}}
-
-# {{{ KeepItSimple
-  function _setKeepItSimple()
-  {
-    _checkUID
-
-    PS1="%F{$_colorUID}\ %n@%m \ %(?.%F{green}.%F{red})> %f%F{$_colorUID}\%f "
-
-    RPS1="%F{$_colorUID} / %(5~|%-2~/…/%2~|%4~) /%f%F{yellow} %h %F{$_colorUID}/"
-  }
-# }}}
 
 # {{{ Arrows theme
-# First creation      26/10/20 ~ 17:03:28
-# Git support         26/08/21 ~ 20:28:31
-# Restructuring       25/10/22 ~ 13:05:20
+##
+## created     26/10/20 ~ 17:03:28
+## git support 26/08/21 ~ 20:28:31
+## remade1     25/10/22 ~ 13:05:20
+## remade2     12/03/24 ~ 15:32:56
+##
+## I should've used vcs_info. I'm lazy now.
+##
 
-  function _setArrows()
+themeArrows()
+{
+  # {{{ Fetch info for the `isRoot` prompt segment
+  if isRoot
+  then syms[root]="$char[root] "
+  fi
+  # }}}
+
+  # {{{ Fetch info for the `isSSH` prompt segment
+  if isSSH
+  then syms[ssh]="$char[ssh]"
+  fi
+  # }}}
+
+  # Run before running a command
+  preexec()
   {
-    # {{{ Get element colors
-    _checkUID
-    _checkSSH
+    # {{{ Fetch info for the `elapsedTime` prompt segment
+    timePreExecTime
     # }}}
-
-    # {{{ Prompt elements
-    _promptProgramSignal="%(?.%K{green}%F{black} √ %F{green}%K{black}$_charArrowRight%f%k.%K{red}%F{black} × %F{red}%K{black}$_charArrowRight%f%k)"
-    _promptUsername="%K{black} %F{$_colorSSH}%n@%M "
-    _promptArrow="%K{$_colorUID}%F{black} > %k%F{$_colorUID}$_charArrowRight%f%k"
-    _promptFolder="%F{$_colorUID}$_charArrowLeft%K{$_colorUID}%F{black} $_charFolder %(5~|%-2~/.../%2~|%4~)%F{black}%K{$_colorUID} "
-    _promptHistory="$_charArrowLeft%f%k%K{black}%F{white} $_charFile %h %f%k"
-    # }}}
-
-    function precmd()
-    {
-      # {{{ Get Git status
-      _checkGitBranch
-      _checkGitStatus
-      # }}}
-
-      # {{{ Create the Git prompt
-      if git rev-parse --git-dir > /dev/null 2>&1
-        then _promptGit="%K{$_colorGit}%F{black}$_charArrowRight $_charGitSym $_promptGitBranch%f %k%K{$_colorUID}%F{$_colorGit}$_charArrowRight%f"
-        else _promptGit="%F{black}%K{$_colorUID}$_charArrowRight%k"
-      fi
-      # }}}
-    }
-
-    PS1='$_promptProgramSignal$_promptUsername$_promptGit$_promptArrow '
-    RPS1='$_promptFolder$_promptHistory'
   }
-# }}}
+
+  # Run before every prompt
+  precmd()
+  {
+    # {{{ Fetch info for the `elapsedTime` prompt segment
+    timeDisplayTime
+    if [ -z "${cmdTime[time]}" ]
+    then PE[elapsedTime]="$F[blk]$K[bblk]$char[arrowL]%f%k"
+    else PE[elapsedTime]="$F[blk]$K[bblk]$char[arrowL]$F[wht]$K[blk] $char[time] $cmdTime[time] %f%k"
+    fi
+    # }}}
+
+    # {{{ Fetch info for the `git` prompt segment
+    getGitBranch
+
+    if isGitTreeClean
+    then col[gitStatus]="grn"
+    else col[gitStatus]="ylw"
+    fi
+
+    if isGit
+    then PE[git]="$K[$col[gitStatus]]$F[blk]$char[arrowR] $char[git] $git[branch] $K[bblk]$F[$col[gitStatus]]$char[arrowR]%f"
+    else PE[git]="$F[blk]$K[bblk]$char[arrowR]%k"
+    fi
+    # }}}
+  }
+
+  # {{{ Prompt elements not auto-updated
+  PE=(
+    delimiterL  "$char[circleL]"
+    delimiterR  "$char[circleR]"
+    isRoot      "$syms[root]"
+    isSSH       "$syms[ssh]"
+    username    "%n@%m"
+    indicator   "$F[bblk]$K[bwht]$char[arrowR]$F[bwht]$K[wht]$char[arrowR]$F[wht]%k$char[arrowR]%f%k "
+    folder      "$F[bwht]$char[arrowL]$F[blk]$K[bwht] $char[folder] %(5~|%-1~/$char[dots]/%2~|%4~) %f%k"
+    errorCode   "$F[bblk]$K[bwht]$char[arrowL]$F[wht]$K[bblk]%(?.. $char[error] %?%  )%f%k"
+  )
+  # }}}
+
+  # {{{ Arrange prompt elements in the prompts
+  PROMPT='$F[blk]$PE[delimiterL]$F[wht]$K[blk]$PE[isRoot]$PE[isSSH]$PE[username] $PE[git]$PE[indicator]%f%k'
+  RPROMPT='$PE[folder]$PE[errorCode]$PE[elapsedTime]$F[blk]$PE[delimiterR]%f%k'
+  # }}}
+}
 # }}}

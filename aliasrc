@@ -1,11 +1,15 @@
-#!/usr/bin/env zsh
+## vim: set fenc=utf-8 ts=2 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}} ft=zsh:
 ##
 ## aliasrc by Andy3153
 ## created 26/10/20 ~ 14:42:12
+## remade  11/03/24 ~ 01:34:23
 ##
-## This is a secondary Zsh configuration file responsible for configuring aliases.
 
-# Prefer doas instead of sudo if available
+# {{{ Use doas instead of sudo if available
+##
+## Also add the ability to use aliases in sudo/doas commands (because of the spaces)
+##
+
 if ! command -v doas &> /dev/null
 then
   alias doas="sudo "
@@ -13,130 +17,173 @@ then
 else
   alias doas="doas "
 fi
+# }}}
 
-alias\
-      clear="clear && $_scripts/ddate.sh"\
-     \
-      p="doas paclabel"\
-      paru="paru --removemake --pgpfetch --newsonupgrade --bottomup"\
-      P="paru"\
-     \
-      f="doas flatpak"\
-      fI="doas flatpak install"\
-      fU="doas flatpak uninstall"\
-      fS="flatpak search"\
-      fL="flatpak list"\
-     \
-      a="doas apt"\
-      ai="doas apt install"\
-      ar="doas apt remove"\
-      aar="doas apt autoremove"\
-      ac="doas apt clean"\
-      aac="doas apt autoclean"\
-      aupg="doas apt update && doas apt upgrade"\
-      A="doas tap"\
-      Ai="doas tap install"\
-      Ar="doas tap remove"\
-      Aar="doas tap autoremove"\
-      Ac="doas tap clean"\
-      Aac="doas tap autoclean"\
-      Aupg="doas tap update && doas tap upgrade"\
-     \
-      lss="ls -alh"\
-      cd..="cd .."\
-      :q="exit"\
-      :Q="exit"\
-      vi="nvim"\
-      vim="nvim"\
-      svim="doas $EDITOR"\
-      dvim="svim"\
-      S="doas systemctl"\
-      r="source ranger"\
-      R="/usr/bin/ranger"\
-      moar="moar -wrap"\
-     \
-      clipboard="xclip -selection clipboard"\
-      catt="less -FX"\
-      windowpid="xprop _NET_WM_PID"\
-      xorwayland="loginctl show-session $(loginctl | grep $(whoami) | awk '{print $1}') -p Type --value"\
-      rpi_temp="head -n 1 /sys/class/thermal/thermal_zone0/temp | xargs -I{} awk 'BEGIN {printf \"%.2f\n\", {}/1000}'"\
-     \
-      YM="yt-dlp -x --audio-format mp3 --prefer-ffmpeg"\
-     \
-      g="git"\
-      gc="git clone"\
-      gs="git status"\
-      gS="git stash"\
-      gd="git diff"\
-      gdt="git difftool"\
-      gp="git pull"\
-      gA="git add"\
-      gA.="git add ."\
-      gC="git commit"\
-      gP="git push"\
-     \
-      d="docker"\
-      db="docker build"\
-      di="docker image"\
-      dv="docker volume"\
-      dn="docker network"\
-      dex="docker exec"\
-      dc="docker-compose"\
-     \
-      cfz="$EDITOR $ZDOTDIR/zshrc"\
-      cfze="$EDITOR $HOME/.zshenv"\
-      cfza="$EDITOR $ZDOTDIR/aliasrc"\
-      cfzc="$EDITOR $ZDOTDIR/colorrc"\
-      cfzk="$EDITOR $ZDOTDIR/keysrc"\
-      cfzt="$EDITOR $ZDOTDIR/themerc"\
-     \
-      cfv="$EDITOR $XDG_CONFIG_HOME/nvim/init.vim"\
-      cfvp="$EDITOR $XDG_CONFIG_HOME/nvim/plugins.vim"\
-      cfr="$EDITOR $HOME/.config/ranger/rc.conf"\
-      cfstab="doas $EDITOR /etc/fstab"\
-     \
-      labels="doas $EDITOR /etc/paclabel/labels"\
-      flabels="doas $EDITOR /etc/paclabel/flatpak-labels"\
-     \
-      cddesk="cd $XDG_DESKTOP_DIR"\
-      cddoc="cd $XDG_DOCUMENTS_DIR"\
-      cddown="cd $XDG_DOWNLOAD_DIR"\
-      cdmusic="cd $XDG_MUSIC_DIR"\
-      cdpic="cd $XDG_PICTURES_DIR"\
-      cdvid="cd $XDG_VIDEOS_DIR"\
-      cdetc="cd $HOME/etc"\
-      cdgame="cd $HOME/games"\
-      cdsrc="cd $HOME/src"\
-      cdtorr="cd $HOME/torrents"\
-      cdvm="cd $HOME/vms"\
-      cdzsh="cd $HOME/src/sh/andy3153-zshrc/"\
-      cdnvim="cd $HOME/src/nvim/andy3153-init.lua/"\
-      cdhypr="cd $HOME/src/hyprland/hyprland-rice/"\
-      cdhyprc="cd $HOME/src/hyprland/hyprland-rice/dotconfig"\
-      cdhyprl="cd $HOME/src/hyprland/hyprland-rice/dotlocal"\
-      cdnix="cd $HOME/src/nixos/nixos-rice/"\
-      cdnixc="cd $HOME/src/nixos/nixos-rice/etc/nixos"\
-      cdnixh="cd $HOME/src/nixos/nixos-rice/home/andy3153/.config/home-manager/"\
-     \
-      thispc="echo && neofetch | lolcat -t"\
-      parrotgif="curl parrot.live"\
-      weather="curl wttr.in"\
-      ipinfo="curl ipinfo.io"\ \
-      rldzsh="zsh ; exit"
+# {{{ Aliases
+# Add ddate to clear command
+alias clear="clear && startMessage"
 
-function ssht()
+# Reload zsh configuration
+alias rldzsh="zsh ; exit"
+
+alias sc="doas systemctl"
+alias clipboard="xclip -selection clipboard"
+
+# {{{ Package managers
+# {{{ Arch-based distros
+if command -v pacman &> /dev/null
+then
+  alias p="doas pacman"
+
+  update()
+  {
+    doas pacman -Syu "$@"; doas flatpak update
+  }
+fi
+
+if command -v paclabel &> /dev/null
+then
+  alias p="doas paclabel"
+
+  update()
+  {
+    doas paclabel -Syu "$@"; doas flatpak update
+  }
+fi
+
+if command -v paru &> /dev/null
+then
+  alias paru="paru --removemake --pgpfetch --newsonupgrade --bottomup"
+  alias P="paru"
+
+  update()
+  {
+    paru -Syu --skipreview "$@"; doas flatpak update
+  }
+fi
+# }}}
+
+# {{{ Flatpak
+if command -v flatpak &> /dev/null
+then
+  alias f="doas flatpak"
+  alias fI="doas flatpak install"
+  alias fU="doas flatpak uninstall"
+  alias fS="flatpak search"
+  alias fL="flatpak list"
+fi
+# }}}
+
+# {{{ Debian-based distros
+if command -v apt &> /dev/null
+then
+  alias a="doas apt"
+  alias ai="doas apt install"
+  alias ar="doas apt remove"
+  alias aar="doas apt autoremove"
+  alias ac="doas apt clean"
+  alias aac="doas apt autoclean"
+  alias aupg="doas apt update && doas apt upgrade"
+fi
+
+if command -v tap &> /dev/null
+then
+  alias A="doas tap"
+  alias Ai="doas tap install"
+  alias Ar="doas tap remove"
+  alias Aar="doas tap autoremove"
+  alias Ac="doas tap clean"
+  alias Aac="doas tap autoclean"
+  alias Aupg="doas tap update && doas tap upgrade"
+fi
+# }}}
+# }}}
+
+# {{{ Basic navigation
+alias lss="ls -alh"
+alias cd..="cd .."
+alias :q="exit"
+alias :Q="exit"
+# }}}
+
+# {{{ (n)vi(m)
+alias vi="nvim"
+alias vim="nvim"
+alias svim="doas ${EDITOR}"
+alias dvim="svim"
+# }}}
+
+# {{{ Ranger
+alias r="source ranger"
+alias R="/usr/bin/ranger"
+# }}}
+
+# {{{ Git
+alias g="git"
+alias gc="git clone"
+alias gs="git status"
+alias gS="git stash"
+alias gd="git diff"
+alias gdt="git difftool"
+alias gp="git pull"
+alias gA="git add"
+alias gA.="git add ."
+alias gC="git commit"
+alias gP="git push"
+# }}}
+
+# {{{ Docker
+alias d="docker"
+alias db="docker build"
+alias di="docker image"
+alias dv="docker volume"
+alias dn="docker network"
+alias dex="docker exec"
+alias dc="docker-compose"
+# }}}
+
+# {{{ Edit paclabel labels
+alias labels="doas $EDITOR /etc/paclabel/labels"
+alias flabels="doas $EDITOR /etc/paclabel/flatpak-labels"
+# }}}
+
+# {{{ Enter XDG user directories and my homedirs
+alias cddesk="cd ${XDG_DESKTOP_DIR}"
+alias cddoc="cd ${XDG_DOCUMENTS_DIR}"
+alias cddown="cd ${XDG_DOWNLOAD_DIR}"
+alias cdmusic="cd ${XDG_MUSIC_DIR}"
+alias cdpic="cd ${XDG_PICTURES_DIR}"
+alias cdvid="cd ${XDG_VIDEOS_DIR}"
+
+alias cdetc="cd ${HOME}/etc"
+alias cdgame="cd ${HOME}/games"
+alias cdsrc="cd ${HOME}/src"
+alias cdtorr="cd ${HOME}/torrents"
+alias cdvm="cd ${HOME}/vms"
+# }}}
+
+# {{{ Enter dotfile directories
+alias cdzsh="cd $HOME/src/sh/andy3153-zshrc/"
+alias cdnvim="cd $HOME/src/nvim/andy3153-init.lua/"
+alias cdhypr="cd $HOME/src/hyprland/hyprland-rice/"
+alias cdhyprc="cd $HOME/src/hyprland/hyprland-rice/dotconfig"
+alias cdhyprl="cd $HOME/src/hyprland/hyprland-rice/dotlocal"
+alias cdnix="cd $HOME/src/nixos/nixos-rice/"
+alias cdnixc="cd $HOME/src/nixos/nixos-rice/etc/nixos"
+alias cdnixh="cd $HOME/src/nixos/nixos-rice/home/andy3153/.config/home-manager/"
+# }}}
+
+# {{{ Open tmux inside ssh
+ssht()
 {
-  /usr/bin/ssh -t "$@" "tmux attach || tmux new"
+  ssh -t "$@" "tmux attach || tmux new"
 }
+# }}}
 
-function update()
-{
-  paru -Syu --skipreview "$@"; doas flatpak update
-}
-
-function run_game()
-{
-  suspend_compositing.sh suspend & gamemoderun $@ ; suspend_compositing.sh resume
-}
-
-## End of file.
+# {{{ Run a game
+#run_game()
+#{
+#  suspend_compositing.sh suspend & gamemoderun $@ ; suspend_compositing.sh resume
+#}
+# }}}
+# }}}

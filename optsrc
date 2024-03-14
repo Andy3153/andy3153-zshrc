@@ -1,0 +1,46 @@
+## vim: set fenc=utf-8 ts=2 sw=0 sts=0 sr et si tw=0 fdm=marker fmr={{{,}}} ft=zsh:
+##
+## optsrc by Andy3153
+## created 13/03/24 ~ 16:02:40
+##
+
+# {{{ Zsh options
+setopt\
+       APPEND_HISTORY\
+       EXTENDED_HISTORY\
+       prompt_subst\
+       interactive_comments\
+       COMPLETE_ALIASES\
+       correctall
+# }}}
+
+# {{{ Load Zsh functions
+autoload -U\
+            compinit\
+            colors\
+            edit-command-line\
+            select-quoted\
+            select-bracketed\
+
+# {{{ Run Zsh functions
+compinit
+colors
+# }}}
+# }}}
+
+# {{{ Load ZLE widgets
+zle -N edit-command-line
+zle -N select-quoted
+zle -N select-bracketed
+# }}}
+
+# {{{ Load Zsh modules
+zmodload zsh/datetime
+# }}}
+
+# {{{ Zsh style components
+# {{{ Completion
+zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
+zstyle ':completion:*' menu select
+# }}}
+# }}}
