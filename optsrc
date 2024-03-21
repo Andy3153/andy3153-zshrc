@@ -23,7 +23,7 @@ autoload -U\
             select-bracketed\
 
 # {{{ Run Zsh functions
-compinit
+compinit -d "${ZCACHEDIR}/zcompdump/zcompdump-${HOST}"
 colors
 # }}}
 # }}}

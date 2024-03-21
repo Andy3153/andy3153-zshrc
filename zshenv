@@ -43,9 +43,6 @@ export ZCACHEDIR="${XDG_CACHE_HOME}/zsh" # Cache location
 export ZPLUGINDIR="${ZDATADIR}/plugins"  # Plugins location
 export ZPROGDIR="${ZDATADIR}/progs"      # Programs location
 
-# Compdump location
-export ZSH_COMPDUMP="${ZCACHEDIR}/zcompdump/zcompdump-${HOST}"
-
 # Create the Zsh folders
 mkdir -p "${ZDOTDIR}" "${ZDATADIR}" "${ZCACHEDIR}" "${ZPLUGINDIR}" "${ZPROGDIR}"
 # }}}
