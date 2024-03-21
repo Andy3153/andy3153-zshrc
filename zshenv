@@ -20,6 +20,15 @@ then HOME=${HOME%?}
 fi
 # }}}
 
+# {{{ NixOS/Home Manager stuff
+# Source Home Manager session variables
+if [ -e "${HOME}/.nix-profile/etc/profile.d/hm-session-vars.sh" ]
+then source "${HOME}/.nix-profile/etc/profile.d/hm-session-vars.sh"
+elif [ -e "/etc/profiles/per-user/${USER}/etc/profile.d/hm-session-vars.sh" ]
+then source "/etc/profiles/per-user/${USER}/etc/profile.d/hm-session-vars.sh"
+fi
+# }}}
+
 # {{{ Environment variables
 # {{{ Run games through GameMode on NVIDIA dGPU with MangoHUD
 export GAMEMODERUNEXEC="env __NV_PRIME_RENDER_OFFLOAD=1 env __GLX_VENDOR_LIBRARY_NAME=nvidia env __VK_LAYER_NV_optimus=NVIDIA_only mangohud"
