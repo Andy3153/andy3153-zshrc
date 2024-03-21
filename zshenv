@@ -37,13 +37,17 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 # }}}
 
 # {{{ Zsh folders
-export ZDOTDIR="${XDG_CONFIG_HOME}/zsh" # Config location
-export ZDATADIR="${XDG_DATA_HOME}/zsh"  # Data location
-export ZPLUGINDIR="${ZDATADIR}/plugins" # Plugins location
-export ZPROGDIR="${ZDATADIR}/progs"     # Programs location
+export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"  # Config location
+export ZDATADIR="${XDG_DATA_HOME}/zsh"   # Data location
+export ZCACHEDIR="${XDG_CACHE_HOME}/zsh" # Cache location
+export ZPLUGINDIR="${ZDATADIR}/plugins"  # Plugins location
+export ZPROGDIR="${ZDATADIR}/progs"      # Programs location
+
+# Compdump location
+export ZSH_COMPDUMP="${ZCACHEDIR}/zcompdump/zcompdump-${HOST}"
 
 # Create the Zsh folders
-mkdir -p "${ZDOTDIR}" "${ZDATADIR}" "${ZPLUGINDIR}" "${ZPROGDIR}"
+mkdir -p "${ZDOTDIR}" "${ZDATADIR}" "${ZCACHEDIR}" "${ZPLUGINDIR}" "${ZPROGDIR}"
 # }}}
 
 # {{{ $PATH
