@@ -109,8 +109,7 @@ alias :Q="exit"
 # {{{ (n)vi(m)
 alias vi="nvim"
 alias vim="nvim"
-alias svim="doas ${EDITOR}"
-alias dvim="svim"
+alias dvim="doas nvim"
 # }}}
 
 # {{{ Ranger
