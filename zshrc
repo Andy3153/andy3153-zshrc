@@ -5,8 +5,6 @@
 ## remade1 26/10/20 ~ 12:53:21
 ## remade2 13/03/24 ~ 15:34:59
 ##
-## `gf` on any file in the list to open it in Nvim
-##
 
 #source "${ZDOTDIR}/zshenv"
 source "${ZDOTDIR}/varsrc"
