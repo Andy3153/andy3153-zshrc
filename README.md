@@ -27,7 +27,7 @@ cp -r andy3153-zshrc ~/.config/zsh/
 bash install.sh --install
 
 # Optionally, if you don't set $ZDOTDIR somewhere else to be at `~/.config/zsh`
-ln -s ~/.config/zsh/zshenv ~/.zshenv
+cp ~/.config/zsh/zshenv ~/.zshenv
 ```
 
 Replace `/path/to/clone/folder/` with the folder you want to clone the Git repo inside. Your choice, could be your Home directory.
