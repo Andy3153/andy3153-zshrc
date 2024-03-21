@@ -26,9 +26,6 @@ alias clear="clear && startMessage"
 # Reload zsh configuration
 alias rldzsh="zsh ; exit"
 
-alias sc="doas systemctl"
-alias clipboard="xclip -selection clipboard"
-
 # {{{ Package managers
 # {{{ Arch-based distros
 if command -v pacman &> /dev/null
@@ -115,6 +112,38 @@ alias dvim="doas nvim"
 # {{{ Ranger
 alias r="source ranger"
 alias R="/usr/bin/ranger"
+# }}}
+
+# {{{ Systemctl
+# Unpriviledged services
+alias sc="systemctl"
+alias scs="systemctl status"
+
+# Unpriviledged user services
+alias scu="systemctl --user"
+alias scus="systemctl --user status"
+
+alias scuS="systemctl --user start"
+alias scuSS="systemctl --user stop"
+
+alias scuE="systemctl --user enable"
+alias scuD="systemctl --user disable"
+
+alias scuEN="systemctl --user enable --now"
+alias scuDN="systemctl --user disable --now"
+
+# Priviledged services
+alias dsc="doas systemctl"
+alias dscs="doas systemctl status"
+
+alias dscS="doas systemctl start"
+alias dscSS="doas systemctl stop"
+
+alias dscE="doas systemctl enable"
+alias dscD="doas systemctl disable"
+
+alias dscEN="doas systemctl enable --now"
+alias dscDN="doas systemctl disable --now"
 # }}}
 
 # {{{ Git
