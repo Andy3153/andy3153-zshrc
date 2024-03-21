@@ -39,11 +39,11 @@ then
   {
     doas pacman -Syu "$@"; doas flatpak update
   }
-fi
-
-if command -v paclabel &> /dev/null
+elif command -v paclabel &> /dev/null
 then
   alias p="doas paclabel"
+  alias labels="doas ${EDITOR} /etc/paclabel/labels"
+  alias flabels="doas ${EDITOR} /etc/paclabel/flatpak-labels"
 
   update()
   {
@@ -140,11 +140,6 @@ alias dv="docker volume"
 alias dn="docker network"
 alias dex="docker exec"
 alias dc="docker-compose"
-# }}}
-
-# {{{ Edit paclabel labels
-alias labels="doas $EDITOR /etc/paclabel/labels"
-alias flabels="doas $EDITOR /etc/paclabel/flatpak-labels"
 # }}}
 
 # {{{ Enter XDG user directories and my homedirs
