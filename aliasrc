@@ -125,6 +125,7 @@ alias scus="systemctl --user status"
 
 alias scuS="systemctl --user start"
 alias scuSS="systemctl --user stop"
+alias scuR="systemctl --user restart"
 
 alias scuE="systemctl --user enable"
 alias scuD="systemctl --user disable"
@@ -138,6 +139,7 @@ alias dscs="doas systemctl status"
 
 alias dscS="doas systemctl start"
 alias dscSS="doas systemctl stop"
+alias dscR="doas systemctl restart"
 
 alias dscE="doas systemctl enable"
 alias dscD="doas systemctl disable"
