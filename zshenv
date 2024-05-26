@@ -79,7 +79,6 @@ export VISUAL="${EDITOR}"
 export SUDO_EDITOR="${EDITOR}"
 export GIT_EDITOR="${EDITOR}"
 export DIFFPROG="${EDITOR} -d"
-export PAGER="nvimpager"
 # }}}
 
 # {{{ Internal mailserver

@@ -35,6 +35,13 @@ else echo "recommend: install colordiff"
 fi
 # }}}
 
+# {{{ Use nvimpager if available
+if command -v nvimpager &> /dev/null
+then export PAGER="nvimpager"
+else echo "recommend: install nvimpager"
+fi
+# }}}
+
 # {{{ Enable color in basic programs
 alias grep="grep --color=auto"
 alias ip="ip -color"
