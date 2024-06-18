@@ -60,6 +60,16 @@ then
 fi
 # }}}
 
+# {{{ NixOS
+if grep -i nixos /etc/lsb-release > /dev/null
+then
+  update()
+  {
+    nh os switch --update -- --impure
+  }
+fi
+# }}}
+
 # {{{ Flatpak
 if command -v flatpak &> /dev/null
 then
