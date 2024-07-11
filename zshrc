@@ -6,7 +6,7 @@
 ## remade2 13/03/24 ~ 15:34:59
 ##
 
-source "${ZDOTDIR}/zshenv"
+#source "${ZDOTDIR}/zshenv"
 source "${ZDOTDIR}/varsrc"
 source "${ZDOTDIR}/optsrc"
 source "${ZDOTDIR}/funcrc"

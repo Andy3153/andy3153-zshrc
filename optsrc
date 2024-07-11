@@ -15,6 +15,7 @@ setopt\
 
 # {{{ Load Zsh functions
 autoload -U\
+            bashcompinit\
             compinit\
             colors\
             edit-command-line\
@@ -22,6 +23,7 @@ autoload -U\
             select-bracketed\
 
 # {{{ Run Zsh functions
+bashcompinit
 compinit -d "${ZCACHEDIR}/zcompdump/zcompdump-${HOST}"
 colors
 # }}}
