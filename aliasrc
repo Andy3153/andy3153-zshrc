@@ -206,8 +206,9 @@ alias cdhypr="cd $HOME/src/hyprland/hyprland-rice/"
 alias cdhyprc="cd $HOME/src/hyprland/hyprland-rice/dotconfig"
 alias cdhyprl="cd $HOME/src/hyprland/hyprland-rice/dotlocal"
 alias cdnix="cd $HOME/src/nixos/nixos-rice/"
-alias cdnixc="cd $HOME/src/nixos/nixos-rice/etc/nixos"
-alias cdnixh="cd $HOME/src/nixos/nixos-rice/home/andy3153/.config/home-manager/"
+alias cdnixmpkg="cd $HOME/src/nixos/my-nixpkgs/"
+alias cdnixhw="cd $HOME/src/nixos/nixos-hardware/"
+alias cdnixpkg="cd $HOME/src/nixos/nixpkgs/"
 # }}}
 
 # {{{ Open tmux inside ssh
