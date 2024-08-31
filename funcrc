@@ -8,7 +8,7 @@
 startMessage()
 {
   text=$(ddate.sh "~*. Today is %A, the %d. day of %B in the YOLD %Y .*~")
-  printf "\n%*s\n\n" $(( ($#text+$COLUMNS) / 2)) "${text}" | lolcat
+  printf "\n%*s\n\n" $(( ($#text+$COLUMNS) / 2)) "${text}" | clolcat
 }
 # }}}
 
