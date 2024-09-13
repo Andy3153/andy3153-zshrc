@@ -161,16 +161,26 @@ alias dscDN="doas systemctl disable --now"
 # {{{ Git
 alias g="git"
 alias gc="git clone"
+alias gp="git pull"
+
 alias gs="git status"
-alias gS="git stash"
+
+alias gl="git log"
+
 alias gd="git diff"
 alias gdt="git difftool"
-alias gp="git pull"
+
+alias gS="git stash"
+alias gSp="git stash pop"
+alias gSD="git stash drop"
+
+alias gR="git rebase --interactive"
+
 alias gA="git add"
 alias gAp="git add --patch"
-alias gA.="git add ."
-alias gAp.="git add --patch ."
+
 alias gC="git commit"
+
 alias gP="git push"
 # }}}
 
