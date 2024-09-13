@@ -191,7 +191,7 @@ alias di="docker image"
 alias dv="docker volume"
 alias dn="docker network"
 alias dex="docker exec"
-alias dc="docker-compose"
+alias dc="docker compose"
 # }}}
 
 # {{{ Enter XDG user directories and my homedirs
