@@ -27,6 +27,29 @@ alias clear="clear && startMessage"
 alias rldzsh="zsh ; exit"
 
 # {{{ Package managers
+# {{{ NixOS
+if grep -i nixos /etc/lsb-release > /dev/null
+then
+  update()
+  {
+    nh os switch --update -- --impure
+  }
+
+  if [ "$(hostname)" != "sparkle" ] # if it's not my main computer
+  then
+    update()
+    {
+      cdzsh  2>/dev/null && gp --rebase
+      cdnvim 2>/dev/null && gp --rebase
+      cdhypr 2>/dev/null && gp --rebase
+      cdnix  2>/dev/null && gp --rebase
+
+      nh os switch -- --impure
+    }
+  fi
+fi
+# }}}
+
 # {{{ Arch-based distros
 if command -v pacman &> /dev/null
 then
@@ -56,16 +79,6 @@ then
   update()
   {
     paru -Syu --skipreview "$@"; doas flatpak update
-  }
-fi
-# }}}
-
-# {{{ NixOS
-if grep -i nixos /etc/lsb-release > /dev/null
-then
-  update()
-  {
-    nh os switch --update -- --impure
   }
 fi
 # }}}
