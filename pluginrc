@@ -102,6 +102,8 @@ plugins=(
   ohmyzsh/plugins/command-not-found  # Show what package to install when a command is not found
   ohmyzsh/lib/clipboard.zsh          # Cross-platform clipboard
   ohmyzsh/plugins/extract            # Extract any archive
+
+  ohmyzsh/plugins/direnv             # Direnv hook
 )
 
 plugin-clone $plugin_repos
