@@ -189,8 +189,10 @@ alias gSD="git stash drop"
 
 alias gR="git rebase --interactive"
 
+alias gA.="git add ."
 alias gA="git add"
 alias gAp="git add --patch"
+alias gAp.="git add --patch ."
 
 alias gC="git commit"
 
