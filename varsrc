@@ -75,13 +75,14 @@ declare -A char=(
   arrowR      ""
   circleL     ""
   circleR     ""
-  git         ""
-  folder      " "
   dots        "…"
+  error       " "
   file        " "
+  folder      " "
+  git         ""
+  nix         " "
   root        "󰓠 "
   ssh         " "
-  error       " "
   time        " "
 )
 # }}}

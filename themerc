@@ -13,6 +13,7 @@
 ## git support 26/08/21 ~ 20:28:31
 ## remade1     25/10/22 ~ 13:05:20
 ## remade2     12/03/24 ~ 15:32:56
+## nix segment 15/09/24 ~ 23:58:56
 ##
 ## I should've used vcs_info. I'm lazy now.
 ##
@@ -27,7 +28,7 @@ themeArrows()
 
   # {{{ Fetch info for the `isSSH` prompt segment
   if isSSH
-  then syms[ssh]="$char[ssh]"
+  then syms[ssh]="$char[ssh] "
   fi
   # }}}
 
@@ -47,6 +48,13 @@ themeArrows()
     if [ -z "${cmdTime[time]}" ]
     then PE[elapsedTime]="$F[blk]$K[bblk]$char[arrowL]%f%k"
     else PE[elapsedTime]="$F[blk]$K[bblk]$char[arrowL]$F[wht]$K[blk] $char[time] $cmdTime[time] %f%k"
+    fi
+    # }}}
+
+    # {{{ Fetch info for the `isNixShell` prompt segment
+    if isNixShell
+    then PE[isNixShell]="$char[nix] "
+    else PE[isNixShell]=""
     fi
     # }}}
 
@@ -79,7 +87,7 @@ themeArrows()
   # }}}
 
   # {{{ Arrange prompt elements in the prompts
-  PROMPT='$F[blk]$PE[delimiterL]$F[wht]$K[blk]$PE[isRoot]$PE[isSSH]$PE[username] $PE[git]$PE[indicator]%f%k'
+  PROMPT='$F[blk]$PE[delimiterL]$F[wht]$K[blk]$PE[isSSH]$PE[isRoot]$PE[isNixShell]$PE[username] $PE[git]$PE[indicator]%f%k'
   RPROMPT='$PE[folder]$PE[errorCode]$PE[elapsedTime]$F[blk]$PE[delimiterR]%f%k'
   # }}}
 }

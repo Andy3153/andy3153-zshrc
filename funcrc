@@ -33,6 +33,16 @@ isSSH()
 }
 # }}}
 
+# {{{ Check if inside Nix shell
+isNixShell()
+{
+  if [ -z "${IN_NIX_SHELL}" ]
+  then return 1
+  else return 0
+  fi
+}
+# }}}
+
 # {{{ Git
 # {{{ Check if pwd is a Git tree
 isGit()
