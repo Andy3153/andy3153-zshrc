@@ -179,9 +179,13 @@ alias gp="git pull"
 alias gs="git status"
 
 alias gl="git log"
+alias glr="git reflog"
 
 alias gd="git diff"
 alias gdt="git difftool"
+
+alias gr="git restore --staged"
+alias gr\*="git restore --staged *"
 
 alias gS="git stash"
 alias gSp="git stash pop"
@@ -189,8 +193,8 @@ alias gSD="git stash drop"
 
 alias gR="git rebase --interactive"
 
-alias gA.="git add ."
 alias gA="git add"
+alias gA.="git add ."
 alias gAp="git add --patch"
 alias gAp.="git add --patch ."
 
