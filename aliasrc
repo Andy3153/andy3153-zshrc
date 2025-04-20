@@ -213,11 +213,21 @@ alias dex="docker exec"
 alias dc="docker compose"
 # }}}
 
+# {{{ Podman
+alias p="podman"
+alias pb="podman build"
+alias pi="podman image"
+alias pv="podman volume"
+alias pn="podman network"
+alias pex="podman exec"
+alias pc="podman compose"
+# }}}
+
 # {{{ Enter XDG user directories and my homedirs
 alias cddesk="cd ${XDG_DESKTOP_DIR}"
 alias cddoc="cd ${XDG_DOCUMENTS_DIR}"
 alias cddown="cd ${XDG_DOWNLOAD_DIR}"
-alias cdmusic="cd ${XDG_MUSIC_DIR}"
+alias cdmus="cd ${XDG_MUSIC_DIR}"
 alias cdpic="cd ${XDG_PICTURES_DIR}"
 alias cdvid="cd ${XDG_VIDEOS_DIR}"
 
