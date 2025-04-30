@@ -31,22 +31,18 @@ fi
 
 # {{{ Environment variables
 # {{{ XDG Base Directories
-#[[ -z "${XDG_CACHE_HOME// }" ]]  || export XDG_CACHE_HOME="${HOME}/.cache"
-#[[ -z "${XDG_CONFIG_HOME// }" ]] || export XDG_CONFIG_HOME="${HOME}/.config"
-#[[ -z "${XDG_DATA_HOME// }" ]]   || export XDG_DATA_HOME="${HOME}/.local/share"
-#[[ -z "${XDG_STATE_HOME// }" ]]  || export XDG_STATE_HOME="${HOME}/.local/state"
-export XDG_CACHE_HOME="${HOME}/.cache"
-export XDG_CONFIG_HOME="${HOME}/.config"
-export XDG_DATA_HOME="${HOME}/.local/share"
-export XDG_STATE_HOME="${HOME}/.local/state"
+[ -z "${XDG_CACHE_HOME// }" ]  || export XDG_CACHE_HOME="${HOME}/.cache"
+[ -z "${XDG_CONFIG_HOME// }" ] || export XDG_CONFIG_HOME="${HOME}/.config"
+[ -z "${XDG_DATA_HOME// }" ]   || export XDG_DATA_HOME="${HOME}/.local/share"
+[ -z "${XDG_STATE_HOME// }" ]  || export XDG_STATE_HOME="${HOME}/.local/state"
 # }}}
 
 # {{{ Zsh folders
-export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"  # Config location
-export ZDATADIR="${XDG_DATA_HOME}/zsh"   # Data location
-export ZCACHEDIR="${XDG_CACHE_HOME}/zsh" # Cache location
-export ZPLUGINDIR="${ZDATADIR}/plugins"  # Plugins location
-export ZPROGDIR="${ZDATADIR}/progs"      # Programs location
+ZDOTDIR="${XDG_CONFIG_HOME}/zsh"  # Config location
+ZDATADIR="${XDG_DATA_HOME}/zsh"   # Data location
+ZCACHEDIR="${XDG_CACHE_HOME}/zsh" # Cache location
+ZPLUGINDIR="${ZDATADIR}/plugins"  # Plugins location
+ZPROGDIR="${ZDATADIR}/progs"      # Programs location
 
 # Create the Zsh folders
 mkdir -p "${ZDOTDIR}" "${ZDATADIR}" "${ZCACHEDIR}" "${ZPLUGINDIR}" "${ZPROGDIR}"
@@ -64,9 +60,9 @@ unset oldpath
 # }}}
 
 # {{{ History file
-export HISTFILE="${ZDATADIR}/zsh-history"
-export HISTSIZE=1000000
-export SAVEHIST=1000000
+HISTFILE="${ZDATADIR}/zsh-history"
+HISTSIZE=1000000
+SAVEHIST=1000000
 # }}}
 
 # {{{ $EDITOR vars
