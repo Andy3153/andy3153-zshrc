@@ -244,10 +244,10 @@ alias cdnvim="cd $HOME/src/nvim/andy3153-init.lua/"
 alias cdhypr="cd $HOME/src/hyprland/hyprland-rice/"
 alias cdhyprc="cd $HOME/src/hyprland/hyprland-rice/dotconfig"
 alias cdhyprl="cd $HOME/src/hyprland/hyprland-rice/dotlocal"
-alias cdnix="cd $HOME/src/nixos/nixos-rice/"
-alias cdnixmpkg="cd $HOME/src/nixos/my-nixpkgs/"
-alias cdnixhw="cd $HOME/src/nixos/nixos-hardware/"
-alias cdnixpkg="cd $HOME/src/nixos/nixpkgs/"
+alias cdnix="cd $HOME/src/nix/nixos-rice/"
+alias cdnixmpkg="cd $HOME/src/nix/my-nixpkgs/"
+alias cdnixhw="cd $HOME/src/nix/nixos-hardware/"
+alias cdnixpkg="cd $HOME/src/nix/nixpkgs/"
 # }}}
 
 # {{{ Open tmux inside ssh
