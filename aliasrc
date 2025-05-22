@@ -231,11 +231,12 @@ alias cdmus="cd ${XDG_MUSIC_DIR}"
 alias cdpic="cd ${XDG_PICTURES_DIR}"
 alias cdvid="cd ${XDG_VIDEOS_DIR}"
 
+alias cdiso="cd ${XDG_DOWNLOAD_DIR}/iso"
+alias cdtorr="cd ${XDG_DOWNLOAD_DIR}/torrents"
 alias cdetc="cd ${HOME}/etc"
 alias cdgame="cd ${HOME}/games"
+alias cdprog="cd ${HOME}/progs"
 alias cdsrc="cd ${HOME}/src"
-alias cdtorr="cd ${HOME}/torrents"
-alias cdvm="cd ${HOME}/vms"
 # }}}
 
 # {{{ Enter dotfile directories
