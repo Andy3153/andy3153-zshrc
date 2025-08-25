@@ -258,10 +258,10 @@ ssht()
 }
 # }}}
 
-# {{{ Run a game
-#run_game()
-#{
-#  suspend_compositing.sh suspend & gamemoderun $@ ; suspend_compositing.sh resume
-#}
+# {{{ Turn link into a file
+link2file()
+{
+  [ -L "${1}" ] && cp --remove-destination "$(readlink "${1}")" "${1}"
+}
 # }}}
 # }}}
