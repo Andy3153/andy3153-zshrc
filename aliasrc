@@ -264,4 +264,11 @@ link2file()
   [ -L "${1}" ] && cp --remove-destination "$(readlink "${1}")" "${1}"
 }
 # }}}
+
+# {{{ SHA256 checksum in SRI format
+sha256sum-sri()
+{
+  nix hash convert --hash-algo sha256 --to sri "$(sha256sum "${1}" | cut -d ' ' -f1)"
+}
+# }}}
 # }}}
