@@ -132,11 +132,6 @@ alias vim="nvim"
 alias dvim="doas nvim"
 # }}}
 
-# {{{ Ranger
-alias r="source ranger"
-alias R="/usr/bin/ranger"
-# }}}
-
 # {{{ Systemctl
 # Unpriviledged services
 alias sc="systemctl"
@@ -249,6 +244,19 @@ alias cdnix="cd $HOME/src/nix/nixos-rice/"
 alias cdnixmpkg="cd $HOME/src/nix/my-nixpkgs/"
 alias cdnixhw="cd $HOME/src/nix/nixos-hardware/"
 alias cdnixpkg="cd $HOME/src/nix/nixpkgs/"
+# }}}
+
+# {{{ Yazi
+alias Y="yazi"
+
+y() # change dir when quitting
+{
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
+}
 # }}}
 
 # {{{ Open tmux inside ssh

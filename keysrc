@@ -52,6 +52,6 @@ done
 
 # {{{ Run commands
 bindkey -s            "^[c"     "clear"             # clear (alt+c)
-bindkey -s            "^[r"     "source ranger"     # ranger cd (alt+r)
+bindkey -s            "^[y"     "y"     # ranger cd (alt+r)
 # }}}
 # }}}
