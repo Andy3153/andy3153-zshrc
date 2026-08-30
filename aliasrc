@@ -28,7 +28,7 @@ alias rldzsh="zsh ; exit"
 
 # {{{ Package managers
 # {{{ NixOS
-if grep -i nixos /etc/lsb-release > /dev/null
+if grep -i nixos /etc/os-release > /dev/null
 then
   update()
   {
