@@ -283,4 +283,26 @@ sha256sum-sri()
   nix hash convert --hash-algo sha256 --to sri "$(sha256sum "${1}" | cut -d ' ' -f1)"
 }
 # }}}
+
+# {{{ Mount my encrypted drives
+mount-crypt()
+{
+  if [[ -n "${1}" ]]; then
+    doas cryptsetup open "/dev/disk/by-partlabel/${1}-crypt" "${1}" --key-file="/.persist/etc/keys/luks/${1}" && doas mount --mkdir "/dev/mapper/${1}" "/mnt/${1}"
+  else
+    echo "${0}: missing operand"
+  fi
+}
+# }}}
+
+# {{{ Unmount my encrypted drives
+umount-crypt()
+{
+  if [[ -n "${1}" ]]; then
+    doas umount "/mnt/${1}" ; doas cryptsetup close "${1}"
+  else
+    echo "${0}: missing operand"
+  fi
+}
+# }}}
 # }}}
