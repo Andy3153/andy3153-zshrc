@@ -247,7 +247,7 @@ alias cdnixpkg="cd $HOME/src/nix/nixpkgs/"
 # }}}
 
 # {{{ lsblk
-alias lsblk="lsblk --hyperlink=always --output=name,fsused,size,fstype,partlabel,mountpoints"
+alias lsblk="lsblk --hyperlink=always --output=name,fsused,size,fstype,label,partlabel,mountpoints"
 # }}}
 
 # {{{ Yazi
