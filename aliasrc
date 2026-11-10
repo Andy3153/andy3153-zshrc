@@ -29,7 +29,9 @@ alias rldzsh="zsh ; exit"
 # {{{ Package managers / update wrappers
 # {{{ NixOS
 if grep -i nixos /etc/os-release > /dev/null
-then alias sys="just --justfile ${XDG_PROJECTS_DIR}/nix/nixos-rice/justfile"
+then
+  [ -z "${XDG_PROJECTS_DIR// }" ] && export XDG_PROJECTS_DIR="${HOME}/src"
+  alias sys="just --justfile ${XDG_PROJECTS_DIR}/nix/nixos-rice/justfile"
 fi
 # }}}
 
