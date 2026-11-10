@@ -26,27 +26,10 @@ alias clear="clear && startMessage"
 # Reload zsh configuration
 alias rldzsh="zsh ; exit"
 
-# {{{ Package managers
+# {{{ Package managers / update wrappers
 # {{{ NixOS
 if grep -i nixos /etc/os-release > /dev/null
-then
-  update()
-  {
-    nh os switch --update -- --impure
-  }
-
-  if [ "$(hostname)" != "sparkle" ] # if it's not my main computer
-  then
-    update()
-    {
-      cdzsh  2>/dev/null && gp --rebase
-      cdnvim 2>/dev/null && gp --rebase
-      cdhypr 2>/dev/null && gp --rebase
-      cdnix  2>/dev/null && gp --rebase
-
-      nh os switch -- --impure
-    }
-  fi
+then alias sys="just --justfile ${XDG_PROJECTS_DIR}/nix/nixos-rice/justfile"
 fi
 # }}}
 
@@ -224,6 +207,7 @@ alias cddoc="cd ${XDG_DOCUMENTS_DIR}"
 alias cddown="cd ${XDG_DOWNLOAD_DIR}"
 alias cdmus="cd ${XDG_MUSIC_DIR}"
 alias cdpic="cd ${XDG_PICTURES_DIR}"
+alias cdsrc="cd ${XDG_PROJECTS_DIR}"
 alias cdvid="cd ${XDG_VIDEOS_DIR}"
 
 alias cdiso="cd ${XDG_DOWNLOAD_DIR}/iso"
@@ -231,7 +215,6 @@ alias cdtorr="cd ${XDG_DOWNLOAD_DIR}/torrents"
 alias cdetc="cd ${HOME}/etc"
 alias cdgame="cd ${HOME}/games"
 alias cdprog="cd ${HOME}/progs"
-alias cdsrc="cd ${HOME}/src"
 # }}}
 
 # {{{ Enter dotfile directories
