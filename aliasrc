@@ -162,7 +162,9 @@ alias gl="git log"
 alias glr="git reflog"
 
 alias gd="git diff"
+alias gds="git diff --staged"
 alias gdt="git difftool"
+alias gdts="git difftool --staged"
 
 alias gr="git restore --staged"
 alias gr\*="git restore --staged *"
